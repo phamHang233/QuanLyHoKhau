@@ -1,4 +1,4 @@
-package com.example.beginning.controller;
+package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,22 +10,25 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class HelloController {
+import java.io.IOException;
 
+public class HelloController {
+@FXML
     private Button btnLogin;
 
-
+    @FXML
     private TextField loginName;
+    @FXML
 
     private TextField password;
     public HelloController(){}
+    @FXML
+    public void btnLogin(ActionEvent event) throws IOException {
 
-    public void btnLogin(ActionEvent event) throws Exception{
-
-        Parent root =  FXMLLoader.load(getClass().getResource("main-view.fxml")) ;
+        Parent root =  FXMLLoader.load(getClass().getResource("/views/main-view.fxml")) ;
         Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root, 640, 480));
-//        stage.centerOnScreen();
+        stage.setScene(new Scene(root, 1200,640));
+        stage.centerOnScreen();
 
     }
 

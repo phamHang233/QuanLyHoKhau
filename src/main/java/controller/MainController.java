@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+// quản lý màn hình trang chủ
 public class MainController implements Initializable {
     SwitchScene switchScene;
     @FXML

@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+// Class với các method để chuyển màn hình từ trang chủ -> hộ khẩu -> nhân khẩu->nhà văn hoá
 public class SwitchScene {
     public SwitchScene(){}
     void changeToMain(ActionEvent event) throws IOException {

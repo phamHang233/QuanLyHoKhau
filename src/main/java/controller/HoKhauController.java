@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+// quản lý màn hình Hộ khẩu
 public class HoKhauController implements Initializable {
     @FXML
     private Button select1;

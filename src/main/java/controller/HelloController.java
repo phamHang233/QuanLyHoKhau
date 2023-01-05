@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+//điều khiển màn hình đăng nhập
 public class HelloController {
 @FXML
     private Button btnLogin;
@@ -23,6 +23,7 @@ public class HelloController {
     private TextField password;
     public HelloController(){}
     @FXML
+    // click vào nút Login
     public void btnLogin(ActionEvent event) throws IOException {
 
         Parent root =  FXMLLoader.load(getClass().getResource("/views/main-view.fxml")) ;

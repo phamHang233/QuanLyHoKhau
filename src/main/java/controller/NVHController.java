@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+//Quản lý màn hình Nhà Văn Hoá
 public class NVHController implements Initializable {
     @FXML
     private Button select1;

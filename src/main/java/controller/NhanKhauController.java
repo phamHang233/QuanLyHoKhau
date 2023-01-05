@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+// Quản lý màn hình Nhân Khẩu
 public class NhanKhauController implements Initializable {
     @FXML
     private Button select1;

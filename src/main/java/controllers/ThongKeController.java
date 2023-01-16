@@ -1,4 +1,4 @@
-package controller;
+package controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,41 +7,17 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-// quản lý màn hình trang chủ
-public class MainController implements Initializable {
+//Quản lý màn hình thống kê
+public class ThongKeController implements Initializable {
     SwitchScene switchScene;
-
-    @FXML
-    private Label hoTen;
-    @FXML
-    private Label ngaySinh;
-    @FXML
-    private Label gioiTinh;
-    @FXML
-    private Label chucVu;
-    @FXML
-    private Label sdt;
-    @FXML
-    private Label soNhanKhau;
-    @FXML
-    private Label soHoKhau;
-    @FXML
-    private Label soNKTamVang;
-    @FXML
-    private Label soNKTamTru;
-
-    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         switchScene = new SwitchScene();
     }
-
     @FXML
     void btnHoKhau(ActionEvent event) throws IOException {
         switchScene.changeToHoKhau(event);
@@ -82,6 +58,5 @@ public class MainController implements Initializable {
     void btnThongBao(ActionEvent event) throws IOException{
         System.out.println("Hiển thị thông báo!");
     }
-
 
 }

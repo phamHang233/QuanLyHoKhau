@@ -1,5 +1,4 @@
-package controller;
-
+package controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,19 +6,23 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-//Quản lý màn hình Nhà Văn Hoá
-public class NVHController implements Initializable {
+// quản lý màn hình Hộ khẩu
+public class HoKhauController implements Initializable {
+
     SwitchScene switchScene;
+    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         switchScene = new SwitchScene();
     }
-
+    @FXML
+    void btnTrangChu(ActionEvent event) throws IOException {
+        switchScene.changeToMain(event);
+    }
     @FXML
     void btnHoKhau(ActionEvent event) throws IOException {
         switchScene.changeToHoKhau(event);
@@ -41,10 +44,6 @@ public class NVHController implements Initializable {
         switchScene.changeToThongKe(event);
     }
     @FXML
-    void btnTrangChu(ActionEvent event) throws IOException {
-        switchScene.changeToMain(event);
-    }
-    @FXML
     void btnDangXuat(ActionEvent event) throws IOException {
         Parent root =  FXMLLoader.load(getClass().getResource("/views/login-view.fxml")) ;
         Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -60,5 +59,6 @@ public class NVHController implements Initializable {
     void btnThongBao(ActionEvent event) throws IOException{
         System.out.println("Hiển thị thông báo!");
     }
+
 
 }

@@ -149,7 +149,4 @@ public class MainController implements Initializable {
     void btnThongBao(ActionEvent event) throws IOException{
         System.out.println("Hiển thị thông báo!");
     }
-
-
-
 }

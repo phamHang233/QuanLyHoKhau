@@ -35,6 +35,7 @@ public class SwitchScene {
         Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root, 1200,640));
         stage.centerOnScreen();
+        stage.show();
     }
     void changeToNVH(ActionEvent event) throws IOException {
         Parent root =  FXMLLoader.load(getClass().getResource("/views/nhavh-view.fxml")) ;

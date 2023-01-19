@@ -58,6 +58,19 @@ public class MainController implements Initializable {
             }
             preparedStatement.close();
 
+            // set thông tin của người đăng nhập lên màn hình
+            query = "SELECT hoTen, namSinh, gioiTinh, chucVu, SDT FROM nhan_khau, users WHERE users.IDNhanKhau= nhan_khau.ID and users.userName= '" + HelloController.currentUser.getUserName() + "'";
+            preparedStatement = (PreparedStatement)connection.prepareStatement(query);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                this.hoTen.setText((rs.getString("hoTen")));
+                this.chucVu.setText(String.valueOf(rs.getString("chucVu")));
+                this.gioiTinh.setText(String.valueOf(rs.getString("gioiTinh")));
+                this.ngaySinh.setText(String.valueOf(rs.getDate("namSinh")));
+                this.sdt.setText(String.valueOf(rs.getString("SDT")));
+            }
+            preparedStatement.close();
+
             // tính tổng số hộ khẩu
             query = "SELECT COUNT(*) as tong FROM ho_khau";
             preparedStatement = (PreparedStatement)connection.prepareStatement(query);
@@ -66,6 +79,8 @@ public class MainController implements Initializable {
                this.soHoKhau.setText(String.valueOf(rs.getInt("tong")));
             }
             preparedStatement.close();
+
+
 
             // tính tổng số nhân khẩu tạm trú
             query = "SELECT COUNT(*) AS tong FROM tam_tru WHERE denNgay < NOW()";
@@ -76,6 +91,9 @@ public class MainController implements Initializable {
             }
             preparedStatement.close();
 
+            System.out.println("HEllo");
+            System.out.println(HelloController.currentUser.getUserName());
+
             //tính số nhân khẩu tạm vắng
             query = "SELECT COUNT(*) AS tong FROM tam_vang WHERE denNgay < NOW()";
             preparedStatement = (PreparedStatement)connection.prepareStatement(query);
@@ -83,20 +101,9 @@ public class MainController implements Initializable {
             while (rs.next()){
                 this.soNKTamVang.setText(String.valueOf(rs.getInt("tong")));
             }
-            preparedStatement.close();
 
-        // set thông tin của người đăng nhập lên màn hình
-             query = "SELECT hoTen, namSinh, gioiTinh, chucVu, SDT FROM nhan_khau, users WHERE users.IDNhanKhau= nhan_khau.ID and users.userName= '" + HelloController.currentUser.getUserName() + "'";
-             preparedStatement = (PreparedStatement)connection.prepareStatement(query);
-             rs = preparedStatement.executeQuery();
-            while (rs.next()){
-                this.hoTen.setText((rs.getString("hoTen")));
-                this.chucVu.setText(String.valueOf(rs.getString("chucVu")));
-                this.gioiTinh.setText(String.valueOf(rs.getString("gioiTinh")));
-                this.ngaySinh.setText(String.valueOf(rs.getDate("namSinh")));
-                this.sdt.setText(String.valueOf(rs.getString("SDT")));
-            }
             preparedStatement.close();
+//
 
             connection.close();
         } catch (Exception e) {

@@ -59,7 +59,7 @@ public class MainController implements Initializable {
             preparedStatement.close();
 
             // set thông tin của người đăng nhập lên màn hình
-            query = "SELECT hoTen, namSinh, gioiTinh, chucVu, SDT FROM nhan_khau, users WHERE users.IDNhanKhau= nhan_khau.ID and users.userName= '" + HelloController.currentUser.getUserName() + "'";
+            query = "SELECT hoTen, namSinh, gioiTinh, chucVu, SDT FROM nhan_khau, users WHERE users.IDNhanKhau= nhan_khau.ID and users.userName= '" + LoginController.currentUser.getUserName() + "'";
             preparedStatement = (PreparedStatement)connection.prepareStatement(query);
             rs = preparedStatement.executeQuery();
             while (rs.next()){
@@ -92,7 +92,7 @@ public class MainController implements Initializable {
             preparedStatement.close();
 
             System.out.println("HEllo");
-            System.out.println(HelloController.currentUser.getUserName());
+            System.out.println(LoginController.currentUser.getUserName());
 
             //tính số nhân khẩu tạm vắng
             query = "SELECT COUNT(*) AS tong FROM tam_vang WHERE denNgay < NOW()";

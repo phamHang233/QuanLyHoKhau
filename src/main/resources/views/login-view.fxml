@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.HelloController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.LoginController">
    <children>
       <TitledPane animated="false" collapsible="false" depthTest="DISABLE" layoutY="3.0" prefHeight="322.0" prefWidth="600.0" styleClass="info__pane" stylesheets="@file.css" text="Login" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <content>

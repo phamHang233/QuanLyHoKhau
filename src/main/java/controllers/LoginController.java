@@ -21,7 +21,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 //điều khiển màn hình đăng nhập
-public class HelloController {
+public class LoginController {
 @FXML
     private Button btnLogin;
 
@@ -34,7 +34,7 @@ public class HelloController {
 
     // kết tập class UserModel
     public static UserModel currentUser = new UserModel();
-    public HelloController(){}
+    public LoginController(){}
 
     @FXML
     // click vào nút Login
@@ -74,15 +74,15 @@ public class HelloController {
             if (rs.getString("password") == null){
                 if(password== null )
                 {
-                    HelloController.currentUser.setID(rs.getInt("ID"));
-                    HelloController.currentUser.setUserName(rs.getString("userName"));
+                    LoginController.currentUser.setID(rs.getInt("ID"));
+                    LoginController.currentUser.setUserName(rs.getString("userName"));
                     return true;
                 }
             }
             else {
                 if(rs.getString("password").equals(password)){
-                    HelloController.currentUser.setID(rs.getInt("ID"));
-                    HelloController.currentUser.setUserName(rs.getString("userName"));
+                    LoginController.currentUser.setID(rs.getInt("ID"));
+                    LoginController.currentUser.setUserName(rs.getString("userName"));
                     return true;
                 }
 

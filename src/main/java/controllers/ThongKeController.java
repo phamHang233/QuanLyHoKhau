@@ -168,4 +168,14 @@ public class ThongKeController implements Initializable {
 
     public void displayTieuSu(ActionEvent event) {
     }
+    @FXML
+    void btnCSVC (ActionEvent event) throws IOException{
+    }
+    @FXML
+    void btnChoThue (ActionEvent event) throws IOException{
+    }
+    @FXML
+    void btnSuDung (ActionEvent event) throws IOException{
+
+    }
 }

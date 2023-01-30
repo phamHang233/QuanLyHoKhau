@@ -258,7 +258,7 @@ public class HoKhauService {
                 + "',"
                 + "nguoiThucHien = "
                 // ? loginCOntroller
-                + LoginController.currentUser.getID()
+//                + LoginController.currentUser.getID()
                 + " WHERE ho_khau.ID = " + idhoKhau;
         try {
             Connection connection = SQLServerConnection.getSqlConnection();

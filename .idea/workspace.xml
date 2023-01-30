@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Beans/HoKhauBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Beans/NhanKhauBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/HoKhauService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/NhanKhauService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/StringService.java" afterDir="false" />
+    <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/GiaDinhModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/HoKhauBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/HoKhauBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/NhanKhauBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/NhanKhauBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/DinhChinh.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/DinhChinhModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/DinhChinhModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/NhanKhauModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/NhanKhauModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/HoKhauService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/HoKhauService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/QuanLyHoKhau",
+    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/QuanLyHoKhau2",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -96,8 +97,22 @@
       <option name="presentableId" value="Default" />
       <updated>1674114201629</updated>
       <workItem from="1674125071589" duration="4748000" />
-      <workItem from="1674806312896" duration="5021000" />
+      <workItem from="1674806312896" duration="9131000" />
+      <workItem from="1675003897205" duration="724000" />
+      <workItem from="1675006707469" duration="3886000" />
+      <workItem from="1675040448954" duration="599000" />
+      <workItem from="1675086803542" duration="598000" />
+      <workItem from="1675090003093" duration="2999000" />
+      <workItem from="1675093073634" duration="5520000" />
     </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1674812412162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674812412162</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,5 +128,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>

@@ -11,7 +11,6 @@ public class HoKhauBean {
     private HoKhauModel hoKhauModel;
     private NhanKhauModel chuHo;
     private List<NhanKhauModel> listNhanKhauModels;
-
     private List<ThanhVienModel> listThanhVien;
 
     public HoKhauBean(HoKhauModel hoKhauModel, NhanKhauModel chuHo, List<NhanKhauModel> listNhanKhauModels, List<ThanhVienModel> listThanhVienCuaHo) {

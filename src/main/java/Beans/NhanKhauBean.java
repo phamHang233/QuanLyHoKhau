@@ -1,6 +1,7 @@
 package Beans;
 
 import models.CanCuocCongDanModel;
+import models.GiaDinhModel;
 import models.NhanKhauModel;
 import models.TieuSuModel;
 
@@ -11,17 +12,23 @@ public class NhanKhauBean {
     private CanCuocCongDanModel canCuocCongDanModel;
     private List<TieuSuModel> listTieuSuModels;
 
+    private List<GiaDinhModel> listGiaDinhModels;
+
 
     public NhanKhauBean(NhanKhauModel nhanKhauModel, CanCuocCongDanModel canCuocCongDanModel, List<TieuSuModel> listTieuSuModels) {
         this.nhanKhauModel = nhanKhauModel;
         this.canCuocCongDanModel = canCuocCongDanModel;
         this.listTieuSuModels = listTieuSuModels;
+        this.listGiaDinhModels = listGiaDinhModels;
+
     }
 
     public NhanKhauBean() {
         this.nhanKhauModel = new NhanKhauModel();
         this.canCuocCongDanModel = new CanCuocCongDanModel();
         this.listTieuSuModels = new ArrayList<>();
+        this.listGiaDinhModels = new ArrayList<>();
+
     }
 
     public NhanKhauModel getNhanKhauModel() {
@@ -48,7 +55,13 @@ public class NhanKhauBean {
         this.listTieuSuModels = listTieuSuModels;
     }
 
+    public List<GiaDinhModel> getListGiaDinhModels() {
+        return listGiaDinhModels;
+    }
 
+    public void setListGiaDinhModels(List<GiaDinhModel> listGiaDinhModels) {
+        this.listGiaDinhModels = listGiaDinhModels;
+    }
     @Override
     public String toString() {
         String res =  "<html><style>p {padding: 5px; margin-left: 20px} table, th, td {border: 1px solid black; border-collapse: collapse;} table {width: 500px}</style> <div>"
@@ -93,6 +106,28 @@ public class NhanKhauBean {
                 + "<th>Nghề nghiệp</th>"
                 + "<th>Địa chỉ hiện tại</th>"
                 +"</tr>";
+        for (GiaDinhModel giaDinhModel: listGiaDinhModels) {
+            res += "<tr>"
+                    + "<td>"
+                    + giaDinhModel.getHoTen()
+                    + "</td>"
+                    + "<td>"
+                    + giaDinhModel.getNamSinh().toString()
+                    + "</td>"
+                    + "<td>"
+                    + giaDinhModel.getGioiTinh()
+                    + "</td>"
+                    + "<td>"
+                    + giaDinhModel.getQuanHeVoiNhanKhau()
+                    + "</td>"
+                    + "<td>"
+                    + giaDinhModel.getNgheNghiep()
+                    + "</td>"
+                    + "<td>"
+                    + giaDinhModel.getDiaChiHienTai()
+                    + "</td>"
+                    +"</tr>";
+        }
 
         res +=  "</table>"
                 + "</div></html>";

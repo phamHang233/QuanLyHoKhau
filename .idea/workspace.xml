@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/GiaDinhModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/HoKhauBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/HoKhauBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/NhanKhauBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/NhanKhauBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/DinhChinh.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/DinhChinhModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/DinhChinhModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/NhanKhauModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/NhanKhauModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/HoKhauService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/HoKhauService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +98,10 @@
       <workItem from="1675086803542" duration="598000" />
       <workItem from="1675090003093" duration="2999000" />
       <workItem from="1675093073634" duration="5520000" />
+      <workItem from="1675230068945" duration="1390000" />
+      <workItem from="1675237918715" duration="29000" />
+      <workItem from="1675238178481" duration="753000" />
+      <workItem from="1675346979693" duration="3881000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1674812412162</created>

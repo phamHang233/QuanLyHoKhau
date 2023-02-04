@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TitledPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -13,7 +14,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 // quản lý màn hình Hộ khẩu
 public class HoKhauController implements Initializable {
-
+    @FXML
+    private TitledPane NVHTitle;
     SwitchScene switchScene;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -31,7 +33,7 @@ public class HoKhauController implements Initializable {
 
     @FXML
     void btnNhaVH(ActionEvent event) throws IOException {
-        switchScene.changeToNVH(event);
+        NVHTitle.setExpanded(true);
     }
 
     @FXML
@@ -45,10 +47,7 @@ public class HoKhauController implements Initializable {
     }
     @FXML
     void btnDangXuat(ActionEvent event) throws IOException {
-        Parent root =  FXMLLoader.load(getClass().getResource("/views/login-view.fxml")) ;
-        Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root,  600,322));
-        stage.centerOnScreen();
+        switchScene.changToLogin(event);
     }
     @FXML
     void btnHoSo(ActionEvent event) throws IOException{
@@ -61,12 +60,15 @@ public class HoKhauController implements Initializable {
     }
     @FXML
     void btnCSVC (ActionEvent event) throws IOException{
+        switchScene.changeToThietBi(event);
     }
     @FXML
     void btnChoThue (ActionEvent event) throws IOException{
+        switchScene.changeToChoThue(event);
     }
     @FXML
     void btnSuDung (ActionEvent event) throws IOException{
+        switchScene.changeToSuDung(event);
 
     }
 

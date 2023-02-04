@@ -76,6 +76,7 @@ public class LoginController {
                 {
                     LoginController.currentUser.setID(rs.getInt("ID"));
                     LoginController.currentUser.setUserName(rs.getString("userName"));
+                    LoginController.currentUser.setIDNhanKhau(rs.getInt("IDNhanKhau"));
                     return true;
                 }
             }
@@ -83,6 +84,7 @@ public class LoginController {
                 if(rs.getString("password").equals(password)){
                     LoginController.currentUser.setID(rs.getInt("ID"));
                     LoginController.currentUser.setUserName(rs.getString("userName"));
+                    LoginController.currentUser.setIDNhanKhau(rs.getInt("IDNhanKhau"));
                     return true;
                 }
 

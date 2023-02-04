@@ -5,8 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ChoThueNVHController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/SceneSwitchNVH.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/SuDungNVHController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/Sua_ThietBiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ThemMoi_ChoThue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ThemMoi_SD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/Them_ThietBi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ThietBiNVHController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/ChoThueNVHModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/SuDungNVHModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/ThietBiNVHModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/NhaVanHoaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/sua-thietbi.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/sudung.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/them-sd.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/them-thietbi.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/them-thue.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/thietbi.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quan_ly_ho_khau.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HoKhauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/HoKhauController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/NVHController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/NhanKhauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/NhanKhauController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SwitchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SwitchScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/DinhChinh.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/DinhChinhModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/DinhChinhModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/hokhau-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/hokhau-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/nhankhau-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/nhankhau-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/nhavh-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/chothue.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +69,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2KXHqov99OAJI0mAqxVO5BgjAiH" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -42,24 +80,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "F:/Phan Mem/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre18.jar",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Phan Mem/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre18.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\cong nghe pm\beginning" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.Main" />
       <module name="beginning" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TableViewSample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controllers.NVH.TableViewSample" />
+      <module name="beginning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.NVH.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,6 +139,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.TableViewSample" />
       </list>
     </recent_temporary>
   </component>

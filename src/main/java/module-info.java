@@ -11,8 +11,8 @@ module java{
 //
     opens controllers to javafx.fxml;
     exports controllers;
-//    opens application to javafx.fxml;
-//    exports application;
+    opens controllers.NVH to javafx.fxml;
+    exports controllers.NVH;
     opens view to javafx.fxml;
     opens models to javafx.base;
     exports  view;

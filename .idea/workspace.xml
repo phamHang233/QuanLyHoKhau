@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="HoKhau">
+    <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HoKhauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/HoKhauController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quan_ly_ho_khau.bak" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -35,6 +35,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2KXHqov99OAJI0mAqxVO5BgjAiH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,11 +46,11 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Admin/Downloads/QuanLyNhanKhau-main (1)",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "F:/Phan Mem/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre18.jar",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RunManager">
@@ -92,35 +95,8 @@
       <option name="presentableId" value="Default" />
       <updated>1674114201629</updated>
       <workItem from="1674125071589" duration="4748000" />
-      <workItem from="1674806312896" duration="9131000" />
-      <workItem from="1675003897205" duration="724000" />
-      <workItem from="1675006707469" duration="3886000" />
-      <workItem from="1675040448954" duration="599000" />
-      <workItem from="1675086803542" duration="598000" />
-      <workItem from="1675090003093" duration="2999000" />
-      <workItem from="1675093073634" duration="5520000" />
-      <workItem from="1675230068945" duration="1390000" />
-      <workItem from="1675237918715" duration="29000" />
-      <workItem from="1675238178481" duration="753000" />
-      <workItem from="1675346979693" duration="4756000" />
-      <workItem from="1675480462366" duration="1844000" />
-      <workItem from="1675522474213" duration="7803000" />
+      <workItem from="1674806312896" duration="5021000" />
     </task>
-    <task id="LOCAL-00001" summary="test">
-      <created>1674812412162</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1674812412162</updated>
-    </task>
-    <task id="LOCAL-00002" summary="HoKhau">
-      <created>1675351986996</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1675351986996</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,10 +112,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="test" />
-    <MESSAGE value="HoKhau" />
-    <option name="LAST_COMMIT_MESSAGE" value="HoKhau" />
   </component>
 </project>

@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TitledPane;
 import javafx.stage.Stage;
 import services.SQLServerConnection;
 
@@ -24,6 +25,8 @@ public class MainController implements Initializable {
 
     }
     SwitchScene switchScene;
+    @FXML
+    private TitledPane NVHTitle;
 
     @FXML
     private Label hoTen;
@@ -62,13 +65,14 @@ public class MainController implements Initializable {
             query = "SELECT hoTen, namSinh, gioiTinh, chucVu, SDT FROM nhan_khau, users WHERE users.IDNhanKhau= nhan_khau.ID and users.userName= '" + LoginController.currentUser.getUserName() + "'";
             preparedStatement = (PreparedStatement)connection.prepareStatement(query);
             rs = preparedStatement.executeQuery();
-            while (rs.next()){
-                this.hoTen.setText((rs.getString("hoTen")));
-                this.chucVu.setText(String.valueOf(rs.getString("chucVu")));
-                this.gioiTinh.setText(String.valueOf(rs.getString("gioiTinh")));
+
+            LoginController.currentUser.setIDNhanKhau(rs.getInt("IDNhanKhau"));
+                this.hoTen.setText(rs.getString("hoTen"));
+                this.chucVu.setText(rs.getString("chucVu"));
+                this.gioiTinh.setText(rs.getString("gioiTinh"));
                 this.ngaySinh.setText(String.valueOf(rs.getDate("namSinh")));
                 this.sdt.setText(String.valueOf(rs.getString("SDT")));
-            }
+
             preparedStatement.close();
 
             // tính tổng số hộ khẩu
@@ -124,7 +128,8 @@ public class MainController implements Initializable {
 
     @FXML
     void btnNhaVH(ActionEvent event) throws IOException {
-        switchScene.changeToNVH(event);
+        NVHTitle.setExpanded(true);
+
     }
 
     @FXML
@@ -142,10 +147,7 @@ public class MainController implements Initializable {
     }
     @FXML
     void btnDangXuat(ActionEvent event) throws IOException {
-        Parent root =  FXMLLoader.load(getClass().getResource("/views/login-view.fxml")) ;
-        Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root,  600,322));
-        stage.centerOnScreen();
+        switchScene.changToLogin(event);
     }
     @FXML
     void btnHoSo(ActionEvent event) throws IOException{
@@ -158,12 +160,15 @@ public class MainController implements Initializable {
     }
     @FXML
     void btnCSVC (ActionEvent event) throws IOException{
+        switchScene.changeToThietBi(event);
     }
     @FXML
     void btnChoThue (ActionEvent event) throws IOException{
+        switchScene.changeToChoThue(event);
     }
     @FXML
     void btnSuDung (ActionEvent event) throws IOException{
+        switchScene.changeToSuDung(event);
 
     }
 }

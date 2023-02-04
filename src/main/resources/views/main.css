@@ -26,5 +26,10 @@
 .titled-pane > .title {
     -fx-background-color: #a9d7ff;
 }
-
+.insest_background{
+   -fx-background-color: #eeeeee;
+}
+.choosen_button {
+    -fx-background-color: #93b8d7;
+}
 

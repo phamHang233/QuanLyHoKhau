@@ -9,10 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import models.NhanKhauModel;
@@ -33,7 +30,10 @@ import static services.SQLServerConnection.getSqlConnection;
 
 //Quản lý màn hình thống kê
 public class ThongKeController implements Initializable {
+
     SwitchScene switchScene;
+    @FXML
+    private TitledPane NVHTitle;
     @FXML
     private Button buttonGiaDinh;
 
@@ -96,7 +96,7 @@ public class ThongKeController implements Initializable {
 
     @FXML
     void btnNhaVH(ActionEvent event) throws IOException {
-        switchScene.changeToNVH(event);
+         NVHTitle.setExpanded(true);
     }
 
     @FXML
@@ -114,10 +114,7 @@ public class ThongKeController implements Initializable {
     }
     @FXML
     void btnDangXuat(ActionEvent event) throws IOException {
-        Parent root =  FXMLLoader.load(getClass().getResource("/views/login-view.fxml")) ;
-        Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root,  600,322));
-        stage.centerOnScreen();
+        switchScene.changToLogin(event);
     }
     @FXML
     void btnHoSo(ActionEvent event) throws IOException{
@@ -174,12 +171,16 @@ public class ThongKeController implements Initializable {
     }
     @FXML
     void btnCSVC (ActionEvent event) throws IOException{
+        switchScene.changeToThietBi(event);
     }
     @FXML
     void btnChoThue (ActionEvent event) throws IOException{
+        switchScene.changeToChoThue(event);
     }
     @FXML
     void btnSuDung (ActionEvent event) throws IOException{
+        switchScene.changeToSuDung(event);
 
     }
+
 }

@@ -64,6 +64,8 @@ public class SwitchScene {
         stage.centerOnScreen();
     }
 
+    public void changeToNVH(ActionEvent event) {
+    }
 }
 
 

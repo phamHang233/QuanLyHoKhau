@@ -1,4 +1,6 @@
 package controllers;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -6,7 +8,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import services.HoKhauService;
 
 import java.io.IOException;
 import java.net.URL;
@@ -15,10 +19,20 @@ import java.util.ResourceBundle;
 public class HoKhauController implements Initializable {
 
     SwitchScene switchScene;
+    @FXML
+    Button hoKhauButton;
+
+    HoKhauService hoKhauService;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         switchScene = new SwitchScene();
+        hoKhauButton.setStyle("-fx-background-color: #0B82FA; -fx-text-fill: white");
+        hoKhauService = new HoKhauService();
+
     }
+
+
     @FXML
     void btnTrangChu(ActionEvent event) throws IOException {
         switchScene.changeToMain(event);

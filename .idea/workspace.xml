@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="test">
+    <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="HoKhau">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/HoKhauService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/HoKhauService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HoKhauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/HoKhauController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/QuanLyHoKhau2",
+    "last_opened_file_path": "C:/Users/Admin/Downloads/QuanLyNhanKhau-main (1)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -101,7 +102,9 @@
       <workItem from="1675230068945" duration="1390000" />
       <workItem from="1675237918715" duration="29000" />
       <workItem from="1675238178481" duration="753000" />
-      <workItem from="1675346979693" duration="3881000" />
+      <workItem from="1675346979693" duration="4756000" />
+      <workItem from="1675480462366" duration="1844000" />
+      <workItem from="1675522474213" duration="7803000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1674812412162</created>
@@ -110,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674812412162</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="HoKhau">
+      <created>1675351986996</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675351986996</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +139,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="HoKhau" />
+    <option name="LAST_COMMIT_MESSAGE" value="HoKhau" />
   </component>
 </project>

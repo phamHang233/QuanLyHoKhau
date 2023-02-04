@@ -25,6 +25,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
+import services.StringService;
+import services.NhanKhauService;
+
+
 import static services.SQLServerConnection.getSqlConnection;
 
 //Quản lý màn hình thống kê

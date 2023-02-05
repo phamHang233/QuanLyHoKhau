@@ -3,8 +3,12 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
@@ -130,7 +134,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <TitledPane fx:id="NVHTitle" animated="false" expanded="false" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@main.css" text="Nhà Văn Hoá">
+                        <TitledPane fx:id="NVHTitle" animated="false" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@main.css" text="Nhà Văn Hoá">
                             <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="148.0" styleClass="trang__chu__button" stylesheets="@main.css">
                                     <children>
@@ -151,6 +155,41 @@
                         </TitledPane>
                     </children>
                 </VBox>
+            <AnchorPane layoutX="150.0" layoutY="54.0" prefHeight="113.0" prefWidth="1050.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="36.0" layoutY="14.0" prefHeight="35.0" prefWidth="334.0" text="Quản lý Nhân Khẩu">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="14.0" layoutY="57.0" prefHeight="54.0" prefWidth="1018.0" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#themMoi" prefHeight="35.0" prefWidth="79.0" text="Thêm Mới" />
+                        <Button mnemonicParsing="false" onAction="#dangKyTamVang" prefHeight="35.0" prefWidth="87.0" text="ĐK Tạm vắng" />
+                        <Button mnemonicParsing="false" onAction="#dangKyTamTru" prefHeight="35.0" prefWidth="76.0" text="ĐK Tạm trú" />
+                        <Button mnemonicParsing="false" onAction="#khaiTu" prefHeight="36.0" prefWidth="64.0" text="Khai tử" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="150.0" layoutY="167.0" prefHeight="473.0" prefWidth="1050.0">
+               <children>
+                  <TableView fx:id="table" layoutX="98.0" layoutY="23.0" prefHeight="417.0" prefWidth="852.0">
+                    <columns>
+                      <TableColumn fx:id="ID" prefWidth="65.0" text="ID" />
+                      <TableColumn fx:id="hoTen" prefWidth="120.0" text="Họ tên" />
+                        <TableColumn fx:id="CCCD" prefWidth="127.0" text="CCCD" />
+                        <TableColumn fx:id="namSinh" minWidth="6.0" prefWidth="121.0" text="Ngày sinh" />
+                        <TableColumn fx:id="gioiTinh" minWidth="0.0" prefWidth="70.0" text="Giới tính" />
+                        <TableColumn fx:id="diaChiHienNay" minWidth="3.0" prefWidth="348.0" text="Địa chỉ hiện tại" />
+                    </columns>
+                  </TableView>
+                  <Separator layoutY="3.0" prefHeight="0.0" prefWidth="1050.0" />
+               </children>
+            </AnchorPane>
             </children>
         </AnchorPane>
     </children>

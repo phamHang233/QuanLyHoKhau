@@ -271,6 +271,18 @@ public class NhanKhauService {
 //        }
 //    }
 
+    public void khaiTu(int idNguoiChet) {
+        try {
+            Connection connection = SQLServerConnection.getSqlConnection();
+            Statement statement = connection.createStatement();
+            String query = "DELETE FROM `QuanLyNhanKhau`.`nhan_khau` WHERE (`ID` = '" + idNguoiChet + "');";
+            statement.executeUpdate(query);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void themKhaiTu(KhaiTuModel khaiTuModel) {
         try {
             int ID = khaiTuModel.getID();
@@ -296,6 +308,22 @@ public class NhanKhauService {
     private void exceptionHandle(String message) {
         JOptionPane JOptionPane = null;
         JOptionPane.showMessageDialog(null, message, "Warning", JOptionPane.ERROR_MESSAGE);
+    }
+    public static String getCMTfromID(int ID){
+        String soCMT = null;
+        try{
+            Connection connection = SQLServerConnection.getSqlConnection();
+            String idString = String.valueOf(ID);
+            String query = "SELECT * FROM chung_minh_thu WHERE idNhanKhau = '" + idString + "'";
+            ResultSet rs = connection.createStatement().executeQuery(query);
+            if(rs.next()){
+                soCMT = rs.getString("soCMT");
+
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return soCMT;
     }
 }
 

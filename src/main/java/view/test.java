@@ -1,25 +1,23 @@
 package view;
 
-import com.microsoft.sqlserver.jdbc.SQLServerException;
+import controllers.NhanKhauController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.Calendar;
 
-public class Main extends Application {
+
+public class test extends Application {
+
     public static Calendar calendar;
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/views/login-view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/nhankhau-view.fxml"));
         Scene scene1 = new Scene(root, 600, 322);
         stage.setTitle("Quản Lý Nhân Khẩu !");
         stage.setScene(scene1);

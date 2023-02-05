@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TitledPane;
 import javafx.stage.Stage;
+import services.NhanKhauService;
 
 
 import java.io.IOException;
@@ -77,6 +78,20 @@ public class NhanKhauController implements Initializable {
     void btnThongBao(ActionEvent event) throws IOException{
         System.out.println("Hiển thị thông báo!");
     }
+
+    private NhanKhauService nhanKhauService;
+
+//    @Override
+//    public void initialize(URL location, ResourceBundle resources) {
+////        sceneSwitchNhanKhau = new SceneSwitchNhanKhau();
+//        nhanKhauService = new NhanKhauService();
+////        sceneSwitch = new SceneSwitch();
+////        setDataTable();
+////        nhanKhauButton.setStyle("-fx-background-color: #0B82FA; -fx-text-fill: white");
+//    }
+
+
+
 
 
 }

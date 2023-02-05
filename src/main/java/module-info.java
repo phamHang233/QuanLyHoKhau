@@ -7,6 +7,7 @@ module java{
     requires javafx.base;
     requires java.naming;
     requires com.microsoft.sqlserver.jdbc;
+    requires java.desktop;
 //    requires javafx
 //
     opens controllers to javafx.fxml;

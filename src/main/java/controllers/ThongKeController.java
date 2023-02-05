@@ -32,6 +32,8 @@ import static services.SQLServerConnection.getSqlConnection;
 public class ThongKeController implements Initializable {
 
     SwitchScene switchScene;
+    NhanKhauService nhanKhauService;
+
     @FXML
     private TitledPane NVHTitle;
     @FXML
@@ -77,6 +79,8 @@ public class ThongKeController implements Initializable {
     ObservableList<NhanKhauModel> list = FXCollections.observableArrayList();
     public void initialize(URL url, ResourceBundle resourceBundle) {
         switchScene = new SwitchScene();
+        nhanKhauService = new NhanKhauService();
+
         hoten.setCellValueFactory(new PropertyValueFactory<>("hoTen"));
         ngaysinh.setCellValueFactory(new PropertyValueFactory<>("namSinh"));
         diachi.setCellValueFactory(new PropertyValueFactory<>("diaChiHienNay"));
@@ -88,6 +92,8 @@ public class ThongKeController implements Initializable {
         tongiao.setCellValueFactory(new PropertyValueFactory<>("tonGiao"));
         dantoc.setCellValueFactory(new PropertyValueFactory<>("danToc"));
     }
+
+
     @FXML
     void btnHoKhau(ActionEvent event) throws IOException {
         switchScene.changeToHoKhau(event);

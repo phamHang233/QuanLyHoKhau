@@ -2,6 +2,8 @@ package services;
 
 import Beans.NhanKhauBean;
 import models.*;
+
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,8 +13,6 @@ import java.util.List;
 
 
 public class NhanKhauService {
-
-
     public NhanKhauBean getNhanKhau(String cmt) {
         NhanKhauBean nhanKhauBean = new NhanKhauBean();
         try {
@@ -294,7 +294,8 @@ public class NhanKhauService {
      * Ham xử lý ngoại lệ : thông báo ra lỗi nhận được
      */
     private void exceptionHandle(String message) {
-//        JOptionPane.showMessageDialog(null, message, "Warning", JOptionPane.ERROR_MESSAGE);
+        JOptionPane JOptionPane = null;
+        JOptionPane.showMessageDialog(null, message, "Warning", JOptionPane.ERROR_MESSAGE);
     }
 }
 

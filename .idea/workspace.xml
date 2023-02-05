@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/thongke-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/GiaDinhHoKhau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/GiaDinhNK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/LichSuHoKhau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/SwitchSceneTK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/TieuSuNK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/GiaDinhModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/giaDinhHoKhau.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/giaDinhNK.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/lichSuHoKhau.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/tieuSuNK.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SwitchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SwitchScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SQLServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SQLServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/chothue.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/chothue.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/NVH/ChoThueNVHController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ChoThueNVHController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/ThongKeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/thongKe/thongke-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/thongke-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,5 +155,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

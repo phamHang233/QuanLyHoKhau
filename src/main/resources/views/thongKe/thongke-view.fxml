@@ -22,7 +22,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane pickOnBounds="false" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ThongKeController">
+<AnchorPane pickOnBounds="false" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ThongKe.ThongKeController">
    <children>
       <AnchorPane accessibleRole="TEXT" minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="1200.0" style="-fx-background-color: lnr;">
          <children>
@@ -138,9 +138,9 @@
                   </Button>
                   <VBox prefHeight="91.0" prefWidth="151.0">
                      <children>
-                        <Button fx:id="timKiemNhanKhauBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#thongKeMode" prefHeight="30.0" prefWidth="151.0" text="Tìm kiếm nhân khẩu" />
-                        <Button fx:id="timKiemHoKhauBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#thongKeMode" prefHeight="30.0" prefWidth="151.0" text="Tìm kiếm hộ khẩu" />
-                        <Button fx:id="thongKeSoLieuBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#thongKeMode" prefHeight="30.0" prefWidth="151.0" text="Thống kê số liệu" />
+                        <Button fx:id="timKiemNhanKhauBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#chonThongKeMode" prefHeight="30.0" prefWidth="151.0" text="Tìm kiếm nhân khẩu" />
+                        <Button fx:id="timKiemHoKhauBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#chonThongKeMode" prefHeight="30.0" prefWidth="151.0" text="Tìm kiếm hộ khẩu" />
+                        <Button fx:id="thongKeSoLieuBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#chonThongKeMode" prefHeight="30.0" prefWidth="151.0" text="Thống kê số liệu" />
                      </children>
                   </VBox>
                   <TitledPane fx:id="NVHTitle" animated="false" expanded="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="151.0" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@../main.css" text="Nhà Văn Hoá">
@@ -182,7 +182,7 @@
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <AnchorPane layoutY="76.0" prefHeight="510.0" prefWidth="1049.0">
+                  <AnchorPane fx:id="thongTinTimKiemHoKhau" layoutY="76.0" prefHeight="510.0" prefWidth="1049.0">
                      <children>
                         <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="51.0" text="Chủ hộ:">
                            <font>
@@ -219,8 +219,8 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Button fx:id="giaDinhHoKhau" layoutX="14.0" layoutY="144.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#xemThemGiaDinh" prefHeight="30.0" prefWidth="172.0" text="Xem thêm gia đình hộ khẩu" />
-                        <Button fx:id="lichSuThayDoi" layoutX="14.0" layoutY="174.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#xemThemLichSu" prefHeight="30.0" prefWidth="206.0" text="Xem thêm lịch sử thay đổi hộ khẩu" />
+                        <Button fx:id="giaDinhHoKhau" layoutX="14.0" layoutY="144.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#xemThemThongTinHoKhau" prefHeight="30.0" prefWidth="172.0" text="Xem thêm gia đình hộ khẩu" />
+                        <Button fx:id="lichSuThayDoi" layoutX="203.0" layoutY="144.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#xemThemThongTinHoKhau" prefHeight="30.0" prefWidth="206.0" text="Xem thêm lịch sử thay đổi hộ khẩu" />
                         <Label fx:id="hoTenChuHo" layoutX="65.0" layoutY="14.0" prefHeight="30.0" prefWidth="318.0" />
                         <Label fx:id="maKhuVucHoKhau" layoutX="94.0" layoutY="44.0" prefHeight="30.0" prefWidth="187.0" />
                         <Label fx:id="diaChiHoKhau" layoutX="331.0" layoutY="44.0" prefHeight="30.0" prefWidth="187.0" />
@@ -232,7 +232,7 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="nhanKhauMode" layoutX="151.0" layoutY="52.0" prefHeight="594.0" prefWidth="1049.0" visible="false">
+            <AnchorPane fx:id="nhanKhauMode" layoutX="151.0" layoutY="52.0" prefHeight="593.0" prefWidth="1049.0">
                <children>
                   <Label layoutX="11.0" layoutY="25.0" prefHeight="30.0" prefWidth="50.0" text="CCCD :">
                      <font>
@@ -463,13 +463,13 @@
                            </font>
                         </Label>
                         <Label fx:id="tiengDanTocNhanKhau" layoutX="116.0" layoutY="209.0" prefHeight="30.0" prefWidth="213.0" />
-                        <Button layoutX="1.0" layoutY="478.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Xem thêm tiểu sử" />
-                        <Button layoutX="1.0" layoutY="450.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Xem thêm thông tin gia đình" />
+                        <Button layoutX="210.0" layoutY="462.0" mnemonicParsing="false" onAction="#xemThemThongTinNhanKhau" prefHeight="25.0" prefWidth="120.0" text="Xem thêm tiểu sử" fx:id="xemThemTieuSu" />
+                        <Button layoutX="10.0" layoutY="462.0" mnemonicParsing="false" onAction="#xemThemThongTinNhanKhau" prefHeight="25.0" prefWidth="180.0" text="Xem thêm thông tin gia đình" fx:id="xemThemGiaDinh" />
                      </children>
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="151.0" layoutY="54.0" prefHeight="586.0" prefWidth="1049.0">
+            <AnchorPane fx:id="thongKeMode" layoutX="151.0" layoutY="54.0" prefHeight="586.0" prefWidth="1049.0" visible="false">
                <children>
                   <AnchorPane layoutX="787.0" prefHeight="586.0" prefWidth="263.0">
                      <children>
@@ -478,7 +478,7 @@
                               <Font size="15.0" />
                            </font>
                         </Label>
-                        <ComboBox fx:id="gioiTinhThongKe" layoutX="99.0" layoutY="31.0" prefWidth="150.0" />
+                        <ComboBox fx:id="chonGioiTinhThongKe" layoutX="99.0" layoutY="31.0" prefWidth="150.0" />
                         <Label layoutX="14.0" layoutY="59.0" prefHeight="30.0" prefWidth="55.0" text="Độ tuổi:">
                            <font>
                               <Font size="15.0" />
@@ -493,13 +493,13 @@
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="39.0" layoutY="1.0" prefHeight="30.0" prefWidth="70.0" />
+                              <TextField fx:id="tuTuoiText" layoutX="39.0" layoutY="1.0" prefHeight="30.0" prefWidth="70.0" />
                               <Label layoutX="125.0" prefHeight="30.0" prefWidth="33.0" text="Đến:">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="158.0" layoutY="1.0" prefHeight="30.0" prefWidth="70.0" />
+                              <TextField fx:id="denTuoiText" layoutX="158.0" layoutY="1.0" prefHeight="30.0" prefWidth="70.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane fx:id="capDoMode" layoutX="1.0" layoutY="119.0" prefHeight="31.0" prefWidth="249.0" visible="false">
@@ -530,19 +530,28 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <TableView layoutY="41.0" prefHeight="545.0" prefWidth="787.0">
+                  <TableView fx:id="bangThongKe" layoutY="41.0" prefHeight="545.0" prefWidth="787.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="ID" />
-                      <TableColumn prefWidth="101.33332824707031" text="CCCD" />
-                        <TableColumn prefWidth="142.66665649414062" text="Họ và tên" />
-                        <TableColumn prefWidth="109.99993896484375" text="Ngày sinh" />
-                        <TableColumn prefWidth="118.66668701171875" text="Giới tính" />
-                        <TableColumn prefWidth="244.00006103515625" text="Địa chỉ" />
+                      <TableColumn fx:id="idThongKe" prefWidth="83.33334350585938" text="ID" />
+                      <TableColumn fx:id="soCanCuocThongKe" prefWidth="93.33332824707031" text="CCCD" />
+                        <TableColumn fx:id="hoTenThongKe" prefWidth="142.66665649414062" text="Họ và tên" />
+                        <TableColumn fx:id="ngaySinhThongKe" prefWidth="109.99993896484375" text="Ngày sinh" />
+                        <TableColumn fx:id="gioiTinhThongKe" prefWidth="118.66668701171875" text="Giới tính" />
+                        <TableColumn fx:id="diaChiThongKe" prefWidth="244.00006103515625" text="Địa chỉ" />
                     </columns>
                   </TableView>
-                  <Label layoutX="308.0" prefHeight="35.0" prefWidth="172.0" text="Bảng thống kê">
+                  <Label layoutX="313.0" prefHeight="35.0" prefWidth="161.0" text="Bảng thống kê">
                      <font>
                         <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="hienThiMacDinh" layoutX="151.0" layoutY="54.0" prefHeight="586.0" prefWidth="1049.0" visible="false">
+               <children>
+                  <Label layoutX="187.0" layoutY="202.0" prefHeight="181.0" prefWidth="675.0" text="Chọn chế độ cho mục thống kê" textFill="#00000044">
+                     <font>
+                        <Font size="48.0" />
                      </font>
                   </Label>
                </children>

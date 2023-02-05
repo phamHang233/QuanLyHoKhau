@@ -29,11 +29,41 @@ import static services.SQLServerConnection.getSqlConnection;
 public class ThongKeController implements Initializable {
 
     SwitchScene switchScene;
+    // Thuoc tinh cho phan popup xem them thong tin gia dinh nhan khau
+    @FXML
+    private TableColumn<?, ?> gioiTinhNhanKhauXT;
+
+    @FXML
+    private TableColumn<?, ?> hoTenNhanKhauXT;
+
+    @FXML
+    private TableColumn<?, ?> idNhanKhauXT;
+
+    @FXML
+    private TableColumn<?, ?> ngaySinhNhanKhauXT;
+
+    @FXML
+    private TableColumn<?, ?> ngheNghiepNhanKhauXT;
+
+    @FXML
+    private TableColumn<?, ?> qhNhanKhauXT;
+
+    @FXML
+    private TableView<?> thongTinGiaDinhXT;
+
+
+    //
     @FXML
     private TitledPane NVHTitle;
 
     @FXML
-    private AnchorPane nhanKhauMode;
+    private TableView<?> bangThongKe;
+
+    @FXML
+    private ComboBox<?> capDoBox;
+
+    @FXML
+    private AnchorPane capDoMode;
 
     @FXML
     private Label chuyenMonNhanKhau;
@@ -42,37 +72,88 @@ public class ThongKeController implements Initializable {
     private Label danTocNhanKhau;
 
     @FXML
+    private TextField denTuoiText;
+
+    @FXML
+    private Label diaChiHoKhau;
+
+    @FXML
     private Label diaChiMoiNhanKhau;
 
     @FXML
     private Label diaChiNhanKhau;
 
     @FXML
+    private TableColumn<?, ?> diaChiThongKe;
+
+    @FXML
+    private AnchorPane doTuoiMode;
+
+    @FXML
     private Label ghiChuNhanKhau;
+
+    @FXML
+    private Button giaDinhHoKhau;
 
     @FXML
     private Label gioiTinhNhanKhau;
 
     @FXML
+    private TableColumn<?, ?> gioiTinhThongKe;
+
+    @FXML
+    private AnchorPane hoKhauMode;
+
+    @FXML
+    private Label hoTenChuHo;
+
+    @FXML
     private Label hoTenNhanKhau;
+
+    @FXML
+    private TableColumn<?, ?> hoTenThongKe;
 
     @FXML
     private Label hocVanNhanKhau;
 
     @FXML
+    private TableColumn<?, ?> idThongKe;
+
+    @FXML
+    private Button lichSuThayDoi;
+
+    @FXML
     private Label lyDoChuyenDenNhanKhau;
+
+    @FXML
+    private Label lyDoChuyenHoKhau;
 
     @FXML
     private Label lyDoXoaNhanKhau;
 
     @FXML
+    private TextField maHoKhau;
+
+    @FXML
+    private Label maKhuVucHoKhau;
+
+    @FXML
     private Label ngayChuyenDenNhanKhau;
+
+    @FXML
+    private Label ngayChuyenDiHoKhau;
 
     @FXML
     private Label ngayChuyenDiNhanKhau;
 
     @FXML
+    private Label ngayLapHoKhau;
+
+    @FXML
     private Label ngaySinhNhanKhau;
+
+    @FXML
+    private TableColumn<?, ?> ngaySinhThongKe;
 
     @FXML
     private Label ngayTaoNhanKhau;
@@ -90,7 +171,13 @@ public class ThongKeController implements Initializable {
     private Label nguoiTaoNhanKhau;
 
     @FXML
+    private Label nguoiThucHienHoKhau;
+
+    @FXML
     private Label nguyenQuanNhanKhau;
+
+    @FXML
+    private AnchorPane nhanKhauMode;
 
     @FXML
     private Label noiLamViecNhanKhau;
@@ -105,7 +192,19 @@ public class ThongKeController implements Initializable {
     private TextField soCanCuocCongDan;
 
     @FXML
+    private TableColumn<?, ?> soCanCuocThongKe;
+
+    @FXML
     private Label soHoChieuNhanKhau;
+
+    @FXML
+    private CheckBox theoCapDo;
+
+    @FXML
+    private CheckBox theoDoTuoi;
+
+    @FXML
+    private AnchorPane thongKeMode;
 
     @FXML
     private Button thongKeSoLieuBtn;
@@ -129,8 +228,21 @@ public class ThongKeController implements Initializable {
     private Button timKiemNhanKhauBtn;
 
     @FXML
+    private ComboBox<?> tinhTrangThongKe;
+
+    @FXML
     private Label tonGiaoNhanKhau;
 
+    @FXML
+    private TextField tuTuoiText;
+    @FXML
+    private AnchorPane thongTinTimKiemHoKhau;
+    @FXML
+    private AnchorPane hienThiMacDinh;
+    @FXML
+    private Button xemThemGiaDinh;
+    @FXML
+    private Button xemThemTieuSu;
     private void exceptionHandle(String message) {
     }
 
@@ -245,7 +357,7 @@ public class ThongKeController implements Initializable {
         }
     }
         @FXML
-        void xoaTimKiemNhanKhau (ActionEvent event){
+        void xoaTimKiemNhanKhau (){
             thongTinTimKiemNhanKhau.setVisible(false);
             soCanCuocCongDan.setText("");
             hoTenNhanKhau.setText("");
@@ -277,15 +389,78 @@ public class ThongKeController implements Initializable {
             ghiChuNhanKhau.setText("");
         }
         @FXML
-        void thongKeMode(ActionEvent event) throws IOException {
+        void xoaTimKiemHoKhau(){
+            thongTinTimKiemHoKhau.setVisible(false);
+            hoTenChuHo.setText("");
+            maKhuVucHoKhau.setText("");
+            diaChiHoKhau.setText("");
+            ngayLapHoKhau.setText("");
+            ngayChuyenDiHoKhau.setText("");
+            ngayLapHoKhau.setText("");
+            ngayChuyenDiHoKhau.setText("");
+            lyDoChuyenHoKhau.setText("");
+            nguoiThucHienHoKhau.setText("");
+            maHoKhau.setText("");
+        }
+        @FXML
+        void chonThongKeMode(ActionEvent event) throws IOException {
 //            switchScene.changeToThongKe(event);
-            nhanKhauMode.setVisible(true);
-//            System.out.println("test thong ke Mode");
-            thongTinTimKiemNhanKhau.setVisible(false);
+            if(event.getSource() == timKiemNhanKhauBtn){
+                nhanKhauMode.setVisible(true);
+                xoaTimKiemNhanKhau();
+                hoKhauMode.setVisible(false);
+                thongKeMode.setVisible(false);
+            }
+            else if(event.getSource() == timKiemHoKhauBtn){
+                hoKhauMode.setVisible(true);
+                xoaTimKiemHoKhau();
+                nhanKhauMode.setVisible(false);
+                thongKeMode.setVisible(false);
+            }
+            else{
+                thongKeMode.setVisible(true);
+                hoKhauMode.setVisible(false);
+                nhanKhauMode.setVisible(false);
+            }
+
+
         }
-        @Override
-        public void initialize (URL url, ResourceBundle resourceBundle){
-            switchScene = new SwitchScene();
-            nhanKhauMode.setVisible(false);
+        public void timKiemHoKhau(ActionEvent event) {
+            
         }
+        public void xemThemGiaDinh(ActionEvent event) {
+
+        }
+        public void xemThemLichSu(ActionEvent event) {
+
+        }
+        public void timKiemThongKe(ActionEvent event) {
+
+        }
+        public void xoaTimKiemThongKe(ActionEvent event) {
+
+        }
+    public void xemThemThongTinNhanKhau(ActionEvent event) {
+
+    }
+    // Nut huy va OK cua phan popup xem them gia dinh nhan khau
+    @FXML
+    void btnHuy(ActionEvent event) {
+        
+    }
+
+    @FXML
+    void btnOK(ActionEvent event) {
+
+    }
+
+    // Ham khoi tao cho thongKeController
+    @Override
+    public void initialize (URL url, ResourceBundle resourceBundle){
+        switchScene = new SwitchScene();
+        hienThiMacDinh.setVisible(true);
+        nhanKhauMode.setVisible(false);
+        hoKhauMode.setVisible(false);
+        thongKeMode.setVisible(false);
+    }
 }

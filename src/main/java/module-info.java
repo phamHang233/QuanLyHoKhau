@@ -16,4 +16,6 @@ module java{
     opens view to javafx.fxml;
     opens models to javafx.base;
     exports  view;
+    exports controllers.ThongKe;
+    opens controllers.ThongKe to javafx.fxml;
 }

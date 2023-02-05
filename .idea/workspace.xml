@@ -5,42 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ChoThueNVHController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/SceneSwitchNVH.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/SuDungNVHController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/Sua_ThietBiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ThemMoi_ChoThue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ThemMoi_SD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/Them_ThietBi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ThietBiNVHController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/ChoThueNVHModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/SuDungNVHModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/ThietBiNVHModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/NhaVanHoaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/sua-thietbi.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/sudung.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/them-sd.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/them-thietbi.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/them-thue.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/thietbi.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/thongke-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HoKhauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/HoKhauController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/NVHController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/NhanKhauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/NhanKhauController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SwitchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SwitchScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/DinhChinh.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/DinhChinhModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/DinhChinhModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/hokhau-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/hokhau-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/nhankhau-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/nhankhau-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/nhavh-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/chothue.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SQLServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SQLServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/chothue.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/chothue.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="thongkeController" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -138,6 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.TableViewSample" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.TableViewSample" />
       </list>

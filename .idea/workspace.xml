@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="Tam Vang Tam Tru fix bug">
+    <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="update check ngày sinh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/nhankhauControllers/ThemMoiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/nhankhauControllers/ThemMoiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/nhankhau-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/nhankhau-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +150,7 @@
       <workItem from="1674125071589" duration="4748000" />
       <workItem from="1674806312896" duration="5021000" />
       <workItem from="1675576813860" duration="4090000" />
-      <workItem from="1675706181164" duration="3125000" />
+      <workItem from="1675706181164" duration="6061000" />
     </task>
     <task id="LOCAL-00001" summary="chua sua controller">
       <created>1675531743073</created>
@@ -186,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675708240401</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update check ngày sinh">
+      <created>1675709352375</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675709352375</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +217,7 @@
     <MESSAGE value="Sửa lỗi giao diện" />
     <MESSAGE value="Sql Connection" />
     <MESSAGE value="Tam Vang Tam Tru fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tam Vang Tam Tru fix bug" />
+    <MESSAGE value="update check ngày sinh" />
+    <option name="LAST_COMMIT_MESSAGE" value="update check ngày sinh" />
   </component>
 </project>

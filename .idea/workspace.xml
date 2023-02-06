@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="Sửa lỗi giao diện">
+    <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="Tam Vang Tam Tru fix bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/nhankhauControllers/ThemMoiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/nhankhauControllers/ThemMoiController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +54,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/admin/IdeaProjects/Quan_ly_ho_khau",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -145,6 +149,7 @@
       <workItem from="1674125071589" duration="4748000" />
       <workItem from="1674806312896" duration="5021000" />
       <workItem from="1675576813860" duration="4090000" />
+      <workItem from="1675706181164" duration="3125000" />
     </task>
     <task id="LOCAL-00001" summary="chua sua controller">
       <created>1675531743073</created>
@@ -167,7 +172,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675689610840</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Sql Connection">
+      <created>1675690968022</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675690968022</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Tam Vang Tam Tru fix bug">
+      <created>1675708240400</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675708240401</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +207,8 @@
     <MESSAGE value="chua sua controller" />
     <MESSAGE value="Update NhanKhau" />
     <MESSAGE value="Sửa lỗi giao diện" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sửa lỗi giao diện" />
+    <MESSAGE value="Sql Connection" />
+    <MESSAGE value="Tam Vang Tam Tru fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tam Vang Tam Tru fix bug" />
   </component>
 </project>

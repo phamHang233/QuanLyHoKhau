@@ -137,8 +137,7 @@ public class ThemMoiController implements Initializable {
         CanCuocCongDanModel chungMinhThu = nhanKhauBean.getCanCuocCongDanModel();
         Connection connection = SQLServerConnection.getSqlConnection();
         // 1 - 19
-        String query = "INSERT INTO nhan_khau (ID,hoTen, bietDanh, namSinh, gioiTinh, noiSinh, nguyenQuan, danToc, tonGiao, quocTich, soHoChieu, noiThuongTru, diaChiHienNay, trinhDoHocVan, TrinhDoChuyenMon, bietTiengDanToc, trinhDoNgoaiNgu, ngheNghiep, noiLamViec)"
-                + " values (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO nhan_khau (ID,hoTen, bietDanh, namSinh, gioiTinh, noiSinh, nguyenQuan, danToc, tonGiao, quocTich, soHoChieu, noiThuongTru, diaChiHienNay, trinhDoHocVan, TrinhDoChuyenMon, bietTiengDanToc, trinhDoNgoaiNgu, ngheNghiep, noiLamViec) values(?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement preparedStatement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
         preparedStatement.setInt(1, nhanKhau.getID());
         preparedStatement.setString(2, nhanKhau.getHoTen());
@@ -168,24 +167,25 @@ public class ThemMoiController implements Initializable {
         ResultSet rs = preparedStatement.getGeneratedKeys();
         if (rs.next()) {
             int genID = rs.getInt(1);
-            String sql = "INSERT INTO chung_minh_thu(ID, soCMT)"
-                    + " values (?,?)";
+            String sql = "INSERT INTO chung_minh_thu(ID,idNhanKhau, soCMT)"
+                    + " values (?,?,?)";
             PreparedStatement prst = connection.prepareStatement(sql);
             prst.setInt(1, genID);
-            prst.setString(2, chungMinhThu.getSoCMT());
+            prst.setInt(2, genID);
+            prst.setString(3, chungMinhThu.getSoCMT());
             prst.execute();
             nhanKhauBean.getListTieuSuModels().forEach(tieuSu -> {
                 try {
-                    String sql_tieu_su = "INSERT INTO tieu_su(ID, tuNgay, denNgay, diaChi, ngheNghiep, noiLamViec)"
-                            + " values (?, ?, ?, ?, ?, ?)";
+                    String sql_tieu_su = "INSERT INTO tieu_su(ID, idNhanKhau, tuNgay, denNgay, diaChi, ngheNghiep, noiLamViec) values (?,?, ?, ?, ?, ?, ?)";
                     PreparedStatement preStatement = connection.prepareStatement(sql_tieu_su);
                     preStatement.setInt(1, genID);
+                    preStatement.setInt(2, genID);
                     Date tuNgay = new Date(tieuSu.getTuNgay().getTime());
-                    preStatement.setDate(2, tuNgay);
-                    preStatement.setDate(3, new Date(tieuSu.getDenNgay().getTime()));
-                    preStatement.setString(4, tieuSu.getDiaChi());
-                    preStatement.setString(5, tieuSu.getNgheNghiep());
-                    preStatement.setString(6, tieuSu.getNoiLamViec());
+                    preStatement.setDate(3, tuNgay);
+                    preStatement.setDate(4, new Date(tieuSu.getDenNgay().getTime()));
+                    preStatement.setString(5, tieuSu.getDiaChi());
+                    preStatement.setString(6, tieuSu.getNgheNghiep());
+                    preStatement.setString(7, tieuSu.getNoiLamViec());
                     preStatement.execute();
                     preStatement.close();
                 } catch (Exception e) {
@@ -194,16 +194,16 @@ public class ThemMoiController implements Initializable {
             });
             nhanKhauBean.getListGiaDinhModels().forEach(giaDinh -> {
                 try {
-                    String sql_tieu_su = "INSERT INTO gia_dinh(ID, hoTen, namSinh, gioiTinh, quanHeVoiNhanKhau, ngheNghiep, diaChiHienTai)"
-                            + " values (?, ?, ?, ?, ?, ?, ?)";
+                    String sql_tieu_su = "INSERT INTO gia_dinh(ID, idNhanKhau, hoTen, namSinh, gioiTinh, quanHeVoiNhanKhau, ngheNghiep, diaChiHienTai) values (?, ?, ?, ?, ?, ?, ?, ?)";
                     PreparedStatement preStatement = connection.prepareStatement(sql_tieu_su);
                     preStatement.setInt(1, genID);
-                    preStatement.setString(2, giaDinh.getHoTen());
-                    preStatement.setDate(3, new Date(giaDinh.getNamSinh().getTime()));
-                    preStatement.setString(4, giaDinh.getGioiTinh());
-                    preStatement.setString(5, giaDinh.getQuanHeVoiNhanKhau());
-                    preStatement.setString(6, giaDinh.getNgheNghiep());
-                    preStatement.setString(7, giaDinh.getDiaChiHienTai());
+                    preStatement.setInt(2, genID);
+                    preStatement.setString(3, giaDinh.getHoTen());
+                    preStatement.setDate(4, new Date(giaDinh.getNamSinh().getTime()));
+                    preStatement.setString(5, giaDinh.getGioiTinh());
+                    preStatement.setString(6, giaDinh.getQuanHeVoiNhanKhau());
+                    preStatement.setString(7, giaDinh.getNgheNghiep());
+                    preStatement.setString(8, giaDinh.getDiaChiHienTai());
                     preStatement.execute();
                     preStatement.close();
                 } catch (Exception e) {
@@ -240,6 +240,14 @@ public class ThemMoiController implements Initializable {
             invalidCMTAlert.setTitle("Warning!");
             invalidCMTAlert.setContentText("Số CMT không thể chứa các ký tự");
             invalidCMTAlert.show();
+            return false;
+        }
+        if (namSinhDateC.getValue().isAfter(java.time.LocalDate.now())){
+            System.out.println("lỗi");
+            Alert missingFieldAlert = new Alert(Alert.AlertType.ERROR);
+            missingFieldAlert.setTitle("Warning!");
+            missingFieldAlert.setContentText("Ngày sinh không chính xác!");
+            missingFieldAlert.show();
             return false;
         }
         // kiem tra do dai cmt

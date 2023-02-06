@@ -19,6 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <AnchorPane pickOnBounds="false" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NVH.ChoThueNVHController">
     <children>
@@ -26,15 +27,16 @@
             <children>
                 <HBox prefHeight="54.0" prefWidth="1200.0" styleClass="info__pane" stylesheets="@../main.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                     <children>
-                        <Button alignment="CENTER" blendMode="MULTIPLY" mnemonicParsing="false" onAction="#btnTrangChu" prefHeight="58.0" prefWidth="68.0" style="-fx-border-style: solid; -fx-border-width: 0; -fx-background-color: solid;" textOverrun="CLIP">
-                            <graphic>
-                                <ImageView blendMode="MULTIPLY" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../../icons/home.jpg" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="54.0">
+                     <children>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" style="-fx-background-color: #85c0f4;">
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="mdi-home-outline" iconSize="40" />
+                           </graphic>
                         </Button>
+                              <Button alignment="CENTER" blendMode="MULTIPLY" mnemonicParsing="false" onAction="#btnTrangChu" prefHeight="58.0" prefWidth="54.0" style="-fx-background-color: transparent;" textOverrun="CLIP" />
+                     </children>
+                  </AnchorPane>
                         <Pane prefHeight="66.0" prefWidth="390.0">
                             <children>
                                 <Text fontSmoothingType="LCD" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản Lý Nhân Khẩu-Hộ Khẩu" wrappingWidth="304.5367031097412">
@@ -46,46 +48,34 @@
                         </Pane>
                         <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="66.0" prefWidth="871.0" styleClass="info__pane" stylesheets="@../main.css">
                             <items>
-                                <MenuButton mnemonicParsing="false" onAction="#btnHoSo" style="-fx-background-color: solid;" text="Hồ sơ">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="Tài khoản" />
-                                        <MenuItem mnemonicParsing="false" text="Cài đặt" />
-                                    </items>
-                                    <graphic>
-                                        <ImageView blendMode="MULTIPLY" fitHeight="132.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../../icons/person-icon.png" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </MenuButton>
-                                <Button mnemonicParsing="false" onAction="#btnDangXuat" style="-fx-background-color: solid;" text="Đăng xuất">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                    <graphic>
-                                        <ImageView blendMode="MULTIPLY" fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../../icons/log-out.png" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                </Button>
-                                <Button blendMode="DARKEN" mnemonicParsing="false" onAction="#btnThongBao" style="-fx-background-color: solid;" text="Thông báo">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                    <graphic>
-                                        <ImageView blendMode="MULTIPLY" fitHeight="34.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../../icons/thongbao.jpg" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                </Button>
+                        <MenuButton mnemonicParsing="false" onAction="#btnHoSo" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #85c0f4;" text="Hồ sơ">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Tài khoản" />
+                            <MenuItem mnemonicParsing="false" text="Cài đặt" />
+                          </items>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="28" />
+                           </graphic>
+                        </MenuButton>
+                        <Button mnemonicParsing="false" onAction="#btnDangXuat" prefHeight="43.0" prefWidth="124.0" style="-fx-background-color: #85c0f4;" text="Đăng xuất">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontIcon fill="WHITE" iconLiteral="mdi-logout" iconSize="28" />
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnThongBao" prefHeight="43.0" prefWidth="124.0" style="-fx-background-color: #85c0f4;" text="Thông báo">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontIcon fill="WHITE" iconLiteral="mdi-bell" iconSize="28" />
+                           </graphic>
+                        </Button>
                             </items>
                             <HBox.margin>
                                 <Insets />
@@ -102,37 +92,25 @@
                             <font>
                                 <Font size="14.0" />
                             </font>
-                            <graphic>
-                                <ImageView blendMode="DARKEN" fitHeight="37.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../../icons/qlnhankhau.jpg" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-account-box" iconSize="32" />
+                     </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#btnHoKhau" prefHeight="54.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 1; -fx-border-style: solid;" styleClass="trang__chu__button" stylesheets="@../main.css" text="Hộ Khẩu" textAlignment="CENTER">
+                        <Button mnemonicParsing="false" onAction="#btnHoKhau" prefHeight="54.0" prefWidth="153.0" style="-fx-border-color: white; -fx-border-width: 1; -fx-border-style: solid;" styleClass="trang__chu__button" stylesheets="@../main.css" text="Hộ Khẩu" textAlignment="CENTER">
                             <font>
                                 <Font size="14.0" />
                             </font>
-                            <graphic>
-                                <ImageView blendMode="MULTIPLY" fitHeight="38.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../../icons/istockphoto-1155611136-612x612.jpg" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-home" iconSize="32" />
+                     </graphic>
                         </Button>
                         <Button mnemonicParsing="false" onAction="#btnThongKe" prefHeight="54.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 1; -fx-border-style: solid;" styleClass="trang__chu__button" stylesheets="@../main.css" text="Thống Kê" textAlignment="CENTER">
                             <font>
                                 <Font size="14.0" />
                             </font>
-                            <graphic>
-                                <ImageView blendMode="MULTIPLY" fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../../icons/thongke.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-chart-areaspline" iconSize="32" />
+                     </graphic>
                         </Button>
                         <TitledPane fx:id="NVHTitle" animated="false" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@../main.css" text="Nhà Văn Hoá">
                             <content>
@@ -145,13 +123,9 @@
                                     </children>
                                 </AnchorPane>
                             </content>
-                            <graphic>
-                                <ImageView blendMode="MULTIPLY" fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../../icons/nhaVanHoa.jpg" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-store" iconSize="32" />
+                     </graphic>
                         </TitledPane>
                     </children>
                 </VBox>

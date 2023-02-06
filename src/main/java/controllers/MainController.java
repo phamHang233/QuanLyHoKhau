@@ -117,7 +117,6 @@ public class MainController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setData();
         switchScene = new SwitchScene();
-
     }
 
     @FXML

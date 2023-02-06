@@ -33,7 +33,9 @@ public class SwitchScene {
         stage.show();
     }
     public void changeToThongKe(ActionEvent event) throws IOException {
-        Parent root =  FXMLLoader.load(getClass().getResource("/views/thongke-view.fxml")) ;
+        System.out.println("test thong ke");
+        Parent root =  FXMLLoader.load(getClass().getResource("/views/thongKe/thongke-view.fxml")) ;
+
         Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root, 1200,640));
         stage.centerOnScreen();

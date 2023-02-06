@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="590.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.hoKhauControllers.ChonController">
+   <children>
+      <TableView fx:id="table" layoutY="84.0" onMouseClicked="#chonChuHo" prefHeight="447.0" prefWidth="739.0">
+        <columns>
+          <TableColumn fx:id="hoTen" prefWidth="161.0" text="Họ tên" />
+          <TableColumn fx:id="gioiTinh" minWidth="0.0" prefWidth="66.0" text="Giới tính" />
+            <TableColumn fx:id="ngaySinh" minWidth="7.0" prefWidth="116.0" text="Ngày sinh" />
+            <TableColumn fx:id="soCMT" prefWidth="162.0" text="Số CMT" />
+            <TableColumn fx:id="diaChiHienNay" prefWidth="233.0" text="Địa chỉ hiện nay" />
+        </columns>
+      </TableView>
+      <Button layoutX="633.0" layoutY="539.0" mnemonicParsing="false" onAction="#huy" style="-fx-font-size: 16;" text="Hủy">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/img_394787.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Pane layoutX="-9.0" layoutY="-5.0" prefHeight="87.0" prefWidth="749.0" style="-fx-background-color: CCFFCC;">
+         <children>
+            <ImageView fitHeight="57.0" fitWidth="71.0" layoutX="20.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/img_264064.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="91.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40;" text=" Chọn chủ hộ" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

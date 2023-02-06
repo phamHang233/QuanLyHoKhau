@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -15,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane pickOnBounds="false" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.NVHController">
+<AnchorPane pickOnBounds="false" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NhanKhauController">
     <children>
         <AnchorPane accessibleRole="TEXT" minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="1200.0" style="-fx-background-color: lnr;">
             <children>
@@ -129,10 +130,17 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button layoutX="10.0" layoutY="119.0" mnemonicParsing="false" onAction="#btnNhaVH" prefHeight="54.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 1; -fx-border-style: solid;" styleClass="trang__chu__button" stylesheets="@main.css" text="Nhà Văn Hoá" textAlignment="CENTER">
-                            <font>
-                                <Font size="14.0" />
-                            </font>
+                        <TitledPane fx:id="NVHTitle" animated="false" expanded="false" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@main.css" text="Nhà Văn Hoá">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="148.0" styleClass="trang__chu__button" stylesheets="@main.css">
+                                    <children>
+                                        <VBox layoutX="19.6" layoutY="6.6" prefHeight="121.6" prefWidth="148.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        <Button layoutY="4.0" mnemonicParsing="false" onAction="#btnCSVC" prefHeight="40.0" prefWidth="148.0" style="-fx-border-width: 0;" styleClass="content_button_pane" stylesheets="@main.css" text="Thiết Bị" textOverrun="CLIP" />
+                                        <Button layoutY="84.0" mnemonicParsing="false" onAction="#btnChoThue" prefHeight="40.0" prefWidth="148.0" styleClass="content_button_pane" stylesheets="@main.css" text="Cho Thuê" />
+                                        <Button layoutY="44.0" mnemonicParsing="false" onAction="#btnSuDung" prefHeight="40.0" prefWidth="148.0" styleClass="content_button_pane" stylesheets="@main.css" text="Sử Dụng" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
                             <graphic>
                                 <ImageView blendMode="MULTIPLY" fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -140,7 +148,7 @@
                                     </image>
                                 </ImageView>
                             </graphic>
-                        </Button>
+                        </TitledPane>
                     </children>
                 </VBox>
             </children>

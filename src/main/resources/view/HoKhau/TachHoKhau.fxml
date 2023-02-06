@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="667.0" prefWidth="1017.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.hoKhauControllers.TachHoKhauController">
+   <children>
+      <Label layoutX="14.0" layoutY="95.0" text="Chọn hộ cần tách">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="hoCanTachTable" layoutX="14.0" layoutY="118.0" onMouseClicked="#chonHoCanTach" prefHeight="216.0" prefWidth="459.0">
+        <columns>
+          <TableColumn fx:id="maHoKhauColumn" text="Mã hộ khẩu" />
+          <TableColumn fx:id="hoTenChuHoColumn" prefWidth="137.0" text="Họ tên chủ hộ" />
+            <TableColumn fx:id="diaChiColumn" prefWidth="241.0" text="Địa chỉ " />
+        </columns>
+      </TableView>
+      <Label layoutX="11.0" layoutY="352.0" prefHeight="32.0" prefWidth="195.0" text="Chọn người sang hộ mới">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="nguoiSangHoMoiTable" layoutX="11.0" layoutY="393.0" prefHeight="216.0" prefWidth="450.0">
+         <columns>
+            <TableColumn fx:id="IDColumn" minWidth="0.0" prefWidth="36.0" text="ID" />
+            <TableColumn fx:id="hoTenColumn" prefWidth="143.0" text="Họ tên" />
+            <TableColumn fx:id="ngaySinhColumn" prefWidth="123.0" text="Ngày sinh" />
+            <TableColumn fx:id="quanHeVoiChuHoColumn" prefWidth="147.0" text="QH với chủ hộ" />
+         </columns>
+      </TableView>
+      <Label layoutX="486.0" layoutY="118.0" text="Chủ hộ hiện tại">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="484.0" layoutY="205.0" text="Mã khu vực :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="491.0" layoutY="240.0" text="Địa chỉ :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="486.0" layoutY="277.0" text="Mã hộ khẩu mới :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="484.0" layoutY="313.0" text="Chủ hộ mới :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="chuHoHienTaiText" layoutX="629.0" layoutY="116.0" prefHeight="26.0" prefWidth="353.0" />
+      <TextField fx:id="maKhuVucText" layoutX="629.0" layoutY="203.0" prefHeight="26.0" prefWidth="353.0" />
+      <TextField fx:id="diaChiText" layoutX="629.0" layoutY="237.0" prefHeight="26.0" prefWidth="353.0" />
+      <TextField fx:id="maHoKhauMoiText" layoutX="629.0" layoutY="275.0" prefHeight="26.0" prefWidth="353.0" />
+      <TextField fx:id="chuHoMoiText" layoutX="629.0" layoutY="311.0" prefHeight="26.0" prefWidth="353.0" />
+      <Label layoutX="990.0" layoutY="121.0" text="(*)" textFill="RED" />
+      <Label layoutX="990.0" layoutY="208.0" text="(*)" textFill="RED" />
+      <Label layoutX="990.0" layoutY="242.0" text="(*)" textFill="RED" />
+      <Label layoutX="990.0" layoutY="279.0" text="(*)" textFill="RED" />
+      <Label layoutX="990.0" layoutY="316.0" text="(*)" textFill="RED" />
+      <Label layoutX="571.0" layoutY="358.0" text="Những người ở hộ mới">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="489.0" layoutY="514.0" mnemonicParsing="false" onAction="#add" prefHeight="32.0" prefWidth="57.0" text="&gt;&gt;" />
+      <Button layoutX="489.0" layoutY="557.0" mnemonicParsing="false" onAction="#remove" prefHeight="32.0" prefWidth="57.0" text="&lt;&lt;" />
+      <TableView fx:id="nguoiOHoMoiTable" layoutX="571.0" layoutY="393.0" prefHeight="216.0" prefWidth="425.0">
+         <columns>
+            <TableColumn fx:id="ID2Column" prefWidth="35.0" text="ID" />
+            <TableColumn fx:id="hoTen2Column" prefWidth="146.0" text="Họ tên" />
+            <TableColumn fx:id="ngaySinh2Column" prefWidth="125.0" text="Ngày sinh" />
+            <TableColumn fx:id="quanHeVoiChuHo2Column" prefWidth="118.0" text="QH với chủ hộ" />
+         </columns>
+      </TableView>
+      <Button layoutX="818.0" layoutY="625.0" mnemonicParsing="false" onAction="#huy" prefHeight="17.0" prefWidth="63.0" style="-fx-font-size: 12;" text="Hủy">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/img_394787.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="889.0" layoutY="625.0" mnemonicParsing="false" onAction="#xacNhan" prefHeight="29.0" prefWidth="107.0" style="-fx-font-size: 12;" text="Xác nhận">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/check-mark-png-black-transparent-18.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="486.0" layoutY="152.0" text="Nhập thông tin hộ mới:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="592.0" layoutY="311.0" mnemonicParsing="false" onAction="#chonChuHo" text="..." />
+      <Text layoutX="480.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Thay đổi" />
+      <ImageView fitHeight="57.0" fitWidth="95.0" layoutX="489.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/pngtree-swap-user-line-icon-vector-png-image_5199534.jpg" />
+         </image>
+      </ImageView>
+      <Line endX="759.9999389648438" endY="23.0" layoutX="257.0" layoutY="329.0" startX="-257.0" startY="23.0" />
+      <Pane layoutX="-1.0" prefHeight="85.0" prefWidth="1017.0" style="-fx-background-color: CCFFFF;">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="57.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/img_264064.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="81.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40;" text="Tách hộ khẩu" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

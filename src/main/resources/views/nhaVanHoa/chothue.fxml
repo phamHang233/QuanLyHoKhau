@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane pickOnBounds="false" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NVH.ChoThueNVHController">
+    <children>
+        <AnchorPane accessibleRole="TEXT" minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="1200.0" style="-fx-background-color: lnr;">
+            <children>
+                <HBox prefHeight="54.0" prefWidth="1200.0" styleClass="info__pane" stylesheets="@../main.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <Button alignment="CENTER" blendMode="MULTIPLY" mnemonicParsing="false" onAction="#btnTrangChu" prefHeight="58.0" prefWidth="68.0" style="-fx-border-style: solid; -fx-border-width: 0; -fx-background-color: solid;" textOverrun="CLIP">
+                            <graphic>
+                                <ImageView blendMode="MULTIPLY" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../icons/home.jpg" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Pane prefHeight="66.0" prefWidth="390.0">
+                            <children>
+                                <Text fontSmoothingType="LCD" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản Lý Nhân Khẩu-Hộ Khẩu" wrappingWidth="304.5367031097412">
+                                    <font>
+                                        <Font name="Book Antiqua Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </Pane>
+                        <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="66.0" prefWidth="871.0" styleClass="info__pane" stylesheets="@../main.css">
+                            <items>
+                                <MenuButton mnemonicParsing="false" onAction="#btnHoSo" style="-fx-background-color: solid;" text="Hồ sơ">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="Tài khoản" />
+                                        <MenuItem mnemonicParsing="false" text="Cài đặt" />
+                                    </items>
+                                    <graphic>
+                                        <ImageView blendMode="MULTIPLY" fitHeight="132.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../icons/person-icon.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </MenuButton>
+                                <Button mnemonicParsing="false" onAction="#btnDangXuat" style="-fx-background-color: solid;" text="Đăng xuất">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView blendMode="MULTIPLY" fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../icons/log-out.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button blendMode="DARKEN" mnemonicParsing="false" onAction="#btnThongBao" style="-fx-background-color: solid;" text="Thông báo">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView blendMode="MULTIPLY" fitHeight="34.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../icons/thongbao.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </items>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </ToolBar>
+                    </children>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </HBox>
+                <VBox layoutY="75.0" prefHeight="586.0" prefWidth="151.0" styleClass="info__pane" stylesheets="@../main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="1049.0" AnchorPane.topAnchor="54.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#btnNhanKhau" prefHeight="54.0" prefWidth="151.0" style="-fx-border-color: white; -fx-border-width: 1; -fx-border-style: solid;" styleClass="trang__chu__button" stylesheets="@../main.css" text="Nhân Khẩu" textAlignment="CENTER">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <graphic>
+                                <ImageView blendMode="DARKEN" fitHeight="37.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../icons/qlnhankhau.jpg" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnHoKhau" prefHeight="54.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 1; -fx-border-style: solid;" styleClass="trang__chu__button" stylesheets="@../main.css" text="Hộ Khẩu" textAlignment="CENTER">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <graphic>
+                                <ImageView blendMode="MULTIPLY" fitHeight="38.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../icons/istockphoto-1155611136-612x612.jpg" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnThongKe" prefHeight="54.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 1; -fx-border-style: solid;" styleClass="trang__chu__button" stylesheets="@../main.css" text="Thống Kê" textAlignment="CENTER">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <graphic>
+                                <ImageView blendMode="MULTIPLY" fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../icons/thongke.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <TitledPane fx:id="NVHTitle" animated="false" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@../main.css" text="Nhà Văn Hoá">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="148.0" styleClass="trang__chu__button" stylesheets="@../main.css">
+                                    <children>
+                                        <VBox layoutX="19.6" layoutY="6.6" prefHeight="121.6" prefWidth="148.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        <Button layoutY="4.0" mnemonicParsing="false" onAction="#btnCSVC" prefHeight="40.0" prefWidth="148.0" style="-fx-border-width: 0;" styleClass="content_button_pane" stylesheets="@../main.css" text="Thiết Bị" textOverrun="CLIP" />
+                                        <Button layoutY="44.0" mnemonicParsing="false" onAction="#btnSuDung" prefHeight="40.0" prefWidth="148.0" styleClass="content_button_pane" stylesheets="@../main.css" text="Sử Dụng" />
+                                        <Button layoutY="84.0" mnemonicParsing="false" onAction="#btnChoThue" prefHeight="40.0" prefWidth="148.0" styleClass="choosen_button" stylesheets="@../main.css" text="Cho Thuê" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                            <graphic>
+                                <ImageView blendMode="MULTIPLY" fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../icons/nhaVanHoa.jpg" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TitledPane>
+                    </children>
+                </VBox>
+                <AnchorPane layoutX="256.0" layoutY="225.0" prefHeight="200.0" prefWidth="1049.0" styleClass="insest_background" stylesheets="@../main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="151.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0">
+                    <children>
+                        <AnchorPane layoutX="156.0" layoutY="40.0" prefHeight="113.0" prefWidth="1049.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label layoutX="36.0" layoutY="14.0" text="Quản lý cho thuê nhà văn hoá">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <Button layoutX="24.0" layoutY="75.0" mnemonicParsing="false" onAction="#btnThem" prefHeight="30.0" prefWidth="180.0" text="Thêm lịch sử cho thuê">
+                                    <graphic>
+                                        <ImageView fitHeight="12.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../icons/cong.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="51.0" layoutY="147.0" prefHeight="369.0" prefWidth="950.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="147.0">
+                            <children>
+                                <TableView fx:id="table" layoutX="59.0" prefHeight="369.0" prefWidth="919.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <columns>
+                                        <TableColumn fx:id="stt" prefWidth="52.80000305175781" text="STT" />
+                                        <TableColumn fx:id="ngayThue" prefWidth="124.0" sortType="DESCENDING" text="Ngày thuê" />
+                                        <TableColumn fx:id="mucDich" prefWidth="162.40005493164062" text="Mục đích" />
+                              <TableColumn fx:id="nguoiThue" prefWidth="157.5999755859375" text="Người/ Tổ chức thuê" />
+                              <TableColumn fx:id="phi" minWidth="0.0" prefWidth="123.199951171875" text="Phí" />
+                                        <TableColumn fx:id="nguoiLap" minWidth="0.0" prefWidth="159.2000732421875" text="Người quản lý" />
+                              <TableColumn fx:id="ghiChu" prefWidth="134.40020751953125" text="Ghi chú" />
+                                    </columns>
+                                </TableView>
+                            </children></AnchorPane>
+                        <Separator layoutY="114.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <HBox layoutX="775.0" layoutY="538.0" prefHeight="35.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Tổng: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="tong" prefWidth="20.0" textAlignment="CENTER">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                                <Label text="dữ liệu">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

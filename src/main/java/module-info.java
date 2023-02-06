@@ -1,7 +1,7 @@
 module java{
     requires javafx.controls;
     requires javafx.fxml;
-    requires mssql.jdbc;
+
     requires java.sql;
     requires javafx.graphics;
     requires javafx.base;
@@ -11,9 +11,15 @@ module java{
 //
     opens controllers to javafx.fxml;
     exports controllers;
+
+    opens controllers.NVH to javafx.fxml;
+    exports controllers.NVH;
+    opens controllers.hoKhauControllers to javafx.fxml;
+    exports controllers.hoKhauControllers;
 //    opens application to javafx.fxml;
 //    exports application;
     opens view to javafx.fxml;
+    exports view;
     opens models to javafx.base;
-    exports  view;
+    exports  models;
 }

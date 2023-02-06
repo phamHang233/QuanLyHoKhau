@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="658.0" prefWidth="728.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.hoKhauControllers.ThemMoiController">
+   <children>
+      <Label layoutX="15.0" layoutY="96.0" style="-fx-font-size: 18;" text="Mã hộ khẩu:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="139.0" style="-fx-font-size: 18;" text="Mã khu vực:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="179.0" style="-fx-font-size: 18;" text="Địa chỉ:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="218.0" style="-fx-font-size: 18;" text="Chủ hộ:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="261.0" style="-fx-font-size: 18;" text="Ngày sinh chủ hộ:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="304.0" style="-fx-font-size: 18;" text="Số CMT chủ hộ:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="maHoKhau" layoutX="163.0" layoutY="94.0" prefHeight="26.0" prefWidth="515.0" />
+      <Button layoutX="85.0" layoutY="214.0" mnemonicParsing="false" onAction="#chon" text="Chọn..." />
+      <TextField fx:id="maKhuVuc" layoutX="163.0" layoutY="138.0" prefHeight="26.0" prefWidth="515.0" />
+      <TextField fx:id="diaChi" layoutX="163.0" layoutY="178.0" prefHeight="26.0" prefWidth="515.0" />
+      <TextField fx:id="chuHo" layoutX="163.0" layoutY="216.0" prefHeight="26.0" prefWidth="515.0" />
+      <TextField fx:id="ngaySinhChuHo" layoutX="163.0" layoutY="259.0" prefHeight="26.0" prefWidth="515.0" />
+      <TextField fx:id="soCMTChuHo" layoutX="163.0" layoutY="302.0" prefHeight="26.0" prefWidth="515.0" />
+      <Label layoutX="46.0" layoutY="337.0" style="-fx-font-size: 20;" text="Thành viên của hộ:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="suaButton" layoutX="6.0" layoutY="370.0" mnemonicParsing="false" onAction="#them" prefHeight="30.0" prefWidth="117.0" style="-fx-font-size: 16;" text="Thêm">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/plus-icon-black-2.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Line endX="358.0" layoutX="362.0" layoutY="349.0" startX="-137.0" />
+      <Line endX="-65.0" layoutX="101.0" layoutY="349.0" startX="-100.0" />
+      <TableView fx:id="table" layoutX="7.0" layoutY="411.0" prefHeight="194.0" prefWidth="707.0">
+        <columns>
+          <TableColumn fx:id="hoTen" prefWidth="166.0" text="Họ tên" />
+          <TableColumn fx:id="ngaySinh" prefWidth="131.0" text="Ngày sinh" />
+            <TableColumn fx:id="quanHeVoiChuHo" prefWidth="303.0" text="Quan hệ với chủ hộ" />
+        </columns>
+      </TableView>
+      <Label layoutX="691.0" layoutY="98.0" text="(*)" textFill="RED" />
+      <Label layoutX="691.0" layoutY="142.0" text="(*)" textFill="RED" />
+      <Label layoutX="691.0" layoutY="182.0" text="(*)" textFill="RED" />
+      <Label layoutX="691.0" layoutY="229.0" text="(*)" textFill="RED" />
+      <Label layoutX="691.0" layoutY="264.0" text="(*)" textFill="RED" />
+      <Label layoutX="691.0" layoutY="306.0" text="(*)" textFill="RED" />
+      <Button fx:id="huy" layoutX="538.0" layoutY="616.0" mnemonicParsing="false" onAction="#huy" style="-fx-font-size: 16;" text="Hủy">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/img_394787.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="luu" layoutX="614.0" layoutY="616.0" mnemonicParsing="false" onAction="#luu" prefHeight="34.0" prefWidth="98.0" style="-fx-font-size: 16;" text="Lưu">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/check-mark-png-black-transparent-18.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="141.0" layoutY="370.0" mnemonicParsing="false" onAction="#xoa" prefHeight="30.0" prefWidth="238.0" style="-fx-font-size: 16;" text="Xóa thành viên đã chọn">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/trash_icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Line endX="461.5" layoutX="259.0" layoutY="337.0" startX="-258.0" stroke="#305e3b" />
+      <Pane layoutX="-3.0" prefHeight="77.0" prefWidth="731.0" style="-fx-background-color: CCFFCC;">
+         <children>
+            <Text layoutX="65.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40;" text="Thêm mới hộ khẩu" />
+            <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/img_264064.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

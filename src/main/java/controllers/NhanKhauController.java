@@ -63,5 +63,17 @@ public class NhanKhauController implements Initializable {
     void btnThongBao(ActionEvent event) throws IOException{
         System.out.println("Hiển thị thông báo!");
     }
+    @FXML
+    void btnCSVC (ActionEvent event) throws IOException{
+        switchScene.changeToThietBi(event);
+    }
+    @FXML
+    void btnChoThue (ActionEvent event) throws IOException{
+        switchScene.changeToChoThue(event);
+    }
+    @FXML
+    void btnSuDung (ActionEvent event) throws IOException{
+        switchScene.changeToSuDung(event);
 
+    }
 }

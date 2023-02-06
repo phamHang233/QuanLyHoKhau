@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.hoKhauControllers.ChonController">
+   <children>
+      <TableView fx:id="table" layoutX="-1.0" layoutY="-1.0" onMouseClicked="#chonChuHo" prefHeight="400.0" prefWidth="739.0">
+         <columns>
+            <TableColumn fx:id="hoTen" prefWidth="169.0" text="Họ tên" />
+            <TableColumn fx:id="gioiTinh" prefWidth="63.0" text="Giới tính" />
+            <TableColumn fx:id="ngaySinh" prefWidth="73.0" text="Ngày sinh" />
+            <TableColumn fx:id="soCMT" prefWidth="177.0" text="Số CMT" />
+            <TableColumn fx:id="diaChiHienNay" prefWidth="256.0" text="Địa chỉ hiện nay" />
+         </columns>
+      </TableView>
+      <Button layoutX="641.0" layoutY="410.0" mnemonicParsing="false" onAction="#huy" text="Hủy" />
+   </children>
+</AnchorPane>

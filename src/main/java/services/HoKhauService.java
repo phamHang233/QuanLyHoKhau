@@ -1,9 +1,14 @@
 package services;
 
 import Beans.HoKhauBean;
+import Beans.HoKhauBean;
+import controllers.HelloController;
+import controllers.HelloController;
 import models.HoKhauModel;
+import models.KhaiTuModel;
 import models.NhanKhauModel;
 import models.ThanhVienModel;
+
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -11,9 +16,13 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ *
+ * @author Hai
+ */
 public class HoKhauService {
     // them moi ho khau
-    public boolean addNew(HoKhauBean hoKhauBean) throws ClassNotFoundException, SQLException {
+    public boolean addNew(HoKhauBean hoKhauBean) throws ClassNotFoundException, SQLException{
         Connection connection = SQLServerConnection.getSqlConnection();
         String query = "INSERT INTO ho_khau(maHoKhau, idChuHo, maKhuVuc, diaChi, ngayLap)"
                 + " values (?, ?, ?, ?, NOW())";
@@ -29,7 +38,7 @@ public class HoKhauService {
             int genID = rs.getInt(1);
             String sql = "INSERT INTO thanh_vien_cua_ho(idNhanKhau, idHoKhau, quanHeVoiChuHo)"
                     + " values (?, ?, ?)";
-            hoKhauBean.getListThanhVien().forEach((ThanhVienModel thanhVien) -> {
+            hoKhauBean.getListThanhVienCuaHo().forEach((ThanhVienModel thanhVien) -> {
                 try {
                     PreparedStatement preStatement = connection.prepareStatement(sql);
                     preStatement.setInt(1, thanhVien.getIdNhanKhau());
@@ -97,10 +106,10 @@ public class HoKhauService {
                     PreparedStatement prst = connection.prepareStatement(sql);
                     ResultSet rs_1 = prst.executeQuery();
                     List<NhanKhauModel> listNhanKhau = temp.getListNhanKhauModels();
-                    List<ThanhVienModel> listThanhVien = temp.getListThanhVien();
+                    List<ThanhVienModel> listThanhVienCuaHo = temp.getListThanhVienCuaHo();
                     while (rs_1.next()) {
                         NhanKhauModel nhanKhauModel = new NhanKhauModel();
-                        ThanhVienModel thanhVienModel = new ThanhVienModel();
+                        ThanhVienModel thanhVienCuaHoModel = new ThanhVienModel();
                         nhanKhauModel.setID(rs_1.getInt("idNhanKhau"));
                         nhanKhauModel.setBietDanh(rs_1.getString("bietDanh"));
                         nhanKhauModel.setHoTen(rs_1.getString("hoTen"));
@@ -114,11 +123,11 @@ public class HoKhauService {
                         nhanKhauModel.setNoiThuongTru(rs_1.getString("noiThuongTru"));
                         nhanKhauModel.setDiaChiHienNay(rs_1.getString("diaChiHienNay"));
 
-                        thanhVienModel.setIdHoKhau(rs_1.getInt("idHoKhau"));
-                        thanhVienModel.setIdNhanKhau(rs_1.getInt("idNhanKhau"));
-                        thanhVienModel.setQuanHeVoiChuHo(rs_1.getString("quanHeVoiChuHo"));
+                        thanhVienCuaHoModel.setIdHoKhau(rs_1.getInt("idHoKhau"));
+                        thanhVienCuaHoModel.setIdNhanKhau(rs_1.getInt("idNhanKhau"));
+                        thanhVienCuaHoModel.setQuanHeVoiChuHo(rs_1.getString("quanHeVoiChuHo"));
                         listNhanKhau.add(nhanKhauModel);
-                        listThanhVien.add(thanhVienModel);
+                        listThanhVienCuaHo.add(thanhVienCuaHoModel);
                     }
                 } catch (Exception e) {
                     System.out.println("services.HoKhauService.getListHoKhau()");
@@ -170,10 +179,10 @@ public class HoKhauService {
                     PreparedStatement prst = connection.prepareStatement(sql);
                     ResultSet rs_1 = prst.executeQuery();
                     List<NhanKhauModel> listNhanKhau = temp.getListNhanKhauModels();
-                    List<ThanhVienModel> listThanhVienCuaHo = temp.getListThanhVien();
+                    List<ThanhVienModel> listThanhVienCuaHo = temp.getListThanhVienCuaHo();
                     while (rs_1.next()) {
                         NhanKhauModel nhanKhauModel = new NhanKhauModel();
-                        ThanhVienModel thanhVienModel = new ThanhVienModel();
+                        ThanhVienModel thanhVienCuaHoModel = new ThanhVienModel();
                         nhanKhauModel.setID(rs_1.getInt("ID"));
                         nhanKhauModel.setBietDanh(rs_1.getString("bietDanh"));
                         nhanKhauModel.setHoTen(rs_1.getString("hoTen"));
@@ -187,11 +196,11 @@ public class HoKhauService {
                         nhanKhauModel.setNoiThuongTru(rs_1.getString("noiThuongTru"));
                         nhanKhauModel.setDiaChiHienNay(rs_1.getString("diaChiHienNay"));
 
-                        thanhVienModel.setIdHoKhau(rs_1.getInt("idHoKhau"));
-                        thanhVienModel.setIdNhanKhau(rs_1.getInt("ID"));
-                        thanhVienModel.setQuanHeVoiChuHo(rs_1.getString("quanHeVoiChuHo"));
+                        thanhVienCuaHoModel.setIdHoKhau(rs_1.getInt("idHoKhau"));
+                        thanhVienCuaHoModel.setIdNhanKhau(rs_1.getInt("ID"));
+                        thanhVienCuaHoModel.setQuanHeVoiChuHo(rs_1.getString("quanHeVoiChuHo"));
                         listNhanKhau.add(nhanKhauModel);
-                        listThanhVienCuaHo.add(thanhVienModel);
+                        listThanhVienCuaHo.add(thanhVienCuaHoModel);
                     }
                 } catch (Exception e) {
                     System.out.println("services.HoKhauService.search()");
@@ -227,7 +236,7 @@ public class HoKhauService {
         }
         // xoa cac thanh vien
 
-        hoKhauBean.getListThanhVien().forEach((ThanhVienModel item) -> {
+        hoKhauBean.getListThanhVienCuaHo().forEach((ThanhVienModel item) -> {
             String sql = "DELETE FROM thanh_vien_cua_ho WHERE idNhanKhau = " + item.getIdHoKhau();
             try {
                 Connection connection = SQLServerConnection.getSqlConnection();
@@ -257,8 +266,7 @@ public class HoKhauService {
                 + noiChuyenDen
                 + "',"
                 + "nguoiThucHien = "
-                // ? loginCOntroller
-                + LoginController.currentUser.getID()
+                + HelloController.currentUser.getID()
                 + " WHERE ho_khau.ID = " + idhoKhau;
         try {
             Connection connection = SQLServerConnection.getSqlConnection();
@@ -272,4 +280,3 @@ public class HoKhauService {
 
 
 }
-

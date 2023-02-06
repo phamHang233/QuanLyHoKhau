@@ -1,0 +1,17 @@
+.info__pane{
+    -fx-background-color: #666666;
+}
+
+.trang__chu__button{
+    -fx-background-color: #E4E6EB;
+    -fx-text-fill: #1D1F23;
+}
+
+.left__home__pane{
+    -fx-background-color: #666666;
+}
+
+.home__button{
+    -fx-background-color: #E4E6EB;
+    -fx-text-fill: #1D1F23;
+}

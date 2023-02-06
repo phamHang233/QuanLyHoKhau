@@ -7,26 +7,30 @@ import models.ThanhVienModel;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * @author Minh
+ * ket noi tu nhien gia ho_khau va nhan_khau
+ */
+
 public class HoKhauBean {
     private HoKhauModel hoKhauModel;
     private NhanKhauModel chuHo;
     private List<NhanKhauModel> listNhanKhauModels;
-
-    private List<ThanhVienModel> listThanhVien;
+    private List<ThanhVienModel> listThanhVienCuaHo;
 
     public HoKhauBean(HoKhauModel hoKhauModel, NhanKhauModel chuHo, List<NhanKhauModel> listNhanKhauModels, List<ThanhVienModel> listThanhVienCuaHo) {
         this.hoKhauModel = hoKhauModel;
         this.chuHo = chuHo;
         this.listNhanKhauModels = listNhanKhauModels;
-
-        this.listThanhVien = listThanhVien;
+        this.listThanhVienCuaHo = listThanhVienCuaHo;
     }
 
     public HoKhauBean() {
         this.hoKhauModel = new HoKhauModel();
         this.chuHo = new NhanKhauModel();
         this.listNhanKhauModels = new ArrayList<>();
-        this.listThanhVien = new ArrayList<>();
+        this.listThanhVienCuaHo = new ArrayList<>();
     }
 
 
@@ -54,12 +58,12 @@ public class HoKhauBean {
         this.listNhanKhauModels = listNhanKhauModels;
     }
 
-    public List<ThanhVienModel> getListThanhVien() {
-        return listThanhVien;
+    public List<ThanhVienModel> getListThanhVienCuaHo() {
+        return listThanhVienCuaHo;
     }
 
-    public void setListThanhVien(List<ThanhVienModel> listThanhVien) {
-        this.listThanhVien = listThanhVien;
+    public void setListThanhVienCuaHo(List<ThanhVienModel> listThanhVienCuaHo) {
+        this.listThanhVienCuaHo = listThanhVienCuaHo;
     }
 
     @Override
@@ -89,7 +93,7 @@ public class HoKhauBean {
                     + listNhanKhauModels.get(i).getGioiTinh()
                     + "</td>"
                     + "<td>"
-                    + listThanhVien.get(i).getQuanHeVoiChuHo()
+                    + listThanhVienCuaHo.get(i).getQuanHeVoiChuHo()
                     + "</td>"
                     + "</tr>";
         }
@@ -98,4 +102,3 @@ public class HoKhauBean {
     }
 
 }
-

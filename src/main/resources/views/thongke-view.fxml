@@ -9,6 +9,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -133,10 +134,17 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button layoutX="10.0" layoutY="119.0" mnemonicParsing="false" onAction="#btnNhaVH" prefHeight="54.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 1; -fx-border-style: solid;" styleClass="trang__chu__button" stylesheets="@main.css" text="Nhà Văn Hoá" textAlignment="CENTER">
-                            <font>
-                                <Font size="14.0" />
-                            </font>
+                        <TitledPane fx:id="NVHTitle" animated="false" expanded="false" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@main.css" text="Nhà Văn Hoá">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="148.0" styleClass="trang__chu__button" stylesheets="@main.css">
+                                    <children>
+                                        <VBox layoutX="19.6" layoutY="6.6" prefHeight="121.6" prefWidth="148.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        <Button layoutY="4.0" mnemonicParsing="false" onAction="#btnCSVC" prefHeight="40.0" prefWidth="148.0" style="-fx-border-width: 0;" styleClass="content_button_pane" stylesheets="@main.css" text="Thiết Bị" textOverrun="CLIP" />
+                                        <Button layoutY="84.0" mnemonicParsing="false" onAction="#btnChoThue" prefHeight="40.0" prefWidth="148.0" styleClass="content_button_pane" stylesheets="@main.css" text="Cho Thuê" />
+                                        <Button layoutY="44.0" mnemonicParsing="false" onAction="#btnSuDung" prefHeight="40.0" prefWidth="148.0" styleClass="content_button_pane" stylesheets="@main.css" text="Sử Dụng" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
                             <graphic>
                                 <ImageView blendMode="MULTIPLY" fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -144,96 +152,96 @@
                                     </image>
                                 </ImageView>
                             </graphic>
-                        </Button>
+                        </TitledPane>
                     </children>
                 </VBox>
-            <HBox layoutX="151.0" layoutY="54.0" prefHeight="54.0" prefWidth="1049.0">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="140.0" text="Tìm kiếm nhân khẩu" />
-                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="140.0" text="Tìm kiếm hộ khẩu" />
-                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="140.0" text="Thống kê số liệu" />
-               </children>
-            </HBox>
-            <HBox layoutX="184.0" layoutY="125.0" prefHeight="27.0" prefWidth="448.0">
-               <children>
-                  <Label prefHeight="50.0" prefWidth="50.0" text="CCCD">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="cccd" prefHeight="50.0" prefWidth="300.0" />
-                  <Button mnemonicParsing="false" onAction="#timkiem" prefHeight="50.0" prefWidth="100.0" text="Tìm kiếm" />
-               </children>
-            </HBox>
-            <TableView fx:id="thongtinnhankhau" layoutX="187.0" layoutY="185.0" prefHeight="75.0" prefWidth="977.0">
-              <columns>
-                <TableColumn fx:id="hoten" prefWidth="86.66665649414062" text="Họ và tên" />
-                  <TableColumn fx:id="ngaysinh" prefWidth="87.99995422363281" text="Ngày sinh" />
-                  <TableColumn fx:id="diachi" prefWidth="72.6666259765625" text="Địa chỉ" />
-                  <TableColumn fx:id="nguyenquan" prefWidth="100.0" text="Nguyên quán" />
-                  <TableColumn fx:id="nghenghiep" prefWidth="107.33328247070312" text="Nghề nghiệp" />
-                  <TableColumn fx:id="dantoc" prefWidth="79.99993896484375" text="Dân tộc" />
-                  <TableColumn fx:id="quoctich" prefWidth="87.33331298828125" text="Quốc tịch" />
-                  <TableColumn fx:id="tongiao" prefWidth="80.66668701171875" text="Tôn giáo" />
-                  <TableColumn fx:id="thuongtru" prefWidth="78.66668701171875" text="Thường trú" />
-                  <TableColumn fx:id="noilamviec" prefWidth="84.0" text="Nơi làm việc" />
-                  <TableColumn prefWidth="108.6666259765625" text="Giới tính" />
-              </columns>
-            </TableView>
-            <Button layoutX="644.0" layoutY="125.0" mnemonicParsing="false" onAction="#xoa" prefHeight="27.0" prefWidth="94.0" text="Xoá" />
-            <Label layoutX="184.0" layoutY="158.0" prefHeight="27.0" prefWidth="140.0" text="Thông tin nhân khẩu">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label layoutX="160.0" layoutY="267.0" prefHeight="27.0" prefWidth="188.0" text="Thông tin gia đình nhân khẩu">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <TableView fx:id="giadinh" layoutX="155.0" layoutY="293.0" prefHeight="54.0" prefWidth="575.0">
-              <columns>
-                <TableColumn fx:id="hoTenGiaDinh" prefWidth="75.0" text="Họ và tên" />
-                <TableColumn fx:id="ngaySinhGiaDinh" prefWidth="75.0" text="Ngày sinh" />
-                  <TableColumn fx:id="gioiTinhGiaDinh" prefWidth="75.0" text="Giới tính" />
-                  <TableColumn fx:id="quanHeChuHo" prefWidth="145.99996948242188" text="Quan hệ với chủ hộ" />
-                  <TableColumn fx:id="ngheNghiep" prefWidth="94.66668701171875" text="Nghề nghiệp" />
-                  <TableColumn fx:id="diaChi" prefWidth="106.66670735677087" text="Địa chỉ" />
-              </columns>
-            </TableView>
-            <Label layoutX="730.0" layoutY="267.0" prefHeight="27.0" prefWidth="49.0" text="Tiểu sử">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <TableView fx:id="tieusu" layoutX="735.0" layoutY="293.0" prefHeight="54.0" prefWidth="462.0">
-               <columns>
-                  <TableColumn fx:id="tuNgay" prefWidth="75.0" text="Từ ngày " />
-                  <TableColumn fx:id="denNgay" prefWidth="75.0" text="Đến ngày" />
-                  <TableColumn fx:id="diaChi" prefWidth="75.0" text="Địa chỉ" />
-                  <TableColumn fx:id="ngheNghiep" prefWidth="104.0" text="Nghề nghiệp" />
-                  <TableColumn fx:id="noiLamViec" prefWidth="137.333251953125" text="Nơi làm việc" />
-                  <TableColumn prefWidth="106.66670735677087" text="Địa chỉ" />
-               </columns>
-            </TableView>
-            <Button fx:id="buttonGiaDinh" layoutX="348.0" layoutY="269.0" mnemonicParsing="false" onAction="#displayGiaDinh">
-               <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/arrow.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="buttonTieuSu" layoutX="779.0" layoutY="269.0" mnemonicParsing="false" onAction="#displayTieuSu">
-               <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/arrow.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+                <HBox layoutX="151.0" layoutY="54.0" prefHeight="54.0" prefWidth="1049.0">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="140.0" text="Tìm kiếm nhân khẩu" />
+                        <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="140.0" text="Tìm kiếm hộ khẩu" />
+                        <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="140.0" text="Thống kê số liệu" />
+                    </children>
+                </HBox>
+                <HBox layoutX="184.0" layoutY="125.0" prefHeight="27.0" prefWidth="448.0">
+                    <children>
+                        <Label prefHeight="50.0" prefWidth="50.0" text="CCCD">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="cccd" prefHeight="50.0" prefWidth="300.0" />
+                        <Button mnemonicParsing="false" onAction="#timkiem" prefHeight="50.0" prefWidth="100.0" text="Tìm kiếm" />
+                    </children>
+                </HBox>
+                <TableView fx:id="thongtinnhankhau" layoutX="187.0" layoutY="185.0" prefHeight="75.0" prefWidth="977.0">
+                    <columns>
+                        <TableColumn fx:id="hoten" prefWidth="86.66665649414062" text="Họ và tên" />
+                        <TableColumn fx:id="ngaysinh" prefWidth="87.99995422363281" text="Ngày sinh" />
+                        <TableColumn fx:id="diachi" prefWidth="72.6666259765625" text="Địa chỉ" />
+                        <TableColumn fx:id="nguyenquan" prefWidth="100.0" text="Nguyên quán" />
+                        <TableColumn fx:id="nghenghiep" prefWidth="107.33328247070312" text="Nghề nghiệp" />
+                        <TableColumn fx:id="dantoc" prefWidth="79.99993896484375" text="Dân tộc" />
+                        <TableColumn fx:id="quoctich" prefWidth="87.33331298828125" text="Quốc tịch" />
+                        <TableColumn fx:id="tongiao" prefWidth="80.66668701171875" text="Tôn giáo" />
+                        <TableColumn fx:id="thuongtru" prefWidth="78.66668701171875" text="Thường trú" />
+                        <TableColumn fx:id="noilamviec" prefWidth="84.0" text="Nơi làm việc" />
+                        <TableColumn prefWidth="108.6666259765625" text="Giới tính" />
+                    </columns>
+                </TableView>
+                <Button layoutX="644.0" layoutY="125.0" mnemonicParsing="false" onAction="#xoa" prefHeight="27.0" prefWidth="94.0" text="Xoá" />
+                <Label layoutX="184.0" layoutY="158.0" prefHeight="27.0" prefWidth="140.0" text="Thông tin nhân khẩu">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="160.0" layoutY="267.0" prefHeight="27.0" prefWidth="188.0" text="Thông tin gia đình nhân khẩu">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="giadinh" layoutX="155.0" layoutY="293.0" prefHeight="54.0" prefWidth="575.0">
+                    <columns>
+                        <TableColumn fx:id="hoTenGiaDinh" prefWidth="75.0" text="Họ và tên" />
+                        <TableColumn fx:id="ngaySinhGiaDinh" prefWidth="75.0" text="Ngày sinh" />
+                        <TableColumn fx:id="gioiTinhGiaDinh" prefWidth="75.0" text="Giới tính" />
+                        <TableColumn fx:id="quanHeChuHo" prefWidth="145.99996948242188" text="Quan hệ với chủ hộ" />
+                        <TableColumn fx:id="ngheNghiep" prefWidth="94.66668701171875" text="Nghề nghiệp" />
+                        <TableColumn fx:id="diaChi" prefWidth="106.66670735677087" text="Địa chỉ" />
+                    </columns>
+                </TableView>
+                <Label layoutX="730.0" layoutY="267.0" prefHeight="27.0" prefWidth="49.0" text="Tiểu sử">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="tieusu" layoutX="735.0" layoutY="293.0" prefHeight="54.0" prefWidth="462.0">
+                    <columns>
+                        <TableColumn fx:id="tuNgay" prefWidth="75.0" text="Từ ngày " />
+                        <TableColumn fx:id="denNgay" prefWidth="75.0" text="Đến ngày" />
+                        <TableColumn fx:id="diachi" prefWidth="75.0" text="Địa chỉ" />
+                        <TableColumn fx:id="ngheNghiep" prefWidth="104.0" text="Nghề nghiệp" />
+                        <TableColumn fx:id="noiLamViec" prefWidth="137.333251953125" text="Nơi làm việc" />
+                        <TableColumn prefWidth="106.66670735677087" text="Địa chỉ" />
+                    </columns>
+                </TableView>
+                <Button fx:id="buttonGiaDinh" layoutX="348.0" layoutY="269.0" mnemonicParsing="false" onAction="#displayGiaDinh">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../icons/arrow.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="buttonTieuSu" layoutX="779.0" layoutY="269.0" mnemonicParsing="false" onAction="#displayTieuSu">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../icons/arrow.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
             </children>
         </AnchorPane>
     </children>

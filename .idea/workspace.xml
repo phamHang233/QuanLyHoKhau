@@ -5,13 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Beans/HoKhauBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Beans/NhanKhauBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/HoKhauService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/NhanKhauService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/StringService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Beans/DanhMucBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Beans/MemOfFamily.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ChoThueNVHController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/SceneSwitchNVH.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/SuDungNVHController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/Sua_ThietBiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ThemMoi_ChoThue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ThemMoi_SD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/Them_ThietBi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ThietBiNVHController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/hoKhauControllers/ChiTietController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/hoKhauControllers/ChonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/hoKhauControllers/ChuHoHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/hoKhauControllers/ChuyenDiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/hoKhauControllers/HoKhauHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/hoKhauControllers/SceneSwitchHoKhau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/hoKhauControllers/SuaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/hoKhauControllers/TachHoKhauController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/hoKhauControllers/ThanhVienHoHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/hoKhauControllers/ThemMoiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/ChoThueNVHModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/GiaDinhModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/SuDungNVHModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/ThietBiNVHModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/NhaVanHoaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/884732.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/cong.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/img_264064.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/plus-icon-black-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/search.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/sua.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/HoKhau/ChiTiet.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/HoKhau/Chon.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/HoKhau/ChuHo.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/HoKhau/ChuyenDi.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/HoKhau/Sua.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/HoKhau/TachHoKhau.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/HoKhau/ThemMoi.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/chothue.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/sua-thietbi.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/sudung.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/them-sd.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/them-thietbi.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/them-thue.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/nhaVanHoa/thietbi.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/HoKhauBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/HoKhauBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/NhanKhauBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/NhanKhauBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HoKhauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/HoKhauController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/NhanKhauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/NhanKhauController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SwitchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SwitchScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/HoKhauService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/HoKhauService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/NhanKhauService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/NhanKhauService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SQLServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SQLServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/hokhau-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/hokhau-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/nhankhau-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/nhankhau-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,17 +99,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/QuanLyHoKhau",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Phan Mem/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre18.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Cac_mon_lap_trinh\CNPM\QuanLyHoKhau1\src\main\resources\icons" />
+      <recent name="D:\Cac_mon_lap_trinh\CNPM\QuanLyHoKhau1\src\main\resources\views\nhaVanHoa" />
+      <recent name="D:\Cac_mon_lap_trinh\CNPM\QuanLyHoKhau1\src\main\resources\views" />
+      <recent name="D:\Cac_mon_lap_trinh\CNPM\QuanLyHoKhau1\src\main\java\controllers" />
+      <recent name="D:\Cac_mon_lap_trinh\CNPM\QuanLyHoKhau\src\main\resources\view" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="services" />
+      <recent name="models" />
+      <recent name="Beans" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.Main" />

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="494.0" prefWidth="1231.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.hoKhauControllers.SuaController">
+   <children>
+      <TableView fx:id="dataTable" layoutY="123.0" prefHeight="371.0" prefWidth="566.0">
+        <columns>
+            <TableColumn fx:id="IDColumn" prefWidth="44.0" text="ID" />
+          <TableColumn fx:id="hoTen" prefWidth="170.0" text="Họ tên" />
+          <TableColumn fx:id="gioiTinh" prefWidth="74.0" text="Giới tính" />
+            <TableColumn fx:id="ngaySinh" prefWidth="116.0" text="Ngày sinh" />
+            <TableColumn fx:id="soCMT" prefWidth="161.0" text="Số CMT" />
+        </columns>
+      </TableView>
+      <Button layoutX="589.0" layoutY="247.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="81.0" text="&gt;&gt;" />
+      <Button layoutX="589.0" layoutY="284.0" mnemonicParsing="false" onAction="#remove" prefHeight="25.0" prefWidth="81.0" text="&lt;&lt;" />
+      <Button layoutX="588.0" layoutY="327.0" mnemonicParsing="false" onAction="#save" text="Lưu thay đổi" />
+      <TableView fx:id="addedDataTable" layoutX="701.0" layoutY="123.0" prefHeight="371.0" prefWidth="530.0">
+        <columns>
+          <TableColumn fx:id="hoTenAdded" prefWidth="197.0" text="Họ tên" />
+          <TableColumn fx:id="ngaySinhAdded" prefWidth="140.0" text="Ngày sinh" />
+            <TableColumn fx:id="quanHeVoiChuHo" prefWidth="178.0" text="Quan hệ với chủ hộ" />
+        </columns>
+      </TableView>
+      <Text layoutX="6.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Nhân khẩu trên địa bàn" />
+      <Text fill="#041232" layoutX="701.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Nhân khẩu mới" />
+      <ImageView fitHeight="65.0" fitWidth="74.0" layoutX="593.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/pngtree-swap-user-line-icon-vector-png-image_5199534.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-7.0" layoutY="-6.0" prefHeight="86.0" prefWidth="1241.0" style="-fx-background-color: CCFFCC;">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/img_264064.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="89.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40;" text="Thêm thành viên của hộ" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,26 +1,34 @@
 package Beans;
 
 import models.CanCuocCongDanModel;
+import models.GiaDinhModel;
 import models.NhanKhauModel;
 import models.TieuSuModel;
 
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ *
+ * @author Hai
+ */
 public class NhanKhauBean {
     private NhanKhauModel nhanKhauModel;
-    private CanCuocCongDanModel canCuocCongDanModel;
+    private CanCuocCongDanModel chungMinhThuModel;
     private List<TieuSuModel> listTieuSuModels;
+    private List<GiaDinhModel> listGiaDinhModels;
 
-
-    public NhanKhauBean(NhanKhauModel nhanKhauModel, CanCuocCongDanModel canCuocCongDanModel, List<TieuSuModel> listTieuSuModels) {
+    public NhanKhauBean(NhanKhauModel nhanKhauModel, CanCuocCongDanModel chungMinhThuModel, List<TieuSuModel> listTieuSuModels, List<GiaDinhModel> listGiaDinhModels) {
         this.nhanKhauModel = nhanKhauModel;
-        this.canCuocCongDanModel = canCuocCongDanModel;
+        this.chungMinhThuModel = chungMinhThuModel;
         this.listTieuSuModels = listTieuSuModels;
+        this.listGiaDinhModels = listGiaDinhModels;
     }
 
     public NhanKhauBean() {
         this.nhanKhauModel = new NhanKhauModel();
-        this.canCuocCongDanModel = new CanCuocCongDanModel();
+        this.chungMinhThuModel = new CanCuocCongDanModel();
+        this.listGiaDinhModels = new ArrayList<>();
         this.listTieuSuModels = new ArrayList<>();
     }
 
@@ -32,12 +40,12 @@ public class NhanKhauBean {
         this.nhanKhauModel = nhanKhauModel;
     }
 
-    public CanCuocCongDanModel getCanCuocCongDanModel() {
-        return canCuocCongDanModel;
+    public CanCuocCongDanModel getChungMinhThuModel() {
+        return chungMinhThuModel;
     }
 
-    public void satCanCuocCongDanModel(CanCuocCongDanModel canCuocCongDanModel) {
-        this.canCuocCongDanModel = canCuocCongDanModel;
+    public void setChungMinhThuModel(CanCuocCongDanModel chungMinhThuModel) {
+        this.chungMinhThuModel = chungMinhThuModel;
     }
 
     public List<TieuSuModel> getListTieuSuModels() {
@@ -48,6 +56,13 @@ public class NhanKhauBean {
         this.listTieuSuModels = listTieuSuModels;
     }
 
+    public List<GiaDinhModel> getListGiaDinhModels() {
+        return listGiaDinhModels;
+    }
+
+    public void setListGiaDinhModels(List<GiaDinhModel> listGiaDinhModels) {
+        this.listGiaDinhModels = listGiaDinhModels;
+    }
 
     @Override
     public String toString() {
@@ -60,7 +75,7 @@ public class NhanKhauBean {
                 + "<p>Dân tộc: <b>" + nhanKhauModel.getDanToc()+ "</p>"
                 + "<p>Tôn giáo: <b>" + nhanKhauModel.getTonGiao()+ "</p>"
                 + "<p>Quốc tịch: <b>" + nhanKhauModel.getQuocTich()+ "</p>"
-                + "<p>Số CMT: <b>" + canCuocCongDanModel.getSoCMT()+ "</p>"
+                + "<p>Số CMT: <b>" + chungMinhThuModel.getSoCMT()+ "</p>"
                 + "<h4>Tiểu sử<table>"
                 + "<tr>"
                 + "<th>Từ ngày</th>"
@@ -93,10 +108,30 @@ public class NhanKhauBean {
                 + "<th>Nghề nghiệp</th>"
                 + "<th>Địa chỉ hiện tại</th>"
                 +"</tr>";
-
+        for (GiaDinhModel giaDinhModel: listGiaDinhModels) {
+            res += "<tr>"
+                    + "<td>"
+                    + giaDinhModel.getHoTen()
+                    + "</td>"
+                    + "<td>"
+                    + giaDinhModel.getNamSinh().toString()
+                    + "</td>"
+                    + "<td>"
+                    + giaDinhModel.getGioiTinh()
+                    + "</td>"
+                    + "<td>"
+                    + giaDinhModel.getQuanHeVoiNhanKhau()
+                    + "</td>"
+                    + "<td>"
+                    + giaDinhModel.getNgheNghiep()
+                    + "</td>"
+                    + "<td>"
+                    + giaDinhModel.getDiaChiHienTai()
+                    + "</td>"
+                    +"</tr>";
+        }
         res +=  "</table>"
                 + "</div></html>";
         return res;
     }
 }
-

@@ -10,7 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import services.SQLServerConnection;
-
+import javafx.scene.paint.Paint;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -155,5 +155,18 @@ public class MainController implements Initializable {
     @FXML
     void btnThongBao(ActionEvent event) throws IOException{
         System.out.println("Hiển thị thông báo!");
+    }
+    @FXML
+    void btnCSVC (ActionEvent event) throws IOException{
+        switchScene.changeToThietBi(event);
+    }
+    @FXML
+    void btnChoThue (ActionEvent event) throws IOException{
+        switchScene.changeToChoThue(event);
+    }
+    @FXML
+    void btnSuDung (ActionEvent event) throws IOException{
+        switchScene.changeToSuDung(event);
+
     }
 }

@@ -24,7 +24,7 @@ public class NhanKhauService {
             int idNhanKhau = -1;
             while (rs.next()) {
                 NhanKhauModel nhanKhau = nhanKhauBean.getNhanKhauModel();
-                CanCuocCongDanModel chungMinhThuModel = nhanKhauBean.getCanCuocCongDanModel();
+                CanCuocCongDanModel chungMinhThuModel = nhanKhauBean.getChungMinhThuModel();
                 idNhanKhau = rs.getInt("idNhanKhau");
                 nhanKhau.setID(idNhanKhau);
                 nhanKhau.setBietDanh(rs.getString("bietDanh"));
@@ -89,7 +89,7 @@ public class NhanKhauService {
                 nhanKhau.setGioiTinh(rs.getString("gioiTinh"));
                 nhanKhau.setNamSinh(rs.getDate("namSinh"));
                 nhanKhau.setDiaChiHienNay(rs.getString("diaChiHienNay"));
-                CanCuocCongDanModel canCuocCongDanModel = nhanKhauBean.getCanCuocCongDanModel();
+                CanCuocCongDanModel canCuocCongDanModel = nhanKhauBean.getChungMinhThuModel();
                 canCuocCongDanModel.setIdNhanKhau(rs.getInt("idNhanKhau"));
                 canCuocCongDanModel.setSoCMT(rs.getString("soCMT"));
                 canCuocCongDanModel.setNgayCap(rs.getDate("ngayCap"));
@@ -150,7 +150,7 @@ public class NhanKhauService {
             while (rs.next()) {
                 NhanKhauBean nhanKhauBean = new NhanKhauBean();
                 NhanKhauModel nhanKhau = nhanKhauBean.getNhanKhauModel();
-                CanCuocCongDanModel canCuocCongDanModel = nhanKhauBean.getCanCuocCongDanModel();
+                CanCuocCongDanModel canCuocCongDanModel = nhanKhauBean.getChungMinhThuModel();
                 idNhanKhau = rs.getInt("idNhanKhau");
                 nhanKhau.setID(idNhanKhau);
                 nhanKhau.setBietDanh(rs.getString("bietDanh"));
@@ -243,7 +243,7 @@ public class NhanKhauService {
                 nhanKhau.setNamSinh(rs.getDate("namSinh"));
                 nhanKhau.setDiaChiHienNay(rs.getString("diaChiHienNay"));
 
-                CanCuocCongDanModel canCuocCongDanModel = temp.getCanCuocCongDanModel();
+                CanCuocCongDanModel canCuocCongDanModel = temp.getChungMinhThuModel();
                 canCuocCongDanModel.setIdNhanKhau(rs.getInt("idNhanKhau"));
                 canCuocCongDanModel.setSoCMT(rs.getString("soCMT"));
                 canCuocCongDanModel.setNgayCap(rs.getDate("ngayCap"));

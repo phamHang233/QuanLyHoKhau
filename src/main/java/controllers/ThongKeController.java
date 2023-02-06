@@ -168,4 +168,17 @@ public class ThongKeController implements Initializable {
 
     public void displayTieuSu(ActionEvent event) {
     }
+    @FXML
+    void btnCSVC (ActionEvent event) throws IOException{
+        switchScene.changeToThietBi(event);
+    }
+    @FXML
+    void btnChoThue (ActionEvent event) throws IOException{
+        switchScene.changeToChoThue(event);
+    }
+    @FXML
+    void btnSuDung (ActionEvent event) throws IOException{
+        switchScene.changeToSuDung(event);
+
+    }
 }

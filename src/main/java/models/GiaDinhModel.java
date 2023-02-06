@@ -1,6 +1,8 @@
 package models;
 
+
 import java.util.Date;
+
 
 public class GiaDinhModel {
     private int ID;

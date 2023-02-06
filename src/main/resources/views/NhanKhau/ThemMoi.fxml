@@ -40,12 +40,12 @@
                 <Font size="15.0" />
             </font>
         </Label>
-        <Label layoutX="25.0" layoutY="368.0" text="Trình độ học vấn:">
+        <Label layoutX="25.0" layoutY="368.0" text="ID">
             <font>
                 <Font size="15.0" />
             </font>
         </Label>
-        <Label layoutX="23.0" layoutY="421.0" text="Trình độ ngoại ngữ:">
+        <Label layoutX="23.0" layoutY="421.0" text="Trình độ học vấn:">
             <font>
                 <Font size="15.0" />
             </font>
@@ -60,8 +60,8 @@
         <TextField fx:id="danTocTxb" layoutX="242.0" layoutY="200.0" prefHeight="26.0" prefWidth="297.0" />
         <TextField fx:id="soCMTTxb" layoutX="242.0" layoutY="256.0" prefHeight="26.0" prefWidth="297.0" />
         <TextField fx:id="noiThuongTruTxb" layoutX="242.0" layoutY="312.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="trinhDoHocVanTxb" layoutX="242.0" layoutY="365.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="trinhDoNgoaiNguTxb" layoutX="242.0" layoutY="418.0" prefHeight="26.0" prefWidth="297.0" />
+        <TextField fx:id="id" layoutX="242.0" layoutY="365.0" prefHeight="26.0" prefWidth="297.0" />
+        <TextField fx:id="trinhDoHocVanTxb" layoutX="242.0" layoutY="418.0" prefHeight="26.0" prefWidth="297.0" />
         <TextField fx:id="ngheNghiepTxb" layoutX="242.0" layoutY="472.0" prefHeight="26.0" prefWidth="297.0" />
         <DatePicker fx:id="namSinhDateC" layoutX="242.0" layoutY="94.0" prefHeight="26.0" prefWidth="297.0" />
         <Label layoutX="548.0" layoutY="51.0" text="(*)" textFill="RED" />

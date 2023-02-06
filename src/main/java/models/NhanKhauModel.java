@@ -4,6 +4,7 @@ import java.util.Date;
 public class NhanKhauModel {
     private int ID;
     private String maNhanKhau;
+    private String CCCD;
     private String hoTen;
     private String bietDanh;
     private Date namSinh;
@@ -51,6 +52,14 @@ public class NhanKhauModel {
 
     public void setMaNhanKhau(String maNhanKhau) {
         this.maNhanKhau = maNhanKhau;
+    }
+
+    public String getCCCD() {
+        return CCCD;
+    }
+
+    public void setCCCD(String CCCD) {
+        this.CCCD = String.valueOf(CCCD);
     }
 
     public String getHoTen() {

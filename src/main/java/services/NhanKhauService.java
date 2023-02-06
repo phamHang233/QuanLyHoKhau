@@ -89,6 +89,7 @@ public class NhanKhauService {
                 nhanKhau.setGioiTinh(rs.getString("gioiTinh"));
                 nhanKhau.setNamSinh(rs.getDate("namSinh"));
                 nhanKhau.setDiaChiHienNay(rs.getString("diaChiHienNay"));
+                nhanKhau.setCCCD(rs.getString("soCMT"));
                 CanCuocCongDanModel canCuocCongDanModel = nhanKhauBean.getCanCuocCongDanModel();
                 canCuocCongDanModel.setIdNhanKhau(rs.getInt("idNhanKhau"));
                 canCuocCongDanModel.setSoCMT(rs.getString("soCMT"));

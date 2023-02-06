@@ -7,9 +7,13 @@
     <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/NhanKhauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/NhanKhauController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/nhankhauControllers/ThemMoiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/nhankhauControllers/ThemMoiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/NhanKhauModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/NhanKhauModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/NhanKhauService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/NhanKhauService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/SQLServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SQLServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/hokhau-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/hokhau-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/NhanKhau/ChiTiet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/NhanKhau/ChiTiet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/NhanKhau/ThemMoi.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/NhanKhau/ThemMoi.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/nhankhau-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/nhankhau-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,17 +56,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Phan Mem/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre18.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/admin/IdeaProjects/Quan_ly_ho_khau",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Cac_mon_lap_trinh\CNPM\QuanLyHoKhau1\src\main\resources\icons" />
@@ -77,13 +82,26 @@
       <recent name="Beans" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.Main" />
       <module name="beginning" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SQLServerConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="services.SQLServerConnection" />
+      <module name="beginning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,8 +137,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.test" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.SQLServerConnection" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>

@@ -62,7 +62,7 @@ public class NhanKhauController implements Initializable {
         nhanKhauService = new NhanKhauService();
         switchScene = new SwitchScene();
         setDataTable();
-//        nhanKhauButton.setStyle("-fx-background-color: #0B82FA; -fx-text-fill: white");
+//      nhanKhauButton.setStyle("-fx-background-color: #0B82FA; -fx-text-fill: white");
     }
 
     public void setDataTable(){
@@ -104,6 +104,11 @@ public class NhanKhauController implements Initializable {
         popUpStage.showAndWait();
         setDataTable();
     }
+    public void Xoa ( ActionEvent e){
+        NhanKhauModel selected = table.getSelectionModel().getSelectedItem();
+        observablelistNhanKhau.remove(selected);
+    }
+
 
     public void dangKyTamVang(ActionEvent event) throws IOException {
         sceneSwitchNhanKhau.changeSceneTamVang(event);

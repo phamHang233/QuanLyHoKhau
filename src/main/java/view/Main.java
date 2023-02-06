@@ -15,8 +15,7 @@ import java.sql.SQLException;
 import java.util.Calendar;
 
 public class Main extends Application {
-    public static Calendar calendar;
-
+    public static Calendar calendar = Calendar.getInstance();
     @Override
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/views/login-view.fxml"));

@@ -30,7 +30,6 @@ public class TieuSuNK implements Initializable {
     @FXML
     private Label tuNgayTieuSu;
     public void setDataTieuSu(String soCanCuocCongDan){
-        System.out.println(soCanCuocCongDan);
         try {
             String query = "SELECT * \n" +
                     "FROM tieu_su\n" +
@@ -68,7 +67,6 @@ public class TieuSuNK implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.close();
     }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

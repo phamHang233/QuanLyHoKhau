@@ -5,22 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/GiaDinhHoKhau.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/GiaDinhNK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/LichSuHoKhau.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/SwitchSceneTK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/TieuSuNK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/GiaDinhModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/giaDinhHoKhau.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/giaDinhNK.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/lichSuHoKhau.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/tieuSuNK.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/NVH/ChoThueNVHController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/NVH/ChoThueNVHController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/ThongKeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/GiaDinhHoKhau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/GiaDinhHoKhau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/GiaDinhNK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/GiaDinhNK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/LichSuHoKhau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/LichSuHoKhau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/SwitchSceneTK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/SwitchSceneTK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/ThongKeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/ThongKeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/TieuSuNK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/TieuSuNK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/GiaDinhModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/GiaDinhModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/NhanKhauService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/NhanKhauService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/thongKe/giaDinhHoKhau.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/giaDinhHoKhau.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/thongKe/lichSuHoKhau.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/lichSuHoKhau.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/thongKe/thongke-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/thongke-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

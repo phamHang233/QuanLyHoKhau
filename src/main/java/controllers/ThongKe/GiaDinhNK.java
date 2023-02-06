@@ -65,8 +65,6 @@ public class GiaDinhNK implements Initializable {
             while(rs.next()){
                 GiaDinhModel giaDinhModel = new GiaDinhModel();
                 giaDinhModel.setHoTen(rs.getString("hoTen"));
-//                System.out.println(giaDinhModel.getHoTen() + "1");
-//                System.out.println(rs.getString("hoTen") + "2");
                 giaDinhModel.setGioiTinh(rs.getString("gioiTinh"));
                 giaDinhModel.setNamSinh(rs.getDate("namSinh"));
                 giaDinhModel.setIdNhanKhau(rs.getInt("idNhanKhau"));

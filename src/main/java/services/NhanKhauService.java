@@ -115,16 +115,16 @@ public class NhanKhauService {
                 + " INNER JOIN chung_minh_thu ON nhan_khau.ID = chung_minh_thu.idNhanKhau"
                 + " LEFT JOIN tam_tru ON nhan_khau.ID = tam_tru.idNhanKhau "
                 + " LEFT JOIN tam_vang ON nhan_khau.ID = tam_vang.idNhanKhau "
-                + " WHERE ROUND(DATEDIFF(CURDATE(),namSinh)/365 , 0) >= "
+                + " WHERE ROUND(DATEDIFF(year,GETDATE(),namSinh)/365 , 0) >= "
                 + TuTuoi
-                + " AND ROUND(DATEDIFF(CURDATE(),namSinh)/365 , 0) <= "
+                + " AND ROUND(DATEDIFF(year,GETDATE(),namSinh)/365 , 0) <= "
                 + denTuoi;
         if (!gender.equalsIgnoreCase("Toan Bo")) {
             query += " AND nhan_khau.gioiTinh = '" + gender + "'";
         }
         if (Status.equalsIgnoreCase("Toan bo")) {
-            query += " AND (tam_tru.denNgay >= CURDATE() OR tam_tru.denNgay IS NULL)"
-                    + " AND (tam_vang.denNgay <= CURDATE() OR tam_vang.denNgay IS NULL)";
+            query += " AND (tam_tru.denNgay >= GETDATE() OR tam_tru.denNgay IS NULL)"
+                    + " AND (tam_vang.denNgay <= GETDATE() OR tam_vang.denNgay IS NULL)";
         } else if (Status.equalsIgnoreCase("Thuong tru")) {
             query += " AND tam_tru.denNgay IS NULL";
 

@@ -1,26 +1,27 @@
-package controllers;
+package controllers.ThongKe;
 
+import Beans.NhanKhauBean;
+import controllers.SwitchScene;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import models.NhanKhauModel;
+import org.w3c.dom.Text;
+import services.NhanKhauService;
+import services.StringService;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import static services.SQLServerConnection.getSqlConnection;
@@ -29,41 +30,20 @@ import static services.SQLServerConnection.getSqlConnection;
 public class ThongKeController implements Initializable {
 
     SwitchScene switchScene;
-    // Thuoc tinh cho phan popup xem them thong tin gia dinh nhan khau
-    @FXML
-    private TableColumn<?, ?> gioiTinhNhanKhauXT;
-
-    @FXML
-    private TableColumn<?, ?> hoTenNhanKhauXT;
-
-    @FXML
-    private TableColumn<?, ?> idNhanKhauXT;
-
-    @FXML
-    private TableColumn<?, ?> ngaySinhNhanKhauXT;
-
-    @FXML
-    private TableColumn<?, ?> ngheNghiepNhanKhauXT;
-
-    @FXML
-    private TableColumn<?, ?> qhNhanKhauXT;
-
-    @FXML
-    private TableView<?> thongTinGiaDinhXT;
-
-
-    //
     @FXML
     private TitledPane NVHTitle;
 
     @FXML
-    private TableView<?> bangThongKe;
+    private TableView<NhanKhauModel> bangThongKe;
 
     @FXML
     private ComboBox<?> capDoBox;
 
     @FXML
     private AnchorPane capDoMode;
+
+    @FXML
+    private ComboBox<String> chonGioiTinhThongKe;
 
     @FXML
     private Label chuyenMonNhanKhau;
@@ -100,6 +80,9 @@ public class ThongKeController implements Initializable {
 
     @FXML
     private TableColumn<?, ?> gioiTinhThongKe;
+
+    @FXML
+    private AnchorPane hienThiMacDinh;
 
     @FXML
     private AnchorPane hoKhauMode;
@@ -210,6 +193,9 @@ public class ThongKeController implements Initializable {
     private Button thongKeSoLieuBtn;
 
     @FXML
+    private AnchorPane thongTinTimKiemHoKhau;
+
+    @FXML
     private AnchorPane thongTinTimKiemNhanKhau;
 
     @FXML
@@ -228,24 +214,34 @@ public class ThongKeController implements Initializable {
     private Button timKiemNhanKhauBtn;
 
     @FXML
-    private ComboBox<?> tinhTrangThongKe;
+    private ComboBox<String> tinhTrangThongKe;
 
     @FXML
     private Label tonGiaoNhanKhau;
 
     @FXML
     private TextField tuTuoiText;
-    @FXML
-    private AnchorPane thongTinTimKiemHoKhau;
-    @FXML
-    private AnchorPane hienThiMacDinh;
+
     @FXML
     private Button xemThemGiaDinh;
+
     @FXML
     private Button xemThemTieuSu;
+    @FXML
+    private TextField denNamText;
+    @FXML
+    private TextField tuNamText;
+
+    List<NhanKhauBean> listNhanKhauBeans;
+    NhanKhauService nhanKhauService;
+    ObservableList<NhanKhauModel> observablelistNhanKhau;
+    ObservableList<String> gioiTinhList;
+    ObservableList<String> tinhTrangList;
+    private SwitchSceneTK switchSceneTK;
+    int accessCount = 0;
     private void exceptionHandle(String message) {
     }
-
+    // Nut chung cho cac che do
     @FXML
     void btnCSVC(ActionEvent event) throws IOException {
         switchScene.changeToThietBi(event);
@@ -295,12 +291,12 @@ public class ThongKeController implements Initializable {
     void btnTrangChu(ActionEvent event) throws IOException {
         switchScene.changeToMain(event);
     }
-
+    // Che do tim kiem nhan khau
     @FXML
     void timKiemNhanKhau(ActionEvent event) {
         String stringTemp = soCanCuocCongDan.getText();
 //        System.out.println(stringTemp);
-        NhanKhauModel nhanKhauModel = new NhanKhauModel();
+//        NhanKhauModel nhanKhauModel = new NhanKhauModel();
 
         try {
             String query = "SELECT * FROM nhan_khau INNER JOIN chung_minh_thu ON nhan_khau.id = chung_minh_thu.idNhanKhau WHERE soCMT = '" + stringTemp + "'";
@@ -356,104 +352,189 @@ public class ThongKeController implements Initializable {
 
         }
     }
-        @FXML
-        void xoaTimKiemNhanKhau (){
-            thongTinTimKiemNhanKhau.setVisible(false);
-            soCanCuocCongDan.setText("");
-            hoTenNhanKhau.setText("");
-            soHoChieuNhanKhau.setText("");
-            quocTichNhanKhau.setText("");
-            gioiTinhNhanKhau.setText("");
-            ngaySinhNhanKhau.setText("");
-            noiSinhNhanKhau.setText("");
-            nguyenQuanNhanKhau.setText("");
-            thuongTruNhanKhau.setText("");
-            diaChiNhanKhau.setText("");
-            danTocNhanKhau.setText("");
-            tonGiaoNhanKhau.setText("");
-            hocVanNhanKhau.setText("");
-            chuyenMonNhanKhau.setText("");
-            tiengDanTocNhanKhau.setText("");
-            ngoaiNguNhanKhau.setText("");
-            ngheNghiepNhanKhau.setText("");
-            noiLamViecNhanKhau.setText("");
-            tienAnNhanKhau.setText("");
-            ngayChuyenDenNhanKhau.setText("");
-            lyDoChuyenDenNhanKhau.setText("");
-            ngayChuyenDiNhanKhau.setText("");
-            diaChiMoiNhanKhau.setText("");
-            ngayTaoNhanKhau.setText("");
-            nguoiTaoNhanKhau.setText("");
-            ngayXoaNhanKhau.setText("");
-            lyDoXoaNhanKhau.setText("");
-            ghiChuNhanKhau.setText("");
-        }
-        @FXML
-        void xoaTimKiemHoKhau(){
-            thongTinTimKiemHoKhau.setVisible(false);
-            hoTenChuHo.setText("");
-            maKhuVucHoKhau.setText("");
-            diaChiHoKhau.setText("");
-            ngayLapHoKhau.setText("");
-            ngayChuyenDiHoKhau.setText("");
-            ngayLapHoKhau.setText("");
-            ngayChuyenDiHoKhau.setText("");
-            lyDoChuyenHoKhau.setText("");
-            nguoiThucHienHoKhau.setText("");
-            maHoKhau.setText("");
-        }
-        @FXML
-        void chonThongKeMode(ActionEvent event) throws IOException {
+    @FXML
+    void xoaTimKiemNhanKhau (){
+        thongTinTimKiemNhanKhau.setVisible(false);
+        soCanCuocCongDan.setText("");
+        hoTenNhanKhau.setText("");
+        soHoChieuNhanKhau.setText("");
+        quocTichNhanKhau.setText("");
+        gioiTinhNhanKhau.setText("");
+        ngaySinhNhanKhau.setText("");
+        noiSinhNhanKhau.setText("");
+        nguyenQuanNhanKhau.setText("");
+        thuongTruNhanKhau.setText("");
+        diaChiNhanKhau.setText("");
+        danTocNhanKhau.setText("");
+        tonGiaoNhanKhau.setText("");
+        hocVanNhanKhau.setText("");
+        chuyenMonNhanKhau.setText("");
+        tiengDanTocNhanKhau.setText("");
+        ngoaiNguNhanKhau.setText("");
+        ngheNghiepNhanKhau.setText("");
+        noiLamViecNhanKhau.setText("");
+        tienAnNhanKhau.setText("");
+        ngayChuyenDenNhanKhau.setText("");
+        lyDoChuyenDenNhanKhau.setText("");
+        ngayChuyenDiNhanKhau.setText("");
+        diaChiMoiNhanKhau.setText("");
+        ngayTaoNhanKhau.setText("");
+        nguoiTaoNhanKhau.setText("");
+        ngayXoaNhanKhau.setText("");
+        lyDoXoaNhanKhau.setText("");
+        ghiChuNhanKhau.setText("");
+    }
+    @FXML
+    void chonThongKeMode(ActionEvent event) throws IOException {
 //            switchScene.changeToThongKe(event);
-            if(event.getSource() == timKiemNhanKhauBtn){
-                nhanKhauMode.setVisible(true);
-                xoaTimKiemNhanKhau();
-                hoKhauMode.setVisible(false);
-                thongKeMode.setVisible(false);
-            }
-            else if(event.getSource() == timKiemHoKhauBtn){
-                hoKhauMode.setVisible(true);
-                xoaTimKiemHoKhau();
-                nhanKhauMode.setVisible(false);
-                thongKeMode.setVisible(false);
-            }
-            else{
-                thongKeMode.setVisible(true);
-                hoKhauMode.setVisible(false);
-                nhanKhauMode.setVisible(false);
-            }
-
-
+        hienThiMacDinh.setVisible(false);
+        if(event.getSource() == timKiemNhanKhauBtn){
+            nhanKhauMode.setVisible(true);
+            xoaTimKiemNhanKhau();
+            hoKhauMode.setVisible(false);
+            thongKeMode.setVisible(false);
         }
-        public void timKiemHoKhau(ActionEvent event) {
-            
+        else if(event.getSource() == timKiemHoKhauBtn){
+            hoKhauMode.setVisible(true);
+            xoaTimKiemHoKhau();
+            nhanKhauMode.setVisible(false);
+            thongKeMode.setVisible(false);
         }
-        public void xemThemGiaDinh(ActionEvent event) {
-
+        else{
+            thongKeMode.setVisible(true);
+            hoKhauMode.setVisible(false);
+            nhanKhauMode.setVisible(false);
         }
-        public void xemThemLichSu(ActionEvent event) {
-
-        }
-        public void timKiemThongKe(ActionEvent event) {
-
-        }
-        public void xoaTimKiemThongKe(ActionEvent event) {
-
-        }
-    public void xemThemThongTinNhanKhau(ActionEvent event) {
-
     }
-    // Nut huy va OK cua phan popup xem them gia dinh nhan khau
     @FXML
-    void btnHuy(ActionEvent event) {
-        
+    void xemThemThongTinNhanKhau(ActionEvent event) throws IOException {
+        switchSceneTK.changeToXemThemNhanKhau(event, soCanCuocCongDan.getText());
     }
-
+    // Che do tim kiem ho khau
     @FXML
-    void btnOK(ActionEvent event) {
-
+    void xoaTimKiemHoKhau(){
+        thongTinTimKiemHoKhau.setVisible(false);
+        hoTenChuHo.setText("");
+        maKhuVucHoKhau.setText("");
+        diaChiHoKhau.setText("");
+        ngayLapHoKhau.setText("");
+        ngayChuyenDiHoKhau.setText("");
+        ngayLapHoKhau.setText("");
+        ngayChuyenDiHoKhau.setText("");
+        lyDoChuyenHoKhau.setText("");
+        nguoiThucHienHoKhau.setText("");
+        maHoKhau.setText("");
     }
+    public void timKiemHoKhau(ActionEvent event) {
+        String stringTemp = maHoKhau.getText();
+        try {
+//            String query = "SELECT nk.maNhanKhau, nk.hoTen, nk.namSinh, nk.gioiTinh, nk.diaChiHienNay\n" +
+//                    "FROM nhan_khau as nk, thanh_vien_cua_ho as tv, ho_khau as hk\n" +
+//                    "WHERE hk.ID = tv.idHoKhau\n" +
+//                    "AND tv.idNhanKhau = nk.ID\n" +
+//                    "AND hk.maHoKhau = '" + stringTemp+ "'";
+//            System.out.println(query);
+            String query = "SELECT nk.hoTen, hk.maKhuVuc, hk.diaChi, hk.ngayLap, hk.ngayChuyenDi, hk.lyDoChuyen, hk.nguoiThucHien\n" +
+                    "FROM ho_khau as hk, nhan_khau as nk\n" +
+                    "WHERE hk.idChuHo = nk.ID\n" +
+                    "AND hk.maHoKhau = '"+stringTemp+"'";
+            PreparedStatement preparedStatement = getSqlConnection().prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                hoTenChuHo.setText(rs.getString("hoTen"));
+                maKhuVucHoKhau.setText(rs.getString("maKhuVuc"));
+                diaChiHoKhau.setText(rs.getString("diaChi"));
+                ngayLapHoKhau.setText(rs.getString("ngayLap"));
+                ngayChuyenDiHoKhau.setText(rs.getString("ngayChuyenDi"));
+                lyDoChuyenHoKhau.setText(rs.getString("lyDoChuyen"));
+                nguoiThucHienHoKhau.setText(rs.getString("nguoiThucHien"));
+            }
+            preparedStatement.close();
+//            list.add(nhanKhauModel);
+//            thongtinnhankhau.setItems(list);
 
+            thongTinTimKiemHoKhau.setVisible(true);
+        } catch (Exception e) {
+            this.exceptionHandle(e.getMessage());
+
+        }
+    }
+    public void xemThemThongTinHoKhau(ActionEvent event) throws IOException {
+        switchSceneTK.changeToXemThemHoKhau(event, maHoKhau.getText());
+    }
+    // Che do thong ke so lieu
+    public void timKiemThongKe(ActionEvent event) {
+        setData();
+    }
+    public void xoaTimKiemThongKe(ActionEvent event) {
+        bangThongKe.getItems().clear();
+    }
+    public void checkDoTuoi(ActionEvent event){
+        if(((CheckBox)event.getSource()).getText().equals("Theo độ tuổi")){
+            theoDoTuoi.setSelected(true);
+            theoCapDo.setSelected(false);
+            doTuoiMode.setVisible(true);
+            capDoMode.setVisible(false);
+        }
+        else {
+            theoDoTuoi.setSelected(false);
+            theoCapDo.setSelected(true);
+            doTuoiMode.setVisible(false);
+            capDoMode.setVisible(true);
+        }
+    }
+    public void setData() {
+        int tuTuoi = -1;
+        int denTuoi = 200;
+        int tuNam = 0;
+        int denNam = 2100;
+        String gender = "Toan Bo";
+        String status = "Toan Bo";
+        if (accessCount != 0){
+            gender = StringService.covertToString(chonGioiTinhThongKe.getSelectionModel().getSelectedItem());
+            status = StringService.covertToString(tinhTrangThongKe.getSelectionModel().getSelectedItem());
+        }
+        accessCount++;
+        try {
+            if (!tuTuoiText.getText().trim().isEmpty()) {
+                tuTuoi = Integer.parseInt(tuTuoiText.getText().trim());
+            } else {
+                tuTuoi = -1;
+            }
+            if (!denTuoiText.getText().trim().isEmpty()) {
+                denTuoi = Integer.parseInt(denTuoiText.getText().trim());
+            } else {
+                denTuoi = 200;
+            }
+            if (!tuNamText.getText().trim().isEmpty()) {
+                tuNam = Integer.parseInt(tuNamText.getText().trim());
+            }
+            if (!denNamText.getText().trim().isEmpty()) {
+                denNam = Integer.parseInt(denNamText.getText().trim());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning!");
+            alert.setContentText("Vui lòng nhập đúng kiểu dữ liệu");
+            alert.show();
+        }
+        listNhanKhauBeans = nhanKhauService.statisticNhanKhau(tuTuoi, denTuoi, gender, status, tuNam, denNam);
+        setDataTable();
+    }
+    public void setDataTable() {
+        List<NhanKhauModel> listItem = new ArrayList<>();
+        listNhanKhauBeans.forEach(nhanKhau -> {
+            listItem.add(nhanKhau.getNhanKhauModel());
+        });
+        observablelistNhanKhau = FXCollections.observableList(listItem);
+        idThongKe.setCellValueFactory(new PropertyValueFactory<>("ID"));
+        hoTenThongKe.setCellValueFactory(new PropertyValueFactory<>("hoTen"));
+        ngaySinhThongKe.setCellValueFactory(new PropertyValueFactory<>("namSinh"));
+        gioiTinhThongKe.setCellValueFactory(new PropertyValueFactory<>("gioiTinh"));
+        diaChiThongKe.setCellValueFactory(new PropertyValueFactory<>("diaChiHienNay"));
+        bangThongKe.setItems(observablelistNhanKhau);
+    }
     // Ham khoi tao cho thongKeController
     @Override
     public void initialize (URL url, ResourceBundle resourceBundle){
@@ -462,5 +543,17 @@ public class ThongKeController implements Initializable {
         nhanKhauMode.setVisible(false);
         hoKhauMode.setVisible(false);
         thongKeMode.setVisible(false);
+        switchSceneTK = new SwitchSceneTK();
+        // Thong ke so lieu
+        nhanKhauService = new NhanKhauService();
+        gioiTinhList = FXCollections.observableArrayList("Toàn bộ", "Nam", "Nữ");
+        tinhTrangList = FXCollections.observableArrayList("Toàn bộ", "Thường trú", "Tạm trú", "Tạm vắng");
+        chonGioiTinhThongKe.setItems(gioiTinhList);
+        chonGioiTinhThongKe.getSelectionModel().selectFirst();
+        tinhTrangThongKe.setItems(tinhTrangList);
+        tinhTrangThongKe.getSelectionModel().selectFirst();
+        theoDoTuoi.setSelected(true);
+        doTuoiMode.setVisible(true);
+        capDoMode.setVisible(false);
     }
 }

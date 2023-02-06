@@ -6,12 +6,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<<<<<<< HEAD
-=======
+
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
->>>>>>> 50d66dda51cc21842ffdd24e26a7a38d3ba02a76
+
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
@@ -137,11 +136,9 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-<<<<<<< HEAD
+
                         <TitledPane fx:id="NVHTitle" animated="false" expanded="false" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@main.css" text="Nhà Văn Hoá">
-=======
-                        <TitledPane fx:id="NVHTitle" animated="false" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@main.css" text="Nhà Văn Hoá">
->>>>>>> 50d66dda51cc21842ffdd24e26a7a38d3ba02a76
+
                             <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="148.0" styleClass="trang__chu__button" stylesheets="@main.css">
                                     <children>

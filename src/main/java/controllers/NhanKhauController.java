@@ -62,7 +62,7 @@ public class NhanKhauController implements Initializable {
         nhanKhauService = new NhanKhauService();
         switchScene = new SwitchScene();
         setDataTable();
-        nhanKhauButton.setStyle("-fx-background-color: #0B82FA; -fx-text-fill: white");
+//        nhanKhauButton.setStyle("-fx-background-color: #0B82FA; -fx-text-fill: white");
     }
 
     public void setDataTable(){
@@ -93,7 +93,7 @@ public class NhanKhauController implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Stage popUpStage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/view/NhanKhau/ThemMoi.fxml"));
+        loader.setLocation(getClass().getResource("/views/NhanKhau/ThemMoi.fxml"));
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         popUpStage.initModality(Modality.APPLICATION_MODAL);
@@ -117,7 +117,7 @@ public class NhanKhauController implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Stage popUpStage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/view/NhanKhau/KhaiTu.fxml"));
+        loader.setLocation(getClass().getResource("/views/NhanKhau/KhaiTu.fxml"));
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         popUpStage.initModality(Modality.APPLICATION_MODAL);

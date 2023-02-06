@@ -112,6 +112,13 @@
                         <FontIcon iconColor="WHITE" iconLiteral="mdi-chart-areaspline" iconSize="32" />
                      </graphic>
                   </Button>
+                  <VBox prefHeight="91.0" prefWidth="151.0">
+                     <children>
+                        <Button fx:id="timKiemNhanKhauBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#chonThongKeMode" prefHeight="30.0" prefWidth="151.0" text="Tìm kiếm nhân khẩu" />
+                        <Button fx:id="timKiemHoKhauBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#chonThongKeMode" prefHeight="30.0" prefWidth="151.0" text="Tìm kiếm hộ khẩu" />
+                        <Button fx:id="thongKeSoLieuBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#chonThongKeMode" prefHeight="30.0" prefWidth="151.0" text="Thống kê số liệu" />
+                     </children>
+                  </VBox>
                   <TitledPane fx:id="NVHTitle1" animated="false" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@../main.css" text="Nhà Văn Hoá">
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="148.0" styleClass="trang__chu__button" stylesheets="@../main.css">

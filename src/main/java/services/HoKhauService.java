@@ -1,9 +1,8 @@
 package services;
 
 import Beans.HoKhauBean;
-import Beans.HoKhauBean;
-import controllers.HelloController;
-import controllers.HelloController;
+
+import controllers.LoginController;
 import models.HoKhauModel;
 import models.KhaiTuModel;
 import models.NhanKhauModel;
@@ -16,16 +15,12 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Hai
- */
 public class HoKhauService {
     // them moi ho khau
     public boolean addNew(HoKhauBean hoKhauBean) throws ClassNotFoundException, SQLException{
         Connection connection = SQLServerConnection.getSqlConnection();
         String query = "INSERT INTO ho_khau(maHoKhau, idChuHo, maKhuVuc, diaChi, ngayLap)"
-                + " values (?, ?, ?, ?, NOW())";
+                + " values (?, ?, ?, ?, GETDATE())";
         PreparedStatement preparedStatement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
         preparedStatement.setString(1, hoKhauBean.getHoKhauModel().getMaHoKhau());
         preparedStatement.setInt(2, hoKhauBean.getChuHo().getID());
@@ -144,6 +139,7 @@ public class HoKhauService {
     }
 
     // tim kiem the ten chu ho va ma ho khau
+
     public List<HoKhauBean> search(String key) {
         List<HoKhauBean> list = new ArrayList<>();
         try {
@@ -218,8 +214,9 @@ public class HoKhauService {
 
     /**
      * ham tao moi ho khau va up date lai thong tin nhan khau co trong ho cu
-     * @param hoKhauBean ho khau moi duoc tach ra
+//     * @param hoKhauBean ho khau moi duoc tach ra
      */
+
     public void tachHoKhau(HoKhauBean hoKhauBean) {
         /**
          * xoa cac thanh vien co trong moi ra khoi bang thanh_vien_cua_ho
@@ -266,7 +263,9 @@ public class HoKhauService {
                 + noiChuyenDen
                 + "',"
                 + "nguoiThucHien = "
-                + HelloController.currentUser.getID()
+
+                + LoginController.currentUser.getID()
+
                 + " WHERE ho_khau.ID = " + idhoKhau;
         try {
             Connection connection = SQLServerConnection.getSqlConnection();

@@ -2,6 +2,8 @@ package services;
 
 import Beans.NhanKhauBean;
 import models.*;
+
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,8 +13,6 @@ import java.util.List;
 
 
 public class NhanKhauService {
-
-
     public NhanKhauBean getNhanKhau(String cmt) {
         NhanKhauBean nhanKhauBean = new NhanKhauBean();
         try {
@@ -24,7 +24,7 @@ public class NhanKhauService {
             int idNhanKhau = -1;
             while (rs.next()) {
                 NhanKhauModel nhanKhau = nhanKhauBean.getNhanKhauModel();
-                CanCuocCongDanModel chungMinhThuModel = nhanKhauBean.getChungMinhThuModel();
+                CanCuocCongDanModel chungMinhThuModel = nhanKhauBean.getCanCuocCongDanModel();
                 idNhanKhau = rs.getInt("idNhanKhau");
                 nhanKhau.setID(idNhanKhau);
                 nhanKhau.setBietDanh(rs.getString("bietDanh"));
@@ -89,7 +89,7 @@ public class NhanKhauService {
                 nhanKhau.setGioiTinh(rs.getString("gioiTinh"));
                 nhanKhau.setNamSinh(rs.getDate("namSinh"));
                 nhanKhau.setDiaChiHienNay(rs.getString("diaChiHienNay"));
-                CanCuocCongDanModel canCuocCongDanModel = nhanKhauBean.getChungMinhThuModel();
+                CanCuocCongDanModel canCuocCongDanModel = nhanKhauBean.getCanCuocCongDanModel();
                 canCuocCongDanModel.setIdNhanKhau(rs.getInt("idNhanKhau"));
                 canCuocCongDanModel.setSoCMT(rs.getString("soCMT"));
                 canCuocCongDanModel.setNgayCap(rs.getDate("ngayCap"));
@@ -150,7 +150,7 @@ public class NhanKhauService {
             while (rs.next()) {
                 NhanKhauBean nhanKhauBean = new NhanKhauBean();
                 NhanKhauModel nhanKhau = nhanKhauBean.getNhanKhauModel();
-                CanCuocCongDanModel canCuocCongDanModel = nhanKhauBean.getChungMinhThuModel();
+                CanCuocCongDanModel canCuocCongDanModel = nhanKhauBean.getCanCuocCongDanModel();
                 idNhanKhau = rs.getInt("idNhanKhau");
                 nhanKhau.setID(idNhanKhau);
                 nhanKhau.setBietDanh(rs.getString("bietDanh"));
@@ -243,7 +243,7 @@ public class NhanKhauService {
                 nhanKhau.setNamSinh(rs.getDate("namSinh"));
                 nhanKhau.setDiaChiHienNay(rs.getString("diaChiHienNay"));
 
-                CanCuocCongDanModel canCuocCongDanModel = temp.getChungMinhThuModel();
+                CanCuocCongDanModel canCuocCongDanModel = temp.getCanCuocCongDanModel();
                 canCuocCongDanModel.setIdNhanKhau(rs.getInt("idNhanKhau"));
                 canCuocCongDanModel.setSoCMT(rs.getString("soCMT"));
                 canCuocCongDanModel.setNgayCap(rs.getDate("ngayCap"));
@@ -271,6 +271,18 @@ public class NhanKhauService {
 //        }
 //    }
 
+    public void khaiTu(int idNguoiChet) {
+        try {
+            Connection connection = SQLServerConnection.getSqlConnection();
+            Statement statement = connection.createStatement();
+            String query = "DELETE FROM `QuanLyNhanKhau`.`nhan_khau` WHERE (`ID` = '" + idNguoiChet + "');";
+            statement.executeUpdate(query);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void themKhaiTu(KhaiTuModel khaiTuModel) {
         try {
             int ID = khaiTuModel.getID();
@@ -294,7 +306,24 @@ public class NhanKhauService {
      * Ham xử lý ngoại lệ : thông báo ra lỗi nhận được
      */
     private void exceptionHandle(String message) {
-//        JOptionPane.showMessageDialog(null, message, "Warning", JOptionPane.ERROR_MESSAGE);
+        JOptionPane JOptionPane = null;
+        JOptionPane.showMessageDialog(null, message, "Warning", JOptionPane.ERROR_MESSAGE);
+    }
+    public static String getCMTfromID(int ID){
+        String soCMT = null;
+        try{
+            Connection connection = SQLServerConnection.getSqlConnection();
+            String idString = String.valueOf(ID);
+            String query = "SELECT * FROM chung_minh_thu WHERE idNhanKhau = '" + idString + "'";
+            ResultSet rs = connection.createStatement().executeQuery(query);
+            if(rs.next()){
+                soCMT = rs.getString("soCMT");
+
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return soCMT;
     }
 }
 

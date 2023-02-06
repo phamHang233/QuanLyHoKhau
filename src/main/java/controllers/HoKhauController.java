@@ -156,6 +156,7 @@ public class HoKhauController implements Initializable {
     }
     @FXML
     void btnCSVC (ActionEvent event) throws IOException{
+
         switchScene.changeToThietBi(event);
     }
     @FXML

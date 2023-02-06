@@ -9,27 +9,32 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import models.NhanKhauModel;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
+import services.StringService;
+import services.NhanKhauService;
+
+
 import static services.SQLServerConnection.getSqlConnection;
 
 //Quản lý màn hình thống kê
 public class ThongKeController implements Initializable {
+
     SwitchScene switchScene;
+    NhanKhauService nhanKhauService;
+
+    @FXML
+    private TitledPane NVHTitle;
     @FXML
     private Button buttonGiaDinh;
 
@@ -73,6 +78,8 @@ public class ThongKeController implements Initializable {
     ObservableList<NhanKhauModel> list = FXCollections.observableArrayList();
     public void initialize(URL url, ResourceBundle resourceBundle) {
         switchScene = new SwitchScene();
+        nhanKhauService = new NhanKhauService();
+
         hoten.setCellValueFactory(new PropertyValueFactory<>("hoTen"));
         ngaysinh.setCellValueFactory(new PropertyValueFactory<>("namSinh"));
         diachi.setCellValueFactory(new PropertyValueFactory<>("diaChiHienNay"));
@@ -84,6 +91,8 @@ public class ThongKeController implements Initializable {
         tongiao.setCellValueFactory(new PropertyValueFactory<>("tonGiao"));
         dantoc.setCellValueFactory(new PropertyValueFactory<>("danToc"));
     }
+
+
     @FXML
     void btnHoKhau(ActionEvent event) throws IOException {
         switchScene.changeToHoKhau(event);
@@ -92,7 +101,7 @@ public class ThongKeController implements Initializable {
 
     @FXML
     void btnNhaVH(ActionEvent event) throws IOException {
-        switchScene.changeToNVH(event);
+         NVHTitle.setExpanded(true);
     }
 
     @FXML
@@ -110,10 +119,7 @@ public class ThongKeController implements Initializable {
     }
     @FXML
     void btnDangXuat(ActionEvent event) throws IOException {
-        Parent root =  FXMLLoader.load(getClass().getResource("/views/login-view.fxml")) ;
-        Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root,  600,322));
-        stage.centerOnScreen();
+        switchScene.changToLogin(event);
     }
     @FXML
     void btnHoSo(ActionEvent event) throws IOException{
@@ -181,4 +187,5 @@ public class ThongKeController implements Initializable {
         switchScene.changeToSuDung(event);
 
     }
+
 }

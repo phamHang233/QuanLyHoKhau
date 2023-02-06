@@ -1,6 +1,8 @@
 package controllers.NVH;
 
-import controllers.HelloController;
+
+import controllers.LoginController;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +14,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import models.ChoThueNVHModel;
+
 import services.NhaVanHoaService;
 import services.SQLServerConnection;
 
@@ -64,7 +67,8 @@ public class ThemMoi_ChoThue implements Initializable {
 
             choThueNVHModel.setMucDich(mucDich.getText());
             choThueNVHModel.setNgaySuDung(Date.from(ngayThue.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
-            choThueNVHModel.setIDNguoiLap(HelloController.currentUser.getID());
+
+            choThueNVHModel.setIDNguoiLap(LoginController.currentUser.getIDNhanKhau());
             choThueNVHModel.setNguoiThue(nguoiThue.getText());
             choThueNVHModel.setPhi(Integer.parseInt(phi.getText()));
             choThueNVHModel.setGhiChu(ghiChu.getText());

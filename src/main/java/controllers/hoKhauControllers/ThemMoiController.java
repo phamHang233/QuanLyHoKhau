@@ -87,7 +87,7 @@ public class ThemMoiController implements Initializable{
         selectedNhanKhau = ChuHoHolder.getInstance().getNhanKhauBean();
         chuHo.setText(selectedNhanKhau.getNhanKhauModel().getHoTen());
         ngaySinhChuHo.setText(selectedNhanKhau.getNhanKhauModel().getNamSinh().toString());
-        soCMTChuHo.setText(selectedNhanKhau.getChungMinhThuModel().getSoCMT());
+        soCMTChuHo.setText(selectedNhanKhau.getCanCuocCongDanModel().getSoCMT());
     }
 
     public void them(ActionEvent event) throws IOException {

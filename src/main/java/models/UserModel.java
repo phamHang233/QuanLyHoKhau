@@ -3,6 +3,15 @@ public class UserModel {
     private int ID;
     private String userName;
     private String passwd;
+    private int IDNhanKhau;
+
+    public int getIDNhanKhau() {
+        return IDNhanKhau;
+    }
+
+    public void setIDNhanKhau(int IDNhanKhau) {
+        this.IDNhanKhau = IDNhanKhau;
+    }
 
     public int getID() {
         return ID;

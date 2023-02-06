@@ -1,6 +1,7 @@
 package controllers.NVH;
 
-import controllers.HelloController;
+
+import controllers.LoginController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -55,7 +56,8 @@ public class ThemMoi_SD implements Initializable {
             sdNVHModel.setStt(Integer.parseInt(stt.getText()));
             sdNVHModel.setMucDich(mucDich.getText());
             sdNVHModel.setNgaySuDung(Date.from(ngaySD.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
-            sdNVHModel.setIDNguoiLap(HelloController.currentUser.getID());
+
+            sdNVHModel.setIDNguoiLap(LoginController.currentUser.getIDNhanKhau());
             sdNVHModel.setGhiChu(ghiChu.getText());
 
             try {

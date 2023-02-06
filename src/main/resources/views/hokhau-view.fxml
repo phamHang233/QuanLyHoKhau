@@ -6,9 +6,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<<<<<<< HEAD
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+=======
+>>>>>>> 50d66dda51cc21842ffdd24e26a7a38d3ba02a76
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
@@ -134,6 +137,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
+<<<<<<< HEAD
                   <TitledPane fx:id="NVHTitle" animated="false" expanded="false" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@main.css" text="Nhà Văn Hoá">
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="148.0" styleClass="trang__chu__button" stylesheets="@main.css">
@@ -161,6 +165,27 @@
                         </ImageView>
                      </graphic>
                   </TitledPane>
+=======
+                        <TitledPane fx:id="NVHTitle" animated="false" expanded="false" style="-fx-border-color: white;" styleClass="trang__chu__button" stylesheets="@main.css" text="Nhà Văn Hoá">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="148.0" styleClass="trang__chu__button" stylesheets="@main.css">
+                                    <children>
+                                        <VBox layoutX="19.6" layoutY="6.6" prefHeight="121.6" prefWidth="148.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                        <Button layoutY="4.0" mnemonicParsing="false" onAction="#btnCSVC" prefHeight="40.0" prefWidth="148.0" style="-fx-border-width: 0;" styleClass="content_button_pane" stylesheets="@main.css" text="Thiết Bị" textOverrun="CLIP" />
+                                        <Button layoutY="84.0" mnemonicParsing="false" onAction="#btnChoThue" prefHeight="40.0" prefWidth="148.0" styleClass="content_button_pane" stylesheets="@main.css" text="Cho Thuê" />
+                                        <Button layoutY="44.0" mnemonicParsing="false" onAction="#btnSuDung" prefHeight="40.0" prefWidth="148.0" styleClass="content_button_pane" stylesheets="@main.css" text="Sử Dụng" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                            <graphic>
+                                <ImageView blendMode="MULTIPLY" fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/nhaVanHoa.jpg" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TitledPane>
+>>>>>>> 50d66dda51cc21842ffdd24e26a7a38d3ba02a76
                     </children>
                 </VBox>
 

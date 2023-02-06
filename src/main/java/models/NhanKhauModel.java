@@ -26,7 +26,9 @@ public class NhanKhauModel {
     private Date ngayChuyenDen;
     private String lyDoChuyenDen;
     private Date ngayChuyenDi;
-    private String lyDoChuyenDi;
+
+//dâtbase khong co
+//    private String lyDoChuyenDi;
     private String diaChiMoi;
     private Date ngayTao;
     private int idNguoiTao;
@@ -227,13 +229,13 @@ public class NhanKhauModel {
         this.ngayChuyenDi = ngayChuyenDi;
     }
 
-    public String getLyDoChuyenDi() {
-        return lyDoChuyenDi;
-    }
+//    public String getLyDoChuyenDi() {
+//        return lyDoChuyenDi;
+//    }
 
-    public void setLyDoChuyenDi(String lyDoChuyenDi) {
-        this.lyDoChuyenDi = lyDoChuyenDi;
-    }
+//    public void setLyDoChuyenDi(String lyDoChuyenDi) {
+//        this.lyDoChuyenDi = lyDoChuyenDi;
+//    }
 
     public String getDiaChiMoi() {
         return diaChiMoi;

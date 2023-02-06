@@ -1,5 +1,6 @@
 package models;
 
+
 public class ChoThueNVHModel extends SuDungNVHModel{
     private int phi;
     private String nguoiThue;

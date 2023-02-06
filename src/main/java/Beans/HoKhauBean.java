@@ -19,6 +19,7 @@ public class HoKhauBean {
     private List<NhanKhauModel> listNhanKhauModels;
     private List<ThanhVienModel> listThanhVienCuaHo;
 
+
     public HoKhauBean(HoKhauModel hoKhauModel, NhanKhauModel chuHo, List<NhanKhauModel> listNhanKhauModels, List<ThanhVienModel> listThanhVienCuaHo) {
         this.hoKhauModel = hoKhauModel;
         this.chuHo = chuHo;

@@ -14,22 +14,26 @@ import java.util.List;
  */
 public class NhanKhauBean {
     private NhanKhauModel nhanKhauModel;
-    private CanCuocCongDanModel chungMinhThuModel;
+    private CanCuocCongDanModel canCuocCongDanModel;
     private List<TieuSuModel> listTieuSuModels;
     private List<GiaDinhModel> listGiaDinhModels;
 
-    public NhanKhauBean(NhanKhauModel nhanKhauModel, CanCuocCongDanModel chungMinhThuModel, List<TieuSuModel> listTieuSuModels, List<GiaDinhModel> listGiaDinhModels) {
+    public NhanKhauBean(NhanKhauModel nhanKhauModel, CanCuocCongDanModel canCuocCongDanModel, List<TieuSuModel> listTieuSuModels, List<GiaDinhModel> listGiaDinhModels) {
+
         this.nhanKhauModel = nhanKhauModel;
-        this.chungMinhThuModel = chungMinhThuModel;
+        this.canCuocCongDanModel = canCuocCongDanModel;
         this.listTieuSuModels = listTieuSuModels;
         this.listGiaDinhModels = listGiaDinhModels;
+
     }
 
     public NhanKhauBean() {
         this.nhanKhauModel = new NhanKhauModel();
-        this.chungMinhThuModel = new CanCuocCongDanModel();
+        this.canCuocCongDanModel = new CanCuocCongDanModel();
         this.listGiaDinhModels = new ArrayList<>();
         this.listTieuSuModels = new ArrayList<>();
+        this.listGiaDinhModels = new ArrayList<>();
+
     }
 
     public NhanKhauModel getNhanKhauModel() {
@@ -40,12 +44,12 @@ public class NhanKhauBean {
         this.nhanKhauModel = nhanKhauModel;
     }
 
-    public CanCuocCongDanModel getChungMinhThuModel() {
-        return chungMinhThuModel;
+    public CanCuocCongDanModel getCanCuocCongDanModel() {
+        return canCuocCongDanModel;
     }
 
-    public void setChungMinhThuModel(CanCuocCongDanModel chungMinhThuModel) {
-        this.chungMinhThuModel = chungMinhThuModel;
+    public void setCanCuocCongDanModel(CanCuocCongDanModel canCuocCongDanModel) {
+        this.canCuocCongDanModel = canCuocCongDanModel;
     }
 
     public List<TieuSuModel> getListTieuSuModels() {
@@ -60,10 +64,10 @@ public class NhanKhauBean {
         return listGiaDinhModels;
     }
 
+
     public void setListGiaDinhModels(List<GiaDinhModel> listGiaDinhModels) {
         this.listGiaDinhModels = listGiaDinhModels;
     }
-
     @Override
     public String toString() {
         String res =  "<html><style>p {padding: 5px; margin-left: 20px} table, th, td {border: 1px solid black; border-collapse: collapse;} table {width: 500px}</style> <div>"
@@ -75,7 +79,7 @@ public class NhanKhauBean {
                 + "<p>Dân tộc: <b>" + nhanKhauModel.getDanToc()+ "</p>"
                 + "<p>Tôn giáo: <b>" + nhanKhauModel.getTonGiao()+ "</p>"
                 + "<p>Quốc tịch: <b>" + nhanKhauModel.getQuocTich()+ "</p>"
-                + "<p>Số CMT: <b>" + chungMinhThuModel.getSoCMT()+ "</p>"
+                + "<p>Số CMT: <b>" + canCuocCongDanModel.getSoCMT()+ "</p>"
                 + "<h4>Tiểu sử<table>"
                 + "<tr>"
                 + "<th>Từ ngày</th>"
@@ -130,6 +134,7 @@ public class NhanKhauBean {
                     + "</td>"
                     +"</tr>";
         }
+
         res +=  "</table>"
                 + "</div></html>";
         return res;

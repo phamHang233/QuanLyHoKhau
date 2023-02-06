@@ -23,12 +23,14 @@ public class SwitchScene {
         Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root, 1200,640));
         stage.centerOnScreen();
+        stage.show();
     }
     public void changeToHoKhau(ActionEvent event) throws IOException {
         Parent root =  FXMLLoader.load(getClass().getResource("/views/hokhau-view.fxml")) ;
         Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root, 1200,640));
         stage.centerOnScreen();
+        stage.show();
     }
     public void changeToThongKe(ActionEvent event) throws IOException {
         Parent root =  FXMLLoader.load(getClass().getResource("/views/thongke-view.fxml")) ;
@@ -37,6 +39,7 @@ public class SwitchScene {
         stage.centerOnScreen();
         stage.show();
     }
+
     public void changeToSuDung(ActionEvent event) throws IOException {
         Parent root =  FXMLLoader.load(getClass().getResource("/views/nhaVanHoa/sudung.fxml")) ;
         Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();

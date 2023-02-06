@@ -2,10 +2,6 @@ package models;
 
 import java.util.Date;
 
-/**
- *
- * @author Hai
- */
 public class GiaDinhModel {
     private int ID;
     private int idNhanKhau;
@@ -79,6 +75,4 @@ public class GiaDinhModel {
     public void setDiaChiHienTai(String diaChiHienTai) {
         this.diaChiHienTai = diaChiHienTai;
     }
-    
-    
 }

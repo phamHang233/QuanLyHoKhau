@@ -20,6 +20,8 @@ import java.sql.ResultSet;
 import java.time.ZoneId;
 import java.util.ResourceBundle;
 
+import static services.SQLServerConnection.getSqlConnection;
+
 public class DangKyTamVangController implements Initializable {
 
     @FXML
@@ -145,20 +147,21 @@ public class DangKyTamVangController implements Initializable {
 
     public boolean addNew(TamVangModel tamVangModel) {
         try {
-            Connection connection = SQLServerConnection.getSqlConnection();
-            String query = "INSERT INTO tam_vang(idNhanKhau, maGiayTamVang, noiTamTru, tuNgay, denNgay, lyDo)" + " value (?, ?, ?, ?, ?, ?)";
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+            String query = "INSERT INTO tam_vang(ID,idNhanKhau, maGiayTamVang, noiTamTru, tuNgay, denNgay, lyDo)  values(?,?, ?, ?, ?, ?, ?)";
+            PreparedStatement preparedStatement = getSqlConnection().prepareStatement(query);
             preparedStatement.setInt(1, tamVangModel.getIdNhanKhau());
-            preparedStatement.setString(2, tamVangModel.getMaGiayTamVang());
-            preparedStatement.setString(3, tamVangModel.getNoiTamTru());
+            preparedStatement.setInt(2, tamVangModel.getIdNhanKhau());
+            preparedStatement.setString(3, tamVangModel.getMaGiayTamVang());
+            preparedStatement.setString(4, tamVangModel.getNoiTamTru());
             java.sql.Date tuNgay = new java.sql.Date(tamVangModel.getTuNgay().getTime());
-            preparedStatement.setDate(4, tuNgay);
+            preparedStatement.setDate(5, tuNgay);
             java.sql.Date denNgay = new java.sql.Date(tamVangModel.getDenNgay().getTime());
-            preparedStatement.setDate(5, denNgay);
-            preparedStatement.setString(6, tamVangModel.getLyDo());
+            preparedStatement.setDate(6, denNgay);
+            preparedStatement.setString(7, tamVangModel.getLyDo());
             preparedStatement.execute();
             preparedStatement.close();
-            connection.close();
+            getSqlConnection().close();
             return true;
         } catch (Exception e) {
             e.printStackTrace();

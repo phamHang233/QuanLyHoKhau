@@ -167,16 +167,17 @@ public class DangKyTamTruController implements Initializable {
     public boolean addNew(TamTruModel tamTruModel) {
         try {
             Connection connection = SQLServerConnection.getSqlConnection();
-            String query = "INSERT INTO tam_tru(idNhanKhau, maGiayTamTru, soDienThoaiNguoiDangKy, tuNgay, denNgay, lyDo)" + " value (?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO tam_tru(ID,idNhanKhau, maGiayTamTru, soDienThoaiNguoiDangKy, tuNgay, denNgay, lyDo)  values (?,?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, tamTruModel.getIdNhanKhau());
-            preparedStatement.setString(2, tamTruModel.getMaGiayTamTru());
-            preparedStatement.setString(3, tamTruModel.getSoDienThoaiNguoiDangKy());
+            preparedStatement.setInt(2, tamTruModel.getIdNhanKhau());
+            preparedStatement.setString(3, tamTruModel.getMaGiayTamTru());
+            preparedStatement.setString(4, tamTruModel.getSoDienThoaiNguoiDangKy());
             Date tuNgay = new Date(tamTruModel.getTuNgay().getTime());
-            preparedStatement.setDate(4, tuNgay);
+            preparedStatement.setDate(5, tuNgay);
             Date denNgay = new Date(tamTruModel.getDenNgay().getTime());
-            preparedStatement.setDate(5, denNgay);
-            preparedStatement.setString(6, tamTruModel.getLyDo());
+            preparedStatement.setDate(6, denNgay);
+            preparedStatement.setString(7, tamTruModel.getLyDo());
             preparedStatement.execute();
             preparedStatement.close();
             connection.close();

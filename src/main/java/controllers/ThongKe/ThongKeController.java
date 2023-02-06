@@ -37,7 +37,7 @@ public class ThongKeController implements Initializable {
     private TableView<NhanKhauModel> bangThongKe;
 
     @FXML
-    private ComboBox<?> capDoBox;
+    private ComboBox<String> capDoBox;
 
     @FXML
     private AnchorPane capDoMode;
@@ -237,6 +237,7 @@ public class ThongKeController implements Initializable {
     ObservableList<NhanKhauModel> observablelistNhanKhau;
     ObservableList<String> gioiTinhList;
     ObservableList<String> tinhTrangList;
+    ObservableList<String> capDoList;
     private SwitchSceneTK switchSceneTK;
     int accessCount = 0;
     private void exceptionHandle(String message) {
@@ -464,6 +465,30 @@ public class ThongKeController implements Initializable {
     }
     // Che do thong ke so lieu
     public void timKiemThongKe(ActionEvent event) {
+        if(theoCapDo.isSelected()){
+            String capDo = "Mầm non";
+            capDo = StringService.covertToString(capDoBox.getSelectionModel().getSelectedItem());
+            System.out.println(capDo);
+            if(capDo.equals("Mam non")) {
+                tuTuoiText.setText("0");
+                denTuoiText.setText("6");
+            } else if (capDo.equals("Cap 1")) {
+                tuTuoiText.setText("7");
+                denTuoiText.setText("11");
+            } else if (capDo.equals("Cap 2")) {
+                tuTuoiText.setText("12");
+                denTuoiText.setText("15");
+            } else if (capDo.equals("Cap 3")) {
+                tuTuoiText.setText("16");
+                denTuoiText.setText("18");
+            } else if (capDo.equals("Lao Đong")) {
+                tuTuoiText.setText("19");
+                denTuoiText.setText("65");
+            } else {
+                tuTuoiText.setText("66");
+                denTuoiText.setText("1000");
+            }
+        }
         setData();
     }
     public void xoaTimKiemThongKe(ActionEvent event) {
@@ -519,6 +544,7 @@ public class ThongKeController implements Initializable {
             alert.setContentText("Vui lòng nhập đúng kiểu dữ liệu");
             alert.show();
         }
+        System.out.println(tuTuoi + denTuoi + gender + status);
         listNhanKhauBeans = nhanKhauService.statisticNhanKhau(tuTuoi, denTuoi, gender, status, tuNam, denNam);
         setDataTable();
     }
@@ -548,10 +574,13 @@ public class ThongKeController implements Initializable {
         nhanKhauService = new NhanKhauService();
         gioiTinhList = FXCollections.observableArrayList("Toàn bộ", "Nam", "Nữ");
         tinhTrangList = FXCollections.observableArrayList("Toàn bộ", "Thường trú", "Tạm trú", "Tạm vắng");
+        capDoList = FXCollections.observableArrayList("Mầm non", "Cấp 1", "Cấp 2", "Cấp 3", "Lao Động", "Nghỉ hưu");
         chonGioiTinhThongKe.setItems(gioiTinhList);
         chonGioiTinhThongKe.getSelectionModel().selectFirst();
         tinhTrangThongKe.setItems(tinhTrangList);
         tinhTrangThongKe.getSelectionModel().selectFirst();
+        capDoBox.setItems(capDoList);
+        capDoBox.getSelectionModel().selectFirst();
         theoDoTuoi.setSelected(true);
         doTuoiMode.setVisible(true);
         capDoMode.setVisible(false);

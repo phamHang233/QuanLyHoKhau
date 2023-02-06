@@ -143,6 +143,7 @@ public class NhanKhauService {
                     + ")";
         }
         query += " ORDER BY ngayTao DESC";
+        System.out.println(query);
         try {
             Connection connection = SQLServerConnection.getSqlConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(query);

@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="40ffcc90-e172-45bb-8510-1095108f56db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/thongKe/thongke-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/thongKe/thongke-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/ThongKeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKe/ThongKeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ThongKeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/NhanKhauService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/NhanKhauService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SQLServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SQLServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/thongke-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="448.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ThongKe.GiaDinhNK">
+   <children>
+      <Button layoutX="411.0" layoutY="408.0" mnemonicParsing="false" onAction="#btnOK" prefHeight="26.0" prefWidth="77.0" text="Xác nhận" />
+      <Separator layoutY="45.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0" />
+      <AnchorPane layoutX="146.0" layoutY="1.0" prefHeight="44.0" prefWidth="900.0" styleClass="label_pane" stylesheets="@../main.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <Label layoutX="18.0" layoutY="10.0" text="Thống kê &gt; Tìm kiếm nhân khẩu &gt; Xem thêm gia đình nhân khẩu" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="thongTinGiaDinhXT" layoutY="45.0" prefHeight="350.0" prefWidth="900.0">
+        <columns>
+          <TableColumn fx:id="idNhanKhauXT" prefWidth="85.33331549167633" text="ID nhân khẩu" />
+          <TableColumn fx:id="hoTenNhanKhauXT" prefWidth="161.99999237060547" text="Họ và tên" />
+            <TableColumn fx:id="ngaySinhNhanKhauXT" prefWidth="121.33335876464844" text="Ngày sinh" />
+            <TableColumn fx:id="gioiTinhNhanKhauXT" minWidth="7.77777099609375" prefWidth="71.3333740234375" text="Giới tính" />
+            <TableColumn fx:id="qhNhanKhauXT" prefWidth="142.88888549804688" text="Quan hệ với nhân khẩu" />
+            <TableColumn fx:id="ngheNghiepNhanKhauXT" prefWidth="117.11102294921875" text="Nghề Nghiệp" />
+            <TableColumn fx:id="diaChiNhanKhauXT" prefWidth="196.888916015625" text="Địa chỉ hiện tại" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -113,6 +113,14 @@ public class ThemMoi_SD implements Initializable {
             return false;
 
         }
+        if (ngaySD.getValue().isAfter(java.time.LocalDate.now())){
+            System.out.println("lỗi");
+            Alert missingFieldAlert = new Alert(Alert.AlertType.ERROR);
+            missingFieldAlert.setTitle("Warning!");
+            missingFieldAlert.setContentText("Ngày không chính xác!");
+            missingFieldAlert.show();
+            return false;
+        }
         return true;
     }
 

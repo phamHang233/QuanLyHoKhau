@@ -28,7 +28,7 @@ public class NhanKhauModel {
     private String lyDoChuyenDen;
     private Date ngayChuyenDi;
 
-//dâtbase khong co
+    //dâtbase khong co
 //    private String lyDoChuyenDi;
     private String diaChiMoi;
     private Date ngayTao;

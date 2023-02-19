@@ -89,7 +89,8 @@ public class HoKhauService {
                 hoKhauModel.setNgayLap(rs.getDate("ngayLap"));
                 hoKhauModel.setDiaChi(rs.getString("diaChi"));
                 NhanKhauModel chuHo = temp.getChuHo();
-                chuHo.setID(rs.getInt("ID"));
+                chuHo.setID(rs.getInt("idChuHo"));
+                chuHo.setMaNhanKhau(rs.getString("maNhanKhau"));
                 chuHo.setHoTen(rs.getString("hoTen"));
                 chuHo.setGioiTinh(rs.getString("gioiTinh"));
                 chuHo.setNamSinh(rs.getDate("namSinh"));
@@ -258,7 +259,7 @@ public class HoKhauService {
         String sql = "UPDATE ho_khau SET lyDoChuyen = '"
                 + lyDoChuyen
                 + "',"
-                + "ngayChuyenDi = NOW(), "
+                + "ngayChuyenDi = getDate(), "
                 + "diaChi = '"
                 + noiChuyenDen
                 + "',"

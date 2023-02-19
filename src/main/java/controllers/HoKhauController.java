@@ -69,7 +69,7 @@ public class HoKhauController implements Initializable {
 
     public void setTimKiem(){
         // thanh tìm kiếm
-        search.setPromptText("Tìm kiếm");
+        search.setPromptText("Nhập mã hộ khẩu!");
         FilteredList<HoKhauBean> hoKhauBeanFilteredList = new FilteredList(observableListHoKhauBeans, p -> true);//Pass the data to a filtered list
 
         table.setItems(hoKhauBeanFilteredList);//Set the table's items using the filtered list

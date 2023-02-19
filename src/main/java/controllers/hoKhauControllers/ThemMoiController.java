@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -55,10 +56,14 @@ public class ThemMoiController implements Initializable{
     ObservableList<MemOfFamily> memOfFamilyObservableList;
     List<MemOfFamily> memOfFamilyList;
     NhanKhauBean selectedNhanKhau;
+    List<HoKhauBean> listHoKhauBeans;
+    HoKhauService hoKhauService;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         memOfFamilyList = new ArrayList<>();
+        hoKhauService = new HoKhauService();
+        listHoKhauBeans = hoKhauService.getListHoKhau();
         memOfFamilyObservableList = FXCollections.observableList(memOfFamilyList);
         hoTen.setCellValueFactory(memOfFamily -> new ReadOnlyObjectWrapper<>(memOfFamily.getValue().getNhanKhau().getNhanKhauModel().getHoTen()));
         ngaySinh.setCellValueFactory(memOfFamily -> new ReadOnlyObjectWrapper<>(memOfFamily.getValue().getNhanKhau().getNhanKhauModel().getNamSinh().toString()));
@@ -116,26 +121,46 @@ public class ThemMoiController implements Initializable{
     }
 
     public void luu(ActionEvent event) throws SQLException, ClassNotFoundException {
+        if (validateValueInForm()) {
+            HoKhauBean hoKhauBean = new HoKhauBean();
+            //Set thong tin ho khau
+            HoKhauModel hoKhau = new HoKhauModel();
+            hoKhau.setMaHoKhau(maHoKhau.getText());
+            hoKhau.setMaKhuVuc(maKhuVuc.getText());
+            hoKhau.setDiaChi(diaChi.getText());
+            hoKhau.setIdChuHo(selectedNhanKhau.getNhanKhauModel().getID());
+            hoKhauBean.setHoKhauModel(hoKhau);
+            //set thong tin chu ho
+            NhanKhauModel chuHo = selectedNhanKhau.getNhanKhauModel();
+            hoKhauBean.setChuHo(chuHo);
+            //set thanh vien cua ho
+            List<ThanhVienModel> listThanhVienCuaHo = new ArrayList<>();
+            memOfFamilyObservableList.stream().forEach(memOfFamily -> {
+                listThanhVienCuaHo.add(memOfFamily.getThanhVienCuaHoModel());
+            });
+            hoKhauBean.setListThanhVienCuaHo(listThanhVienCuaHo);
+            if (checkThemMoi(hoKhauBean)){
+                hoKhauService.addNew(hoKhauBean);
+                huy(event);
+            }
 
-        HoKhauBean hoKhauBean = new HoKhauBean();
-        //Set thong tin ho khau
-        HoKhauModel hoKhau = new HoKhauModel();
-        hoKhau.setMaHoKhau(maHoKhau.getText());
-        hoKhau.setMaKhuVuc(maKhuVuc.getText());
-        hoKhau.setDiaChi(diaChi.getText());
-        hoKhau.setIdChuHo(selectedNhanKhau.getNhanKhauModel().getID());
-        hoKhauBean.setHoKhauModel(hoKhau);
-        //set thong tin chu ho
-        NhanKhauModel chuHo = selectedNhanKhau.getNhanKhauModel();
-        hoKhauBean.setChuHo(chuHo);
-        //set thanh vien cua ho
-        List<ThanhVienModel> listThanhVienCuaHo = new ArrayList<>();
-        memOfFamilyObservableList.stream().forEach(memOfFamily -> {
-            listThanhVienCuaHo.add(memOfFamily.getThanhVienCuaHoModel());
-        });
-        hoKhauBean.setListThanhVienCuaHo(listThanhVienCuaHo);
-        new HoKhauService().addNew(hoKhauBean);
-        huy(event);
+        }
+    }
+    boolean checkThemMoi(HoKhauBean hkBean){
+        String maHK = hkBean.getHoKhauModel().getMaHoKhau();
+        int i;
+        for ( i=0; i<listHoKhauBeans.size(); i++){
+
+
+            if(     maHK.equals(listHoKhauBeans.get(i).getHoKhauModel().getMaHoKhau().toString())){
+                Alert missingFieldAlert = new Alert(Alert.AlertType.ERROR);
+                missingFieldAlert.setContentText("Đã tồn tại hộ khẩu!");
+                missingFieldAlert.show();
+                return false;
+            }
+        }
+        return true;
+
     }
 
     public void addDataToTable(){
@@ -145,5 +170,13 @@ public class ThemMoiController implements Initializable{
         System.out.println(list.get(0).getNhanKhau().getNhanKhauModel().getHoTen());
         table.refresh();
     }
-
+    private boolean validateValueInForm() {
+        if (maHoKhau.getText().isBlank() || hoTen.getText().isBlank() || diaChi.getText().isBlank()) {
+            Alert missingFieldAlert = new Alert(Alert.AlertType.ERROR);
+            missingFieldAlert.setContentText("Bạn cần điền đầy đủ tất cả các trường thông tin yêu cầu");
+            missingFieldAlert.show();
+            return false;
+        }
+        return true;
+    }
 }

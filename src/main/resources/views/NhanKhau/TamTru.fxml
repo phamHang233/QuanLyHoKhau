@@ -8,50 +8,81 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="462.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.nhankhauControllers.DangKyTamTruController">
+<AnchorPane prefHeight="462.0" prefWidth="642.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.nhankhauControllers.DangKyTamTruController">
     <children>
-        <Label layoutX="37.0" layoutY="37.0" text="Số CMT/ CCCD:" />
-        <TextField fx:id="soCMTText" layoutX="150.0" layoutY="32.0" prefHeight="26.0" prefWidth="304.0" />
-        <Label layoutX="469.0" layoutY="37.0" text="(*)" textFill="RED" />
-        <Label layoutX="37.0" layoutY="93.0" text="Mã giấy tạm trú:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="37.0" layoutY="134.0" text="Số điện thoại:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="37.0" layoutY="179.0" text="Từ ngày:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="37.0" layoutY="223.0" text="Đến ngày:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="37.0" layoutY="270.0" text="Lý do:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <TextField fx:id="maGiayTamTruText" layoutX="188.0" layoutY="90.0" prefHeight="26.0" prefWidth="289.0" />
-        <TextField fx:id="soDienThoaiText" layoutX="188.0" layoutY="131.0" prefHeight="26.0" prefWidth="289.0" />
-        <DatePicker fx:id="tuNgayDP" layoutX="188.0" layoutY="176.0" prefHeight="26.0" prefWidth="289.0" />
-        <DatePicker fx:id="denNgayDP" layoutX="188.0" layoutY="220.0" prefHeight="26.0" prefWidth="289.0" />
-        <TextArea fx:id="lyDoText" layoutX="184.0" layoutY="270.0" prefHeight="115.0" prefWidth="297.0" />
+        <Label layoutX="465.0" layoutY="94.0" text="(*)" textFill="RED" />
         <Button layoutX="430.0" layoutY="414.0" mnemonicParsing="false" onAction="#xacNhan" text="Xác nhận" fx:id="xacNhanButton" />
         <Button fx:id="huyButton" layoutX="532.0" layoutY="414.0" mnemonicParsing="false" onAction="#huy" text="Hủy" />
-        <ImageView fx:id="checkedIcon" fitHeight="36.0" fitWidth="36.0" layoutX="579.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="checkedIcon" fitHeight="36.0" fitWidth="36.0" layoutX="579.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../icons/checked.png" />
             </image>
         </ImageView>
-        <Button layoutX="503.0" layoutY="33.0" mnemonicParsing="false" onAction="#check" text="Check" />
+        <Button layoutX="503.0" layoutY="91.0" mnemonicParsing="false" onAction="#check" text="Check" />
+      <AnchorPane layoutY="15.0" prefHeight="50.0" prefWidth="642.0" styleClass="label_pane" stylesheets="@../main.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="27.0" layoutY="13.0" text="Nhân khẩu &gt; Quản lý tạm trú" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="40.0" layoutY="138.0" prefHeight="250.0" prefWidth="554.0" style="-fx-background-color: ư;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.39996337890625" minWidth="10.0" prefWidth="174.00001525878906" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.1999969482422" minWidth="10.0" prefWidth="421.99998474121094" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+              <Label text="Mã giấy tạm trú:">
+                  <font>
+                      <Font size="15.0" />
+                  </font>
+              </Label>
+              <Label text="Số điện thoại:" GridPane.rowIndex="1">
+                  <font>
+                      <Font size="15.0" />
+                  </font>
+              </Label>
+              <Label text="Từ ngày:" GridPane.rowIndex="2">
+                  <font>
+                      <Font size="15.0" />
+                  </font>
+              </Label>
+              <Label text="Lý do:" GridPane.rowIndex="4">
+                  <font>
+                      <Font size="15.0" />
+                  </font>
+              </Label>
+              <Label text="Đến ngày:" GridPane.rowIndex="3">
+                  <font>
+                      <Font size="15.0" />
+                  </font>
+              </Label>
+              <TextField fx:id="maGiayTamTruText" prefHeight="26.0" prefWidth="289.0" GridPane.columnIndex="1" />
+              <TextField fx:id="soDienThoaiText" prefHeight="26.0" prefWidth="289.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+              <DatePicker fx:id="tuNgayDP" prefHeight="26.0" prefWidth="289.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              <DatePicker fx:id="denNgayDP" prefHeight="26.0" prefWidth="289.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+              <TextArea fx:id="lyDoText" prefHeight="115.0" prefWidth="297.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+        <Label layoutX="32.0" layoutY="93.0" text="Số CMT/ CCCD:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+        <TextField fx:id="soCMTText" layoutX="150.0" layoutY="92.0" prefHeight="26.0" prefWidth="304.0" />
     </children>
 </AnchorPane>

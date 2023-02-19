@@ -12,10 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TitledPane;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
@@ -49,6 +46,8 @@ public class NhanKhauController implements Initializable {
     @FXML
     Button nhanKhauButton;
     @FXML
+    TextField search;
+    @FXML
     private TitledPane NVHTitle;
     SwitchScene switchScene;
     private NhanKhauService nhanKhauService;
@@ -81,6 +80,17 @@ public class NhanKhauController implements Initializable {
         table.setItems(observablelistNhanKhau);
 
     }
+//    public void setTimKiem(){
+//        // thanh tìm kiếm
+//        search.setPromptText("Nhập mã hộ khẩu!");
+//        FilteredList<NhanKhauBean> nhanKhauBeanFilteredList = new FilteredList(observablelistNhanKhau, p -> true);//Pass the data to a filtered list
+//
+//        table.setItems(nhanKhauBeanFilteredList);//Set the table's items using the filtered list
+//
+//        search.textProperty().addListener((obs, oldValue, newValue) -> {
+//            nhanKhauBeanFilteredList.setPredicate((p -> p.getNhanKhauModel().getMaNhanKhau().toLowerCase().contains(newValue.toLowerCase().trim())));
+//        });
+//    }
 
     public void chonXemNhanKhau(MouseEvent event) throws IOException {
         NhanKhauModel nhanKhauModel = table.getSelectionModel().getSelectedItem();

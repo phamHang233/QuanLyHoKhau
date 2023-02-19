@@ -61,8 +61,9 @@ public class KhaiTuController implements Initializable {
     }
 
     public void check(ActionEvent event) {
-        String tempCMT = soCMTnguoiChet.getText().trim();
-        if (tempCMT.isEmpty()) {
+        String tempCMTNguoiChet = soCMTnguoiChet.getText().trim();
+        String tempCMTNguoiKhai = soCMTnguoiKhai.getText().trim();
+        if (tempCMTNguoiChet.isEmpty()|| tempCMTNguoiKhai.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning!");
             alert.setContentText("Vui lòng nhập số CMT");
@@ -70,7 +71,8 @@ public class KhaiTuController implements Initializable {
             return;
         } else {
             try {
-                Long.parseLong(tempCMT);
+                Long.parseLong(tempCMTNguoiChet);
+                Long.parseLong(tempCMTNguoiKhai);
             } catch (Exception e) {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Warning!");
@@ -79,8 +81,10 @@ public class KhaiTuController implements Initializable {
                 return;
             }
         }
-        int tempID = checkCMT(tempCMT);
-        if (tempID != -1 && !soCMTnguoiKhai.getText().isBlank() && !tenNguoiKhai.getText().isBlank()) {
+        int tempIDNguoiChet = checkCMT(tempCMTNguoiChet);
+        int tempIDNguoiKhai = checkCMT(tempCMTNguoiKhai);
+        if (tempIDNguoiChet != -1 && tempIDNguoiKhai!= -1 && !tenNguoiKhai.getText().isBlank() ) {
+
             soCMTnguoiKhai.setEditable(false);
             checkedIcon.setVisible(true);
             soGiayKhaiTu.setDisable(false);
@@ -131,7 +135,7 @@ public class KhaiTuController implements Initializable {
             preparedStatement.setString(1, cmt);
             ResultSet rs = preparedStatement.executeQuery();
             if (rs.next()) {
-                return rs.getInt("ID");
+                return rs.getInt("idNhanKhau");
             }
         } catch (Exception e) {
             Alert errorMessage = new Alert(Alert.AlertType.ERROR);

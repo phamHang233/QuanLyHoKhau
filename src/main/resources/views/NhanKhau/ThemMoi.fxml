@@ -4,133 +4,175 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="560.0" prefWidth="1190.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.nhankhauControllers.ThemMoiController">
     <children>
-        <Label layoutX="26.0" layoutY="49.0" text="Họ và tên:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="26.0" layoutY="97.0" text="Ngày tháng năm sinh:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="26.0" layoutY="148.0" text="Nguyên quán:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="27.0" layoutY="203.0" text="Dân tộc:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="26.0" layoutY="260.0" text="Số CMT / CCCD:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="24.0" layoutY="315.0" text="Nơi thường trú:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="25.0" layoutY="368.0" text="ID">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="23.0" layoutY="421.0" text="Trình độ học vấn:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="24.0" layoutY="475.0" text="Nghề nghiệp:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <TextField fx:id="hoTenTxb" layoutX="242.0" layoutY="46.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="nguyenQuanTxb" layoutX="242.0" layoutY="145.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="danTocTxb" layoutX="242.0" layoutY="200.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="soCMTTxb" layoutX="242.0" layoutY="256.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="noiThuongTruTxb" layoutX="242.0" layoutY="312.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="id" layoutX="242.0" layoutY="365.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="trinhDoHocVanTxb" layoutX="242.0" layoutY="418.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="ngheNghiepTxb" layoutX="242.0" layoutY="472.0" prefHeight="26.0" prefWidth="297.0" />
-        <DatePicker fx:id="namSinhDateC" layoutX="242.0" layoutY="94.0" prefHeight="26.0" prefWidth="297.0" />
-        <Label layoutX="548.0" layoutY="51.0" text="(*)" textFill="RED" />
-        <Label layoutX="548.0" layoutY="99.0" text="(*)" textFill="RED" />
-        <Label layoutX="548.0" layoutY="150.0" text="(*)" textFill="RED" />
-        <Label layoutX="548.0" layoutY="205.0" text="(*)" textFill="RED" />
-        <Label layoutX="548.0" layoutY="261.0" text="(*)" textFill="RED" />
-        <Label layoutX="548.0" layoutY="317.0" text="(*)" textFill="RED" />
-        <Label layoutX="548.0" layoutY="370.0" text="(*)" textFill="RED" />
-        <Label layoutX="548.0" layoutY="423.0" text="(*)" textFill="RED" />
-        <Label layoutX="548.0" layoutY="477.0" text="(*)" textFill="RED" />
-        <Label layoutX="612.0" layoutY="49.0" text="Biệt danh:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <TextField fx:id="bietDanhTxb" layoutX="826.0" layoutY="46.0" prefHeight="26.0" prefWidth="297.0" />
-        <Label layoutX="612.0" layoutY="97.0" text="Giới tính:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="612.0" layoutY="149.0" text="Tôn giáo:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="612.0" layoutY="204.0" text="Quốc tịch:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="612.0" layoutY="259.0" text="Hộ chiếu số:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="612.0" layoutY="315.0" text="Địa chỉ hiện tại:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="612.0" layoutY="368.0" text="Trình độ chuyên môn:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="612.0" layoutY="422.0" text="Biết tiếng dân tộc:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="612.0" layoutY="476.0" text="Nơi làm việc:">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <TextField fx:id="tonGiaoTxb" layoutX="828.0" layoutY="145.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="quocTichTxb" layoutX="828.0" layoutY="203.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="trinhDoChuyenMonTxb" layoutX="828.0" layoutY="365.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="soHoChieuTxb" layoutX="828.0" layoutY="257.0" prefHeight="26.0" prefWidth="297.0" />
-        <Label layoutX="1134.0" layoutY="151.0" text="(*)" textFill="RED" />
-        <Label layoutX="1134.0" layoutY="205.0" text="(*)" textFill="RED" />
-        <TextField fx:id="diaChiHienNayTxb" layoutX="828.0" layoutY="312.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="bietTiengDanTocTxb" layoutX="828.0" layoutY="418.0" prefHeight="26.0" prefWidth="297.0" />
-        <TextField fx:id="noiLamViecTxb" layoutX="826.0" layoutY="473.0" prefHeight="26.0" prefWidth="297.0" />
-        <Label layoutX="1134.0" layoutY="317.0" text="(*)" textFill="RED" />
-        <ComboBox fx:id="gioiTinhCbb" layoutX="828.0" layoutY="94.0" prefWidth="150.0" />
-        <Button layoutX="975.0" layoutY="516.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
-        <Button layoutX="1061.0" layoutY="515.0" mnemonicParsing="false" onAction="#create" text="Create" />
+      <AnchorPane prefHeight="73.0" prefWidth="1190.0" styleClass="label_pane" stylesheets="@../main.css" AnchorPane.bottomAnchor="487.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="39.0" layoutY="18.0" text="Nhân khẩu &gt; Thêm mới nhân khẩu" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="197.0" layoutY="74.0" prefHeight="485.0" prefWidth="1190.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <GridPane layoutX="41.0" layoutY="26.0" prefHeight="386.0" prefWidth="1118.0" style="-fx-background-color: white;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.6666717529297" minWidth="10.0" prefWidth="154.8666534423828" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="382.13328857421874" minWidth="10.0" prefWidth="325.53334655761716" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.733349609375" minWidth="10.0" prefWidth="64.53331298828124" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.86673583984373" minWidth="10.0" prefWidth="168.93338623046873" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="439.0" minWidth="10.0" prefWidth="325.20000000000005" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="0.0" prefWidth="54.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                    <Label text="Biệt danh:" GridPane.columnIndex="3">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Giới tính:" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Tôn giáo:" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Quốc tịch:" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Hộ chiếu số:" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Địa chỉ hiện tại:" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Trình độ chuyên môn:" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Biết tiếng dân tộc:" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Nơi làm việc:" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="noiLamViecTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                    <TextField fx:id="bietTiengDanTocTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                    <TextField fx:id="trinhDoChuyenMonTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                    <TextField fx:id="diaChiHienNayTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                    <TextField fx:id="soHoChieuTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                    <TextField fx:id="quocTichTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                    <TextField fx:id="tonGiaoTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                    <ComboBox fx:id="gioiTinhCbb" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                    <TextField fx:id="bietDanhTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="4" />
+                    <TextField fx:id="hoTenTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="1" />
+                    <DatePicker fx:id="namSinhDateC" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <TextField fx:id="nguyenQuanTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <TextField fx:id="danTocTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <TextField fx:id="soCMTTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    <TextField fx:id="noiThuongTruTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    <TextField fx:id="trinhDoHocVanTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                    <TextField fx:id="trinhDoNgoaiNguTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                    <TextField fx:id="ngheNghiepTxb" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                    <Label text="Họ và tên:">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Ngày tháng năm sinh:" GridPane.rowIndex="1">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Nguyên quán:" GridPane.rowIndex="2">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Dân tộc:" GridPane.rowIndex="3">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Số CMT / CCCD:" GridPane.rowIndex="4">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Nơi thường trú:" GridPane.rowIndex="5">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Trình độ học vấn:" GridPane.rowIndex="6">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Trình độ ngoại ngữ:" GridPane.rowIndex="7">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="Nghề nghiệp:" GridPane.rowIndex="8">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="2" />
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                    <Label text="(*)" textFill="RED" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                  <Label text="(*)" textFill="RED" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+              <Button layoutX="1021.0" layoutY="429.0" mnemonicParsing="false" onAction="#cancel" prefHeight="32.0" prefWidth="66.0" text="Huỷ" />
+              <Button layoutX="916.0" layoutY="430.0" mnemonicParsing="false" onAction="#create" prefHeight="32.0" prefWidth="66.0" text="Tạo" />
+         </children>
+      </AnchorPane>
+      <Separator layoutY="73.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
     </children>
 </AnchorPane>

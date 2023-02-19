@@ -46,7 +46,7 @@
         <Button layoutX="360.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnOK" prefHeight="26.0" prefWidth="77.0" text="Xác nhận" />
         <Button layoutX="462.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnHuy" prefHeight="26.0" prefWidth="62.0" text="Huỷ" />
         <Separator layoutY="45.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0" />
-      <AnchorPane layoutX="146.0" layoutY="1.0" prefHeight="44.0" prefWidth="570.0" styleClass="label_pane" stylesheets="@../main.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+      <AnchorPane prefHeight="44.0" prefWidth="570.0" styleClass="label_pane" stylesheets="@../main.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="18.0" layoutY="10.0" text="Quản lý thiết bị nhà văn hoá &gt; Sửa thiết bị" textFill="WHITE">
                <font>

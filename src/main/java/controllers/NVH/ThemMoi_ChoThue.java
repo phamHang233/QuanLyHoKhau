@@ -130,6 +130,14 @@ public class ThemMoi_ChoThue implements Initializable {
             return false;
 
         }
+        if (ngayThue.getValue().isAfter(java.time.LocalDate.now())){
+            System.out.println("lỗi");
+            Alert missingFieldAlert = new Alert(Alert.AlertType.ERROR);
+            missingFieldAlert.setTitle("Warning!");
+            missingFieldAlert.setContentText("Ngày không chính xác!");
+            missingFieldAlert.show();
+            return false;
+        }
         return true;
     }
 

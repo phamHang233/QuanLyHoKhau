@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="230.0" prefWidth="529.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ThongKe.LichSuHoKhau">
+   <children>
+      <Button layoutX="213.0" layoutY="185.0" mnemonicParsing="false" onAction="#btnOK" prefHeight="26.0" prefWidth="77.0" text="Xác nhận" />
+      <Separator layoutY="45.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0" />
+      <AnchorPane layoutX="146.0" layoutY="1.0" prefHeight="44.0" prefWidth="900.0" styleClass="label_pane" stylesheets="@../main.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <Label layoutX="18.0" layoutY="10.0" text="Thống kê &gt; Tìm kiếm nhân khẩu &gt; Xem thêm lịch sử thay đổi" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="14.0" layoutY="73.0" prefHeight="30.0" prefWidth="131.0" text="Thông tin thay đổi:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="118.0" prefHeight="30.0" prefWidth="77.0" text="Thay đổi từ:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="252.0" layoutY="118.0" prefHeight="30.0" prefWidth="99.0" text="Thay đổi thành:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="147.0" prefHeight="30.0" prefWidth="99.0" text="Ngày thay đổi:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="252.0" layoutY="147.0" prefHeight="30.0" prefWidth="99.0" text="Người thay đổi:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="thongTinThayDoi" layoutX="134.0" layoutY="73.0" prefHeight="30.0" prefWidth="386.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="thayDoiTu" layoutX="91.0" layoutY="118.0" prefHeight="30.0" prefWidth="159.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="thayDoiThanh" layoutX="351.0" layoutY="118.0" prefHeight="30.0" prefWidth="159.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ngayThayDoi" layoutX="105.0" layoutY="147.0" prefHeight="30.0" prefWidth="143.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nguoiThayDoi" layoutX="351.0" layoutY="147.0" prefHeight="30.0" prefWidth="159.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

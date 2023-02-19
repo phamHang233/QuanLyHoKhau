@@ -166,7 +166,7 @@
             </TableView>
             <Pane layoutX="154.0" layoutY="64.0" prefHeight="118.0" prefWidth="1036.0" style="-fx-background-color: white;">
                <children>
-                  <Button layoutX="14.0" layoutY="58.0" mnemonicParsing="false" onAction="#themMoi" prefHeight="55.0" prefWidth="181.0" style="-fx-font-size: 18;" text="Thêm mới">
+                  <Button layoutX="14.0" layoutY="58.0" mnemonicParsing="false" onAction="#themMoi" prefHeight="55.0" prefWidth="181.0" style="-fx-font-size: 18;" stylesheets="@main.css" text="Thêm mới">
                      <graphic>
                         <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -175,19 +175,19 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Text layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 28;" text="Thao tác chức năng" wrappingWidth="304.5367031097412" />
+                  <Text layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 28;" text="Quản lý hộ khẩu" wrappingWidth="304.5367031097412" />
                   <Button layoutX="398.0" layoutY="57.0" mnemonicParsing="false" onAction="#chuyenDi" prefHeight="55.0" prefWidth="181.0" style="-fx-font-size: 18;" text="Chuyển đi">
                      <graphic>
-                        <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView blendMode="MULTIPLY" fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/884732.png" />
+                              <Image url="@../icons/download.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
                   <Button layoutX="204.0" layoutY="58.0" mnemonicParsing="false" onAction="#tachHoKhau" prefHeight="54.0" prefWidth="181.0" style="-fx-font-size: 18;" text="Tách hộ khẩu">
                      <graphic>
-                        <ImageView fitHeight="45.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/img_264064.png" />
                            </image>

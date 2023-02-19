@@ -9,6 +9,7 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
@@ -166,25 +167,40 @@
                   </Label>
                   <HBox layoutX="14.0" layoutY="57.0" prefHeight="54.0" prefWidth="1018.0" spacing="30.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#dangKyTamVang" prefHeight="35.0" prefWidth="157.0" styleClass="trang__chu__button" stylesheets="@main.css" text="ĐK Tạm vắng">
-                           <font>
-                              <Font name="System Bold" size="14.0" />
-                           </font></Button>
-                        <Button mnemonicParsing="false" onAction="#dangKyTamTru" prefHeight="35.0" prefWidth="114.0" styleClass="trang__chu__button" stylesheets="@main.css" text="ĐK Tạm trú">
-                           <font>
-                              <Font name="System Bold" size="14.0" />
-                           </font></Button>
-                        <Button mnemonicParsing="false" onAction="#themMoi" prefHeight="35.0" prefWidth="137.0" styleClass="trang__chu__button" stylesheets="@main.css" text="Thêm nhân khẩu">
-                           <font>
-                              <Font name="System Bold" size="14.0" />
-                           </font>
+                        <Button mnemonicParsing="false" onAction="#themMoi" prefHeight="55.0" prefWidth="162.0" style="-fx-font-size: 16;" stylesheets="@main.css" text="Thêm mới">
+                           <graphic>
+                              <ImageView fitHeight="42.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/plus-icon-black-2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#Xoa" prefHeight="35.0" prefWidth="120.0" styleClass="trang__chu__button" stylesheets="@main.css" text="Xóa nhân khẩu">
-                           <font>
-                              <Font name="System Bold" size="14.0" />
-                           </font>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#khaiTu" prefHeight="34.0" prefWidth="76.0" styleClass="trang__chu__button" stylesheets="@main.css" text="Khai Tử">
+                        <Button mnemonicParsing="false" onAction="#dangKyTamVang" prefHeight="55.0" prefWidth="148.0" style="-fx-font-size: 16;" text="Tạm vắng">
+                           <graphic>
+                              <ImageView blendMode="MULTIPLY" fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/tamvang.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button mnemonicParsing="false" onAction="#dangKyTamTru" prefHeight="55.0" prefWidth="151.0" style="-fx-font-size: 16;" text="Tạm trú">
+                           <graphic>
+                              <ImageView blendMode="MULTIPLY" fitHeight="38.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/tamtru.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button mnemonicParsing="false" onAction="#khaiTu" prefHeight="55.0" prefWidth="151.0" style="-fx-font-size: 16;" text="Khai tử">
+                           <graphic>
+                              <ImageView blendMode="MULTIPLY" fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/khaitu.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button mnemonicParsing="false" onAction="#Xoa" prefHeight="54.0" prefWidth="128.0" text="Xóa" textFill="#f81515">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -198,7 +214,7 @@
             </AnchorPane>
             <AnchorPane layoutX="150.0" layoutY="167.0" prefHeight="473.0" prefWidth="1050.0">
                <children>
-                  <TableView fx:id="table" layoutX="92.0" layoutY="22.0" onMouseClicked="#chonXemNhanKhau" prefHeight="417.0" prefWidth="852.0">
+                  <TableView fx:id="table" layoutX="98.0" layoutY="45.0" onMouseClicked="#chonXemNhanKhau" prefHeight="396.0" prefWidth="852.0">
                     <columns>
                       <TableColumn fx:id="ID" prefWidth="65.0" text="ID" />
                       <TableColumn fx:id="hoTen" prefWidth="120.0" text="Họ tên" />
@@ -209,6 +225,16 @@
                     </columns>
                   </TableView>
                   <Separator layoutY="3.0" prefHeight="0.0" prefWidth="1050.0" />
+                  <AnchorPane layoutX="706.0" layoutY="10.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 1; -fx-border-color: gray;">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="177.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/search.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="search" layoutX="1.0" layoutY="1.0" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: white;" />
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
             </children>

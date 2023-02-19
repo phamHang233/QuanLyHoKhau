@@ -5,8 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.transform.Scale;
 import javafx.stage.Stage;
 import javafx.scene.paint.Paint;
+
+import java.awt.*;
 import java.io.IOException;
 // Class với các method để chuyển màn hình từ trang chủ -> hộ khẩu -> nhân khẩu->nhà văn hoá
 public class SwitchScene {
@@ -33,7 +36,7 @@ public class SwitchScene {
         stage.show();
     }
     public void changeToThongKe(ActionEvent event) throws IOException {
-        Parent root =  FXMLLoader.load(getClass().getResource("/views/thongke-view.fxml")) ;
+        Parent root =  FXMLLoader.load(getClass().getResource("/views/thongKe/thongke-view.fxml")) ;
         Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root, 1200,640));
         stage.centerOnScreen();
@@ -62,7 +65,7 @@ public class SwitchScene {
     public void changToLogin(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/views/login-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root, 600, 322));
+        stage.setScene(new Scene(root, 459, 322));
         stage.centerOnScreen();
     }
 

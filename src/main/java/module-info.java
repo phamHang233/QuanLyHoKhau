@@ -19,6 +19,8 @@ module java{
     exports controllers.hoKhauControllers;
     opens controllers.nhankhauControllers to javafx.fxml;
     exports  controllers.nhankhauControllers;
+    opens  controllers.ThongKe to javafx.fxml;
+    exports  controllers.ThongKe;
 //    opens application to javafx.fxml;
 //    exports application;
 

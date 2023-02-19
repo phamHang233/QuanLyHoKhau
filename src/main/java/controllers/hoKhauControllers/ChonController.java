@@ -1,5 +1,6 @@
 package controllers.hoKhauControllers;
 
+import Beans.HoKhauBean;
 import Beans.NhanKhauBean;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
@@ -8,10 +9,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import services.HoKhauService;
 import services.NhanKhauService;
 
 import java.io.IOException;
@@ -35,13 +38,16 @@ public class ChonController implements Initializable {
 
     List<NhanKhauBean> listNhanKhauBean;
     NhanKhauService nhanKhauService;
+    List<HoKhauBean> listHoKhauBeans;
 
+    HoKhauService hoKhauService;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         nhanKhauService = new NhanKhauService();
         listNhanKhauBean = nhanKhauService.getListNhanKhau();
-
+        hoKhauService = new HoKhauService();
+        listHoKhauBeans = hoKhauService.getListHoKhau();
         ObservableList nhanKhauBeanObservableList = FXCollections.observableList(listNhanKhauBean);
         hoTen.setCellValueFactory(nhanKhauBean -> new ReadOnlyObjectWrapper<>(nhanKhauBean.getValue().getNhanKhauModel().getHoTen()));
         gioiTinh.setCellValueFactory(nhanKhauBean -> new ReadOnlyObjectWrapper<>(nhanKhauBean.getValue().getNhanKhauModel().getGioiTinh()));
@@ -49,6 +55,7 @@ public class ChonController implements Initializable {
         soCMT.setCellValueFactory(nhanKhauBean -> new ReadOnlyObjectWrapper<>(nhanKhauBean.getValue().getCanCuocCongDanModel().getSoCMT()));
         diaChiHienNay.setCellValueFactory(nhanKhauBean -> new ReadOnlyObjectWrapper<>(nhanKhauBean.getValue().getNhanKhauModel().getDiaChiHienNay()));
         table.setItems(nhanKhauBeanObservableList);
+
     }
 
     @FXML
@@ -58,9 +65,28 @@ public class ChonController implements Initializable {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             ChuHoHolder holder = ChuHoHolder.getInstance();
             holder.setData(selectedNhanKhauBean);
-            stage.close();
+            if(checkChuHo(selectedNhanKhauBean)){
 
+                stage.close();
+            }
         }
+    }
+    public boolean checkChuHo(NhanKhauBean selectedNK){
+        Integer idNK = selectedNK.getNhanKhauModel().getID();
+
+        int i;
+        for ( i=0; i<listHoKhauBeans.size(); i++){
+
+
+            if(     idNK == listHoKhauBeans.get(i).getChuHo().getID()){
+                Alert missingFieldAlert = new Alert(Alert.AlertType.ERROR);
+                missingFieldAlert.setContentText("Không thể chọn người này!");
+                missingFieldAlert.show();
+                return false;
+            }
+        }
+        return true;
+
     }
     @FXML
     public void huy(ActionEvent event){
